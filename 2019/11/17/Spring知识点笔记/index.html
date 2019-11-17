@@ -8,16 +8,20 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
-<meta property="og:type" content="website">
+  <meta name="description" content="1.1.1 Spring简介Spring是一个开源的控制反转（IoC）和面向且切面（AOP）的容器框架。 IOC控制反转：应用本身不负责以来对象的创建和维护，以来对象的创建及维护由外部容器负责。这样控制权就转移到了外部容器。 Dependency Injection依赖注入：在运行期，由外部容器动态地将以来对象注入到组件中。 事务控制全部交给spring处理，不用手工编写事务的创建和提交  1.1">
+<meta property="og:type" content="article">
 <meta property="og:title" content="海若Hero">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/11/17/Spring知识点笔记/index.html">
 <meta property="og:site_name" content="海若Hero">
-<meta property="og:description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
+<meta property="og:description" content="1.1.1 Spring简介Spring是一个开源的控制反转（IoC）和面向且切面（AOP）的容器框架。 IOC控制反转：应用本身不负责以来对象的创建和维护，以来对象的创建及维护由外部容器负责。这样控制权就转移到了外部容器。 Dependency Injection依赖注入：在运行期，由外部容器动态地将以来对象注入到组件中。 事务控制全部交给spring处理，不用手工编写事务的创建和提交  1.1">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11997621-0c40c0373c6451ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11997621-d941d4a1f9683030.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2019-11-17T09:39:40.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="海若Hero">
-<meta name="twitter:description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
+<meta name="twitter:description" content="1.1.1 Spring简介Spring是一个开源的控制反转（IoC）和面向且切面（AOP）的容器框架。 IOC控制反转：应用本身不负责以来对象的创建和维护，以来对象的创建及维护由外部容器负责。这样控制权就转移到了外部容器。 Dependency Injection依赖注入：在运行期，由外部容器动态地将以来对象注入到组件中。 事务控制全部交给spring处理，不用手工编写事务的创建和提交  1.1">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11997621-0c40c0373c6451ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="海若Hero" type="application/atom+xml">
   
@@ -153,1026 +157,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-网络安全协议与PKI应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-SSL-TLS-协议"><a href="#1-SSL-TLS-协议" class="headerlink" title="1. SSL/TLS 协议"></a><strong>1.</strong> <strong>SSL/TLS</strong> <strong>协议</strong></h3><blockquote>
-<p>Secure Socket Layer安全套接层（SSL v2/v3）和Transport Layer Security 传输层安全协议(TLS v1)协议是目前Internet上使用最广泛的安全协议。SSL/TLS在源和目的实体间建立了一条安全通道(在传输层之上)，提供基于证书的认证、信息完整性和数据保密性服务，用来传送信息、实现Server/Client双向身份验证、防篡改（完整性检测）等。</p>
-</blockquote>
-<p><strong>SSL</strong> <strong>记录协议为</strong> <strong>SSL</strong> <strong>连接提供两种服务：</strong></p>
-<ul>
-<li><p>机密性：握手协议定义了共享的、可以用于对SSL有效载荷进行常规加密的密钥。</p>
-</li>
-<li><p>报文完整性：握手协议还定义了共享的、可以用来形成报文的鉴别码(MAC)的密钥。</p>
-</li>
-</ul>
-<p><strong>客户与服务器之间建立逻辑连接的</strong> <strong>4</strong> <strong>个阶段：</strong></p>
-<ul>
-<li><p>建立安全能力：包括协议版本、会话ID、密文组、压缩方法和初始随机数；</p>
-</li>
-<li><p>服务器鉴别和密钥交换：，服务器可以发送证书、密钥交换和证书请求。服务器发出结束Hello报文阶段的信号；</p>
-</li>
-<li><p>客户鉴别和密钥交换，如果请求的话，客户发送证书，客户发送密钥交换，客户可以发送证书验证报文；</p>
-</li>
-<li><p>结束，修改密文族并结束握手协议。</p>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-ea8454f0157e9ffe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>SSL被设计成使用TCP来提供一种端到端的安全服务。浏览器与Web服务器之间经过一个握手的过程来完成身份鉴定与密钥交换，从而建立安全连接，握手过程流程如下：</strong></p>
-<ul>
-<li><p>　　① 客户端的浏览器向服务器传送客户端 SSL 协议的版本号，加密算法的种类，产生的随机数，以及其他服务器和客户端之间通讯所需要的各种信息。</p>
-</li>
-<li><p>　　② 服务器向客户端传送 SSL 协议的版本号，加密算法的种类，随机数以及其他相关信息，同时服务器还将向客户端传送自己的证书。</p>
-</li>
-<li><p>　　③ 客户利用服务器传过来的信息验证服务器的合法性，服务器的合法性包括：证书是否过期，发行服务器证书的 CA 是否可靠，发行者证书的公钥能否正确解开服务器证书的“发行者的数字签名”，服务器证书上的域名是否和服务器的实际域名相匹配。如果合法性验证没有通过，通讯将断开；如果合法性验证通过，将继续进行第四步。</p>
-</li>
-<li><p>　　④ 用户端随机产生一个用于后面通讯的“对称密码”，然后用服务器的公钥（服务器的公钥从步骤②中的服务器的证书中获得）对其加密，然后将加密后的“预主密码”传给服务器。</p>
-</li>
-<li><p>　　⑤ 如果服务器要求客户的身份认证（在握手过程中为可选），用户可以建立一个随机数然后对其进行数据签名，将这个含有签名的随机数和客户自己的证书以及加密过的“预主密码”一起传给服务器。</p>
-</li>
-<li><p>　　⑥ 如果服务器要求客户的身份认证，服务器必须检验客户证书和签名随机数的合法性，具体的合法性验证过程包括：客户的证书使用日期是否有效，为客户提供证书的CA 是否可靠，发行CA 的公钥能否正确解开客户证书的发行 CA 的数字签名，检查客户的证书是否在证书废止列表（CRL）中。检验如果没有通过，通讯立刻中断；如果验证通过，服务器将用自己的私钥解开加密的“预主密码  ”，然后执行一系列步骤来产生主通讯密码（客户端也将通过同样的方法产生相同的主通讯密码）。</p>
-</li>
-<li><p>　　⑦ 服务器和客户端用相同的主密码即“通话密码”，一个对称密钥用于 SSL 协议的安全数据通讯的加解密通讯。同时在 SSL 通讯过程中还要完成数据通讯的完整性，防止数据通讯中的任何变化。</p>
-</li>
-<li><p>　　⑧ 客户端向服务器端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知服务器客户端的握手过程结束。</p>
-</li>
-<li><p>　　⑨ 服务器向客户端发出信息，指明后面的数据通讯将使用的步骤⑦中的主密码为对称密钥，同时通知客户端服务器端的握手过程结束。</p>
-</li>
-<li><p>　　⑩ SSL 的握手部分结束，SSL 安全通道的数据通讯开始，客户和服务器开始使用相同的对称密钥进行数据通讯，同时进行通讯完整性的检验。</p>
-</li>
-</ul>
-<h3 id="2-S-MIME-amp-PGP-协议"><a href="#2-S-MIME-amp-PGP-协议" class="headerlink" title="2. S/MIME &amp; PGP 协议"></a><strong>2.</strong> <strong>S/MIME &amp; PGP</strong> <strong>协议</strong></h3><blockquote>
-<p>PGP（Pretty Good Privacy）和S/MIME（Secure Multi－Part Intermail Mail Extension），邮件加密专用协议，它们的主要功能就是身份的认证和传输数据的加密。</p>
-</blockquote>
-<p><strong>PGP</strong> <strong>协议：</strong></p>
-<ol>
-<li><p>PGP的成功，主要由于Phil Zimmerman的贡献。PGP提供了一种机密性和鉴别的服务，可以用于电子邮件和文件存储的应用。</p>
-</li>
-<li><p>PGP的实际操作由5种服务组成：鉴别、机密性、压缩、电子邮件的兼容性和分段/重组。</p>
-</li>
-<li><p>加密密钥和密钥环</p>
-</li>
-</ol>
-<p>PGP使用了4种类型的密钥：一次性会话的常规密钥、公开密钥、私有密钥和基于口令短语(Passphrase)的常规密钥。</p>
-<ol start="4">
-<li>公开密钥管理</li>
-</ol>
-<p><strong>S/MIME</strong> <strong>协议：</strong></p>
-<p>该标准包括密码报文语法、报文规范、证书处理以及证书申请语法等方面的内容。</p>
-<ol>
-<li><p>RFC822 – MIME – S/MIME</p>
-</li>
-<li><p>S/MIME的功能：加密的数据、签名的数据、Clear-signed Data和签名并且加密的数据。</p>
-</li>
-<li><p>S/MIME证书的处理(RFC2632)：</p>
-</li>
-<li><p>S/MIME增强的安全服务(RFC2634)：Signed Receipt、Security Label和Security mailing list。</p>
-</li>
-</ol>
-<h3 id="3-安全电子交易-SET-协议"><a href="#3-安全电子交易-SET-协议" class="headerlink" title="3. 安全电子交易 SET 协议"></a><strong>3.</strong> <strong>安全电子交易</strong> <strong>SET</strong> <strong>协议</strong></h3><blockquote>
-<p>在金融业逐步走向电子化的今天，支付工具己逐渐从传统的物理形式的现金转换成信用卡，但支付形式却仍是消费者与商家面对面地使用支付工具，当面即时地查验支付工具的真伪。对于网上交易而言，商家、消费者和银行等中间机构是通过Internet互连在一起的，他们无法用传统的方法完成支付的查验过程。为解决这一问题，VISA和Master两大信用卡组织提出了以信用卡为基础的电子系统支付系统规范，即SET（Secure ElectronicTransaction)标准。</p>
-</blockquote>
-<p><strong>在</strong> <strong>SET</strong> <strong>标准中，定义了五种实体：</strong></p>
-<ul>
-<li><p>1）持卡人：拥有信用卡的消费者；</p>
-</li>
-<li><p>2）商家：在Inter 3）支付网关：由金融机构或第三方控制，它处理持卡人购买和商家支付的请求；</p>
-</li>
-<li><p>4）收单者（Acquirer）：负责将持卡人的帐户中资金转入商家帐户的金融机构；ne上提供商品或服务的商店；</p>
-</li>
-<li><p>5）发卡者：负责向持卡人发放信用卡的金融机构。</p>
-<p>涉及SET交易的所有持卡人、商家和支付网关三个实体。认证机构需分别向持卡人，商家和支付网关发出持卡人证书、商家证书和支付网关证书。三者在传输信息时，要加上发方的数字签字，并用接收方的公开密钥对信息解密。实现商家无法获得持卡人的信用卡信息，银行无法获得持卡人的购物信息，同时保证商家能收到货款的SET支付的目标。</p>
-</li>
-</ul>
-<p><strong>应用示例：</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-98c7ee7cb941887e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<ol>
-<li><p>买主通过https连到电子商务站点，站点服务器验证客户证书</p>
-</li>
-<li><p>站点服务器去LDAP库查用户权限</p>
-</li>
-<li><p>购买、下定单，弹出ActiveX签名控件</p>
-</li>
-<li><p>用户验证控件有效性、受性任</p>
-</li>
-<li><p>控件通过微软CryptoAPI访问用户私钥，并提示签名，同时生订定单数据摘要</p>
-</li>
-<li><p>用户对摘要签名点击提交，签名和订单发到web站点</p>
-</li>
-<li><p>供货商收到订单时先申请时间戳存入日志，再验证签名，验证后指定完成订单者，并生成通告用安全邮件发给完成订单及买主<br><img src="https://upload-images.jianshu.io/upload_images/11997621-3158de0543030ed6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信公众号：海若Hero"></p>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/网络安全协议与PKI应用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-网络安全-数字证书与PKI" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-公钥基础设施简介"><a href="#1-公钥基础设施简介" class="headerlink" title="1. 公钥基础设施简介"></a>1. 公钥基础设施简介</h3><p> PKI（Public Key Infrustructure）又称为公钥基础设施，是一种遵循既定标准的密钥管理平台,它能够为所有网络应用提供加密和数字签名等密码服务及所必需的密钥和证书管理体系。</p>
-<p>  完整的PKI系统必须具有权威认证机关(CA)、注册中心(RA)数字证书存储库LDAP、密钥备份及恢复系统(KMC)、证书作废系统(CRL)、应用接口(RADS)等基本构成部分,构建PKI也将围绕着这五大系统来着手构建。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-dd2a3b90375020d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>PKI是提供公钥加密和数字签名服务的系统或平台，目的是为了管理密钥和证书。一个机构通过采用PKI框架管理密钥和证书可以建立一个安全的网络环境。PKI主要包括四个部分:</p>
-<p>(1)X.509格式的证书(X.509V3)和证书废止列表CRL(X.509 V2)；</p>
-<p>(2)CA/RA操作协议；</p>
-<p>(3)CA管理协议；</p>
-<p>(4)CA政策制定。</p>
-<p>一个典型、完整、有效的PKI应用系统至少应具有以下部分:</p>
-<p>(1)CA认证中心CA是PKI的核心,CA负责管理PKI结构下的所有用户(包括各种应用程序)的证书,把用户的公钥和用户的其它信息捆绑在一起,在网上验证用户的身份,CA还要负责用户证书的黑名单登记和黑名单发布,下面有CA的详细描述。</p>
-<p>(2)X.500目录服务器X.500目录服务器用于发布用户的证书和黑名单信息,用户可通过标准的LDAP协议查询自己或其他人的证书和下载黑名单信息。</p>
-<p>(3)具有高强度密码算法(SSL)的安全WWW服务器出口到中国的WWW服务器,如微软的IIS、Netscape的WWW服务</p>
-<p>PKI是利用公钥技术实现电子商务安全的一种体系,是一种基础设施,网络通讯、网上交易是利用它来保证安全的。从某种意义上讲,PKI包含了安全认证系统,即安全认证系统一CA/RA系统是PKI不可缺的组成部分。</p>
-<p>认证中心(CA),是电子商务体系中的核心环节,是电子交易中信赖的基础。它通过自身的注册审核体系,检查核实进行证书申请的用户身份和各项相关信息,使网上交易的用户属性客观真实性与证书的真实性一致。认证中心作为权威的、可信赖的、公正的第三方机构,专门负责发放并管理所有参与网上交易的实体所需的数字证书。</p>
-<p>RA (Registration Authority),数字证书注册审批机构。RA系统是CA的证书发放、管理的延伸。它负责证书申请者的信息录入、审核以及证书发放等工作;同时,对发放的证书完成相应的管理功能。发放的数字证书可以存放于IC卡、硬盘或软盘等介质中。RA系统是整个CA中心得以正常运营不可缺少的一部分</p>
-<p>密钥管理系统是与电子身份认证中心相对应的密钥管理及服务机构。密钥管理中心KMC的目的在于既保证通信的保密性与私有性，又使得有关国家机构在授权条件下可接入特定的通信过程并破译密文，以保障国家的安全与有关法律的实施。密钥管理中心本身并不知道用于通信信息加密的密钥，但它提供了一种手段，可以恢复该密钥。  密钥管理的目标是安全地实施和运用这些密钥管理服务功能。</p>
-<h3 id="2-数字证书"><a href="#2-数字证书" class="headerlink" title="2. 数字证书"></a>2. 数字证书</h3><p>数字证书，是经过权威认证机构CA签名用于为公钥信息作身份认证声明的电子文件。类似于日常生活中的身份证，它是以数字签名的形式声明，由数字证书认证机构来进行颁发，颁发流程一般为：</p>
-<p>（1）用户到RA中心申请证书。</p>
-<p>（2）USBKEY生成签名密钥对，产生CSR，将CSR上传到RA。</p>
-<p>（3）RA向CA提交用户信息及CSR。</p>
-<p>（4）CA向KMC请求加密密钥，同时提交用户的签名公钥。</p>
-<p>（5）KMC生成加密密钥对，对加密私钥用签名公钥加密。</p>
-<p>（6）KMC将经过加密的加密私钥和加密公钥发给CA。</p>
-<p>（7）CA对用户信息及签名和加密公钥签名，生成证书。</p>
-<p>（8）CA发布证书。</p>
-<p>（9）RA下载证书和经过签名公钥加密的私钥。</p>
-<p>（10）用户下载和安装证书和经过签名公钥加密的私钥。</p>
-<p>证书主要的文件类型和协议有: PEM、DER、PFX、JKS、KDB、CER、KEY、CSR、CRT、CRL 、OCSP、SCEP等。它是以X.509标准格式将证书信息规范的存储到一系列可解析的字段当中，证书包含的内容包括版本、序列号、签名算法、颁发者、有效期、主题、公钥、私钥用法、CRL分发点、基本限制等等，见下表。</p>
-<p> <strong>数字证书包含的信息：</strong></p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>释义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>版本号</td>
-<td>标识证书的版本（V1 V2 V3）</td>
-</tr>
-<tr>
-<td>序列号</td>
-<td>证书的唯一标识符</td>
-</tr>
-<tr>
-<td>签名</td>
-<td>签名算法标识符</td>
-</tr>
-<tr>
-<td>颁发者</td>
-<td>证书颁发者的可识别名</td>
-</tr>
-<tr>
-<td>有效期</td>
-<td>证书有效期的时间段</td>
-</tr>
-<tr>
-<td>主体</td>
-<td>证书拥有者的可识别名</td>
-</tr>
-<tr>
-<td>主体公钥信息</td>
-<td>主体的公钥</td>
-</tr>
-<tr>
-<td>颁发者唯一标识符</td>
-<td>证书颁发者的唯一标识符 V2 V3</td>
-</tr>
-<tr>
-<td>主体唯一标识符</td>
-<td>证书拥有者的唯一标识符 V2 V3</td>
-</tr>
-<tr>
-<td>扩展</td>
-<td>可选的标准和专用的扩展 V2 V3</td>
-</tr>
-</tbody></table>
-<p><strong>数字证书的有效性验证主要从三个方面：</strong></p>
-<p>1，数字证书有效期验证</p>
-<p> 就是说证书的使用时间要在起始时间和结束时间之内。通过解析证书很容易得到证书的有效期</p>
-<p>2，根证书验证</p>
-<p> 先来理解一下什么是根证书？</p>
-<p> 普通的证书一般包括三部分：用户信息，用户公钥，以及CA签名</p>
-<p> 那么我们要验证这张证书就需要验证CA签名的真伪。那么就需要CA公钥。而CA公钥存在于另外一张证书（称这张证书是对普通证书签名的证书）中。因此我们又需要验证这另外一张证书的真伪。因此又需要验证另另外证书（称这张证书是对另外一张证书签名的证书）的真伪。依次往下回溯，就得到一条证书链。那么这张证书链从哪里结束呢？就是在根证书结束（即验证到根证书结束）。根证书是个很特别的证书，它是CA中心自己给自己签名的证书（即这张证书是用CA公钥对这张证书进行签名）。信任这张证书，就代表信任这张证书下的证书链。</p>
-<p> 所有用户在使用自己的证书之前必须先下载根证书。</p>
-<p> 所谓根证书验证就是：用根证书公钥来验证该证书的颁发者签名。所以首先必须要有根证书，并且根证书必须在受信任的证书列表（即信任域）。</p>
-<p>3，CRL验证</p>
-<p>CRL是经过CA签名的证书作废列表，用于证书冻结和撤销。一般来说证书中有CRL地址，供HTTP或者LDAP方式访问，通过解析可得到CRL地址，然后下载CRL进行验证。</p>
-<p>并且证书中有CRL生效日期以及下次更新的日期，因此CRL是自动更新的，因此会有延迟性。</p>
-<p> 于是呢，还有另外一种方式OSCP证书状态在线查询，可以即时的查询证书状态。</p>
-<p>两种证书状态查询方式的比较：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-37d1a4d886746113.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><img src="https://upload-images.jianshu.io/upload_images/11997621-4e58b30df965476e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信公众号：海若Hero"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/网络安全-数字证书与PKI/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-网络安全-哈希算法和数字签名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-单向散列算法"><a href="#1-单向散列算法" class="headerlink" title="1. 单向散列算法"></a>1. 单向散列算法</h3><ul>
-<li>单向散列算法也称为哈希算法，它是一种不可逆的单向数学函数，把哈希算法应用于任意长度的一块数据，可以将它映射为一段数据唯一的、不可逆的、定长的、极其紧凑的字符串，这个字符串便称为散列值、哈希值或消息摘要。</li>
-<li>常见的单向散列算法有由Ron Rivest设计的可以产生128位散列值的MD5和由NSA设计的可以产生160位的散列值的SHA-1，还有SHA-224、 SHA-256、SHA-384 和SHA-512等。</li>
-</ul>
-<p><strong>常见</strong> <strong>HASH</strong> <strong>算法：</strong></p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>SM3</th>
-<th>SHA</th>
-<th>MD5</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Hash值</strong></td>
-<td>256bit</td>
-<td>160bit</td>
-<td>128bit</td>
-</tr>
-<tr>
-<td><strong>分组处理长</strong></td>
-<td>512bit</td>
-<td>512bit</td>
-<td>512bit</td>
-</tr>
-<tr>
-<td><strong>基本字长</strong></td>
-<td>32bit</td>
-<td>32bit</td>
-<td>32bit</td>
-</tr>
-<tr>
-<td><strong>步数</strong></td>
-<td>64(3*16)</td>
-<td>80(4*20)</td>
-<td>64(4*16)</td>
-</tr>
-<tr>
-<td><strong>消息长</strong></td>
-<td>&lt;2^64bit</td>
-<td>2^64bit</td>
-<td>不限</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>MD5： MD5 是由 Ron Rivest 设计的可产生一个 128 位的散列值的散列算法。MD5 设计经过优化以用于 Intel 处理器。这种算法的基本原理已经泄露，这就是为什么它不太受欢迎的原因。</p>
-</blockquote>
-<blockquote>
-<p>SHA-1：与 DSA 公钥算法相似，安全散列算法 1(SHA-1)也是由 NSA 设计的，并由 NIST 将其收录到 FIPS 中，作为散列数据的标准。它可产生一个 160 位的散列值。SHA-1 是流行的用于创建数字签名的单向散列算法。</p>
-</blockquote>
-<p><strong>HASH</strong> <strong>算法主要应用：</strong></p>
-<p>*<em>1）文件校验  　　*</em><br>我们比较熟悉的校验算法有奇偶校验和CRC校验，这2种校验并没有抗数据篡改的能力，它们一定程度上能检测并纠正数据传输中的信道误码，但却不能防止对数据的恶意破坏。  　　<br>MD5 Hash算法的”数字指纹”特性，使它成为目前应用最广泛的一种文件完整性校验和（Checksum）算法，不少Unix系统有提供计算md5 checksum的命令。  　　<br>*<em>2）数字签名  　*</em>　<br>Hash 算法也是现代密码体系中的一个重要组成部分。由于非对称算法的运算速度较慢，所以在数字签名协议中，单向散列函数扮演了一个重要的角色。对 Hash 值，又称”数字摘要”进行数字签名，在统计上可以认为与对文件本身进行数字签名是等效的。而且这样的协议还有其他的优点。  　　<br>*<em>3）鉴权协议  　　*</em><br>如下的鉴权协议又被称作”挑战–认证模式：在传输信道是可被侦听，但不可被篡改的情况下，这是一种简单而安全的方法。</p>
-<h3 id="2-数字签名"><a href="#2-数字签名" class="headerlink" title="2. 数字签名"></a>2. 数字签名</h3><ul>
-<li>数字签名，顾名思义，就像在办公中用笔对纸质文件进行签名，它是在计算机上对数据文件进行签名，用于鉴别数字信息，验证数据发送方的身份，保证数据的完整性和不可否认性。</li>
-<li>它结合使用了非对称加密技术与哈希算法来实现，它包含两种互补的运算：一个用于数字签名的签署，另一个用于数字签名的验证。签名和验签的过程一般由启用 PKI 的应用程序完成，首先由数据的发送方用哈希算法生成数据的哈希值，然后用自己的私钥将这个哈希值加密形成数字签名，将它与数据一起加密发送给接收方；接收方进行解密获得数据和数字签名后，用发送方的公钥对数字签名进行解密，如果成功解密，即证明了发送方的身份；对数字签名解密得到数据的哈希值之后，数据的接收方对数据用相同的哈希算法生成另一个哈希值，然后将这两个哈希值进行比较，如果两者相同，则证明这块数据极有可能在传输期间没有被篡改。.</li>
-</ul>
-<p><strong>数字签名签署和验证数据的步骤如图所示：</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-78c1663b3c0bf8be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>PKCS1</strong> <strong>和</strong> <strong>PKCS7</strong> <strong>标准格式的签名：</strong></p>
-<p>1. PKCS1签名：即裸签名，签名值中只有签名信息。</p>
-<p>2. PKCS7签名：签名中可以带有其他的附加信息，例如签名证书信息、签名原文信息、时间戳信息等。</p>
-<p><strong>PKCS7</strong> <strong>的</strong> <strong>attached</strong> <strong>和</strong> <strong>detached</strong> <strong>方式的数字签名：</strong></p>
-<p>1. attached 方式是将签名内容和原文放在一起，按 PKCS7 的格式打包。PKCS7的结构中有一段可以放明文，但明文必需进行ASN.1编码。在进行数字签名验证的同时，提取明文。这里的明文实际上是真正内容的摘要。</p>
-<p>2. detached 方式打包的 PKCS7格式包中不包含明文信息。因此在验证的时候，还需要传递明文才能验证成功。同理，这里的明文实际上是真正内容的摘要。<br><img src="https://upload-images.jianshu.io/upload_images/11997621-388a6240c25c5067.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信公众号：海若Hero"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/网络安全-哈希算法和数字签名/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-网络安全-非对称加密" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>公开密钥密码算法也叫双密钥密码算法或非对称密钥密码算法，它的加密密钥与解密密钥不同。这种算法需要形成一个在数学上是相关联的密钥对（一个公钥和一个私钥），使用其中一个密钥加密数据，用另一个密钥来解密。公钥可以公开传递，不需要安全信道，但与之对应的私钥必须保密。在图1中，发件人用收件人的公钥加密了一段数据，只有收件人用自己的私钥才能解密。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2177bbc27b5f3624.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 公钥加密要求使用一个公钥和一个私钥"></p>
-<p>与对称密钥密码体制一样，非对称密钥密码体制也有很多种加密算法。常用的非对称加密算法包括RSA、Elgamal（离散对数）、ECC（椭圆曲线）等。它没有了对称加密算法密钥分配之类的问题，不必再保持密钥传递信道的保密性，但它的加密速度相对较低。实际上在通信时，通常使用对称加密算法来加密大量数据，仅在传递对称密钥的时刻才使用非对称加密算法。这样将非对称加密算法与对称加密算法结合使用，可以优势互补、优化性能。同时，非对称密钥算法还可以用来签名和防抵赖等。</p>
-<p>RSA公钥加密算法是1977年由Ron Rivest、Adi Shamirh和LenAdleman在（美国麻省理工学院）开发的。RSA取名来自开发他们三者的名字。RSA是目前最有影响力的公钥加密算法，它能够抵抗到目前为止已知的所有密码攻击，已被ISO推荐为公钥数据加密标准。RSA算法基于一个十分简单的数论事实：将两个大素数相乘十分容易，但那时想要对其乘积进行因式分解却极其困难，因此可以将乘积公开作为加密密钥。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-8e631c6e895a05a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>RSA  加解密算法详解：</p>
-<p>（1）选择一对不同的、足够大的素数p，q。 p=3 q=11</p>
-<p>（2）计算n=pq。 n=33</p>
-<p>（3）计算∮(n)=(p-1)(q-1)，对p, q保密。  ∮(n)=20   </p>
-<p>（4）找一个与∮(n)互质的数e，且1&lt;e&lt; ∮(n)。 e=3</p>
-<p>（5）计算d，使得de≡1 mod ∮(n)。 d=7</p>
-<p>（6）公钥KU=(e,n)，私钥KR=(d,n)。公钥{3,33} 私钥{7,33}</p>
-<p>（7）加密时，先将明文变换成0至n-1的一个整数M。若明文较长，可先分割成适当的组，然后再进行交换。设密文为C，则加密过程为：C ≡ M ͤ （mod n）。        </p>
-<p>（8）解密过程为： M ≡ C ͩ（mod n）。</p>
-<p>Ø 在理论上，rsa 的安全性取决于模n分解的困难性，但数学上至今还未证明分解模就是攻击rsa的最佳办法。</p>
-<p>Ø 人们完全可以设想有另外的途径破译rsa，如求解密指数d或找到（p-1）（q-1）等。但这些途径都不比分解n来的容易。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">/* </span><br><span class="line">		 * 用jdk实现RSA: </span><br><span class="line">		 * */</span><br><span class="line">	    public static void jdkRSA(String src)&#123;</span><br><span class="line"></span><br><span class="line">	        //1.初始化秘钥</span><br><span class="line">	        try &#123;</span><br><span class="line">	            KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            keyPairGenerator.initialize(512);</span><br><span class="line">	            KeyPair keyPair = keyPairGenerator.generateKeyPair();</span><br><span class="line">	            RSAPublicKey rSAPublicKey = (RSAPublicKey)keyPair.getPublic();</span><br><span class="line">	            RSAPrivateKey private1 = (RSAPrivateKey)keyPair.getPrivate();</span><br><span class="line">	            System.out.println(&quot;puk  :&quot;+Base64.encodeBase64String(rSAPublicKey.getEncoded()));</span><br><span class="line">	            System.out.println(&quot;pvk  :&quot;+Base64.encodeBase64String(private1.getEncoded()));</span><br><span class="line"></span><br><span class="line">	            //2.私钥,公钥--加密</span><br><span class="line">	            PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(private1.getEncoded());</span><br><span class="line">	            KeyFactory instance = KeyFactory.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            KeyFactory keyFactory = instance;</span><br><span class="line">	            PrivateKey privateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec);</span><br><span class="line">	            Cipher cipher = Cipher.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            cipher.init(Cipher.ENCRYPT_MODE, privateKey);</span><br><span class="line">	            byte[] result = cipher.doFinal(src.getBytes());</span><br><span class="line">	            System.out.println(&quot;私钥加密,公钥解密--加密:&quot;+Base64.encodeBase64String(result));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	            //3.私钥加密,公钥解密---解密</span><br><span class="line">	            X509EncodedKeySpec x509EncodedKeySpec = new X509EncodedKeySpec(rSAPublicKey.getEncoded());</span><br><span class="line">	            keyFactory=KeyFactory.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            PublicKey publicKey = keyFactory.generatePublic(x509EncodedKeySpec);</span><br><span class="line">	            cipher=Cipher.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            cipher.init(Cipher.DECRYPT_MODE, publicKey);</span><br><span class="line">	            result=cipher.doFinal(result);</span><br><span class="line">	            System.out.println(&quot;私钥加密,公钥解密---解密&quot;+new String(result));</span><br><span class="line"></span><br><span class="line">	            //4.公钥加密,私密解密--加密</span><br><span class="line">	            x509EncodedKeySpec =new X509EncodedKeySpec(rSAPublicKey.getEncoded());</span><br><span class="line">	            keyFactory=KeyFactory.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            publicKey = keyFactory.generatePublic(x509EncodedKeySpec);</span><br><span class="line">	            cipher=Cipher.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            cipher.init(Cipher.ENCRYPT_MODE, publicKey);</span><br><span class="line">	            result=cipher.doFinal(src.getBytes());</span><br><span class="line">	            System.out.println(&quot;公钥加密,私密解密--加密&quot;+Base64.encodeBase64String(result));</span><br><span class="line"></span><br><span class="line">	            //5公钥加密,私钥解密--解密</span><br><span class="line">	            pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(private1.getEncoded());</span><br><span class="line">	            keyFactory=KeyFactory.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            privateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec);</span><br><span class="line">	            cipher=Cipher.getInstance(&quot;RSA&quot;);</span><br><span class="line">	            cipher.init(Cipher.DECRYPT_MODE, privateKey);</span><br><span class="line">	            result=cipher.doFinal(result);</span><br><span class="line">	            System.out.println(&quot;公钥加密,私钥解密--解密&quot;+ new String(result));</span><br><span class="line"></span><br><span class="line">	        &#125; catch (Exception e) &#123;</span><br><span class="line">	            // TODO Auto-generated catch block</span><br><span class="line">	            e.printStackTrace();</span><br><span class="line">	        &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<p>ECC（Ellipse Curve Cryptography）椭圆曲线加密算法是1985年由基于椭圆曲线理论的公钥加密技术开发的。与传统的基于大质数因子分解困难性的加密方法不同，ECC通过椭圆曲线方程式的性质产生密钥。ECC 160bit算法等级，相当于RSA 1024bit密钥提供的保密强度，210bit与RSA2048算法强度相当，计算量则更小，处理速度更快，存储空间和传输带宽占用较少。</p>
-<p>ECC  加解密算法详解：</p>
-<p><strong>1</strong> <strong>）</strong> <strong>ECDSA</strong> <strong>签名</strong></p>
-<p>• 1、选择一条椭圆曲线Ep(a,b)，和基点G；</p>
-<p>• 2、选择私有密钥k（k&lt;n，n为G的阶），利用基点G计算公开密钥K=kG；</p>
-<p>• 3、产生一个随机整数r（r&lt;n），计算点R=rG；</p>
-<p>• 4、将原数据和点R的坐标值x,y作为参数，计算SHA1做为hash，即Hash=SHA1(原数据,x,y)；</p>
-<p>• 5、计算s≡r - Hash * k (mod n)</p>
-<p>• 6、r和s做为签名值，如果r和s其中一个为0，重新从第3步开始执行</p>
-<p><strong>2）</strong> <strong>ECDSA</strong> <strong>验证</strong></p>
-<p>• 1、接受方在收到消息(m)和签名值(r,s)后，进行以下运算</p>
-<p>• 2、计算：sG+H(m)P=(x1,y1), r1≡ x1 mod p。</p>
-<p>• 3、验证等式：r1 ≡ r mod p。</p>
-<p>• 4、如果等式成立，接受签名，否则签名无效。<br><img src="https://upload-images.jianshu.io/upload_images/11997621-e0c2d7e5a6bab59d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tobehero666.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/网络安全-非对称加密/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-网络安全-对称加密" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对称密钥密码算法，也叫做单钥密码算法或私钥密码算法，发送方和接收方共同拥有相同的密钥，发送方使用这个密钥将明文数据加密成密文，然后发送给接收方，接收方收到密文后使用这个密钥将密文解密成明文读取。因为这个密钥既用来进行加密数据，也用来进行解密数据，所以叫做对称密钥，它是一种加密大量数据的加密方法。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-3423628d5db1ed1e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>对称密钥密码体制有很多种加密算法，常用的对称加密算法包括DES、3DES、AES、RC4、SM1（国产）、SM4（国产）等。这类算法的长处是加密速度快，便于硬件实现和大规模生产，但由于对称密钥算法的加密密钥和解密密钥时是相同的单个密钥，以是这类加密算法需要保障密钥安全。所以，在使用对称密钥算法加密通信前，必要有安全信道来传递密钥。</p>
-<p>DES是一种分组数据加密技术（先将数据分成固定长度的小数据块，之后进行加密），速度较快，适用于大量数据加密，DES是应用最广泛的对称密码算法(由于计算能力的快速进展，DES已不在被认为是安全的)；</p>
-<p>DES 加解密算法详解：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d4a313cf71ea0110.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>1</strong> <strong>）</strong> <strong>In Action</strong></p>
-<p>• 有明文M(64位) = 0123456789ABCDEF，即 M(64位) = 0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111</p>
-<p>• L(32位) = 0000 0001 0010 0011 0100 0101 0110 0111<br>R(32位) = 1000 1001 1010 1011 1100 1101 1110 1111</p>
-<p>• 有密钥K(64位) = 133457799BBCDFF1，即 K(64位) = 00010011 00110100 01010111 01111001 10011011 10111100 11011111 11110001</p>
-<p>• 其中末尾红色标注为奇偶校验位，即实际密钥为56位。</p>
-<p><strong>2</strong> <strong>）第一步：生成</strong> <strong>16</strong> <strong>个子钥</strong> <strong>(48</strong> <strong>位</strong> <strong>)</strong></p>
-<p>• <strong>对</strong> <strong>K</strong> <strong>使用</strong> <strong>PC-1(8×7)</strong><br>57 49 41 33 25 17 9<br> 1 58 50 42 34 26 18<br> 10 2 59 51 43 35 27<br> 19 11 3 60 52 44 36<br> 63 55 47 39 31 23 15<br> 7 62 54 46 38 30 22<br> 14 6 61 53 45 37 29<br> 21 13 5 28 20 12 4</p>
-<p>• <strong>从而，由</strong> <strong>K(64</strong> <strong>位</strong> <strong>)</strong> = 00010011 00110100 01010111 01111001 10011011 10111100 11011111 11110001</p>
-<p>• <strong>得到</strong> <strong>K</strong>+(56位) = 1111000 0110011 0010101 0101111 0101010 1011001 1001111 0001111</p>
-<p>• 进而， C0(28位) = 1111000 0110011 0010101 0101111<br>D0(28位) = 0101010 1011001 1001111 0001111</p>
-<p>• C1和D1分别为C0和D0左移1位。… C3和D3分别为C2和D2左移2位 …</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-b4a58f7d11d3fe77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>• <strong>*从而得到</strong> ** <strong>C1D1*</strong> <strong><em>～</em></strong> <strong><em>C16D16</em></strong> <strong><em>：</em></strong></p>
-<p>• <strong><em>C1</em></strong> = 1110000110011001010101011111<br><strong><em>D1</em></strong> = 1010101011001100111100011110</p>
-<p>• <strong><em>C2</em></strong> = 1100001100110010101010111111<br><strong><em>D2</em></strong> = 0101010110011001111000111101</p>
-<p>• <strong><em>C3</em></strong> = 0000110011001010101011111111<br><strong><em>D3</em></strong> = 0101011001100111100011110101</p>
-<p>• <strong><em>C4</em></strong> = 0011001100101010101111111100<br><strong><em>D4</em></strong> = 0101100110011110001111010101</p>
-<p>• <strong><em>…<br>…</em></strong></p>
-<p>• <strong><em>C15</em></strong> = 1111100001100110010101010111<br><strong><em>D15</em></strong> = 1010101010110011001111000111</p>
-<p>• <strong><em>C16</em></strong> = 1111000011001100101010101111<br><strong><em>D16</em></strong> = 0101010101100110011110001111</p>
-<p>• <strong>Kn(48</strong> <strong>位</strong> <strong>) = PC-2( CnDn(56</strong> <strong>位</strong> <strong>) )</strong></p>
-<p>• <strong>PC-2(8×6)</strong></p>
-<p>• 14 17 11 24 1 5</p>
-<p>• 3 28 15 6 21 10</p>
-<p>•  23 19 12 4 26 8</p>
-<p>•  16 7 27 20 13 2</p>
-<p>•  41 52 31 37 47 55</p>
-<p>•  30 40 51 45 33 48</p>
-<p>•  44 49 39 56 34 53</p>
-<p>•  46 42 50 36 29 32</p>
-<p>• 最终得到所有16个子钥，每个48位：<br><strong><em>K1</em></strong> = 000110 110000 001011 101111 111111 000111 000001 110010<br><strong><em>K2</em></strong> = 011110 011010 111011 011001 110110 111100 100111 100101<br><strong><em>K3</em></strong> = 010101 011111 110010 001010 010000 101100 111110 011001<br><strong><em>K4</em></strong> = 011100 101010 110111 010110 110110 110011 010100 011101<br><strong><em>K5</em></strong> = 011111 001110 110000 000111 111010 110101 001110 101000<br><strong><em>K6</em></strong> = 011000 111010 010100 111110 010100 000111 101100 101111<br><strong><em>K7</em></strong> = 111011 001000 010010 110111 111101 100001 100010 111100<br><strong><em>K8</em></strong> = 111101 111000 101000 111010 110000 010011 101111 111011<br><strong><em>K9</em></strong> = 111000 001101 101111 101011 111011 011110 011110 000001<br><strong><em>K10</em></strong> = 101100 011111 001101 000111 101110 100100 011001 001111<br><strong><em>K11</em></strong> = 001000 010101 111111 010011 110111 101101 001110 000110<br><strong><em>K12</em></strong> = 011101 010111 000111 110101 100101 000110 011111 101001<br><strong><em>K13</em></strong> = 100101 111100 010111 010001 111110 101011 101001 000001<br><strong><em>K14</em></strong> = 010111 110100 001110 110111 111100 101110 011100 111010<br><strong><em>K15</em></strong> = 101111 111001 000110 001101 001111 010011 111100 001010<br><strong><em>K16</em></strong> = 110010 110011 110110 001011 000011 100001 011111 110101</p>
-<p><strong>3</strong> <strong>）第二步：用子钥对</strong> <strong>64</strong> <strong>位数据加密</strong></p>
-<p>• <strong>对明文</strong> <strong>M</strong> <strong>使用</strong> <strong>IP</strong>(8×8)</p>
-<p>• 58 50 42 34 26 18 10 2</p>
-<p>•  60 52 44 36 28 20 12 4</p>
-<p>•  62 54 46 38 30 22 14 6</p>
-<p>•  64 56 48 40 32 24 16 8</p>
-<p>•  57 49 41 33 25 17 9 1</p>
-<p>•  59 51 43 35 27 19 11 3</p>
-<p>•  61 53 45 37 29 21 13 5</p>
-<p>•  63 55 47 39 31 23 15 7</p>
-<p>• 由于M(64位) =0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111</p>
-<p>• 对M运用IP，故有 <strong>IP</strong>(64位) = 1100 1100 0000 0000 1100 1100 1111 1111 1111 0000 1010 1010 1111 0000 1010 1010</p>
-<p>• IP(64位) = L0(32位) + R0(32位)</p>
-<p>• 故</p>
-<p>• <strong><em>L0</em></strong> (32位) = 1100 1100 0000 0000 1100 1100 1111 1111<br><strong><em>R0</em></strong> (32位) = 1111 0000 1010 1010 1111 0000 1010 1010</p>
-<p>• 从L0和R0开始，循环16次，得出L1R1到L16R16，依据递推公式：</p>
-<p>• <strong><em>Ln</em></strong> = <strong><em>R(n-1)</em></strong><br><strong><em>Rn</em></strong> = <strong><em>L(n-1)</em></strong> + <strong><em>f</em></strong> (<strong><em>R(n-1)</em></strong>,<strong><em>Kn</em></strong>)</p>
-<p> L1=R0</p>
-<p> R1=L0异或F(R0,K1)</p>
-<p>• 其中除了Kn为48位，其他变量及函数均为32位。</p>
-<p>• 其中+号表示异或XOR运算，函数f 从一个32位的数据块R(n-1)和一个48位子钥Kn得到一个新的32位数据块。</p>
-<p>• 先将32位R(n-1)按照下表扩展到48位，在进行异或运算</p>
-<p>•     32,   1,   2,   3,  4,   5,<br>  4,   5,   6,   7,   8,  9,<br>  8,   9, 10, 11, 12, 13,<br>12, 13, 14, 15, 16, 17,<br>16, 17, 18, 19, 20, 21,<br>20, 21, 22, 23, 24, 25,<br>24, 25, 26, 27, 28, 29,<br>28, 29, 30, 31, 32,  1,</p>
-<p>• 得到48位数，将48位数顺序分成8份，6位一份，作为输入，通过第6位中的1和6作为行数2-5作为列数在S盒中进行置换最后形成32位的<strong><em>f</em></strong> (<strong><em>R(n-1)</em></strong>,<strong><em>Kn</em></strong>)</p>
-<p>• 101000 行10 列0100à4 à1101 à 13</p>
-<p>• S[1]:<br>  14,4,13,1,2,15,11,8,3,10,6,12,5,9,0,7, 　<br>0,15,7,4,14,2,13,1,10,6,12,11,9,5,3,8, 　<br>4,1,14,8,13,6,2,11,15,12,9,7,3,10,5,0, 　<br>15,12,8,2,4,9,1,7,5,11,3,14,10,0,6,13,</p>
-<p>• S[2]:<br>    15,1,8,14,6,11,3,4,9,7,2,13,12,0,5,10,<br>    3,13,4,7,15,2,8,14,12,0,1,10,6,9,11,5,<br>    0,14,7,11,10,4,13,1,5,8,12,6,9,3,2,15,<br>    13,8,10,1,3,15,4,2,11,6,7,12,0,5,14,9,</p>
-<p>• S[3]</p>
-<p>• ….</p>
-<p>• S[8]</p>
-<p>• 到此为止，我们得到了16对32位的数据块，即 L1R1, L2R2, L3R3, …, L16R16</p>
-<p>• 最后一对L16R16就是我们需要的。</p>
-<p>• 继续对R16L16(64位)运用一次重排列： <strong>IP-1(8×8)</strong></p>
-<p>• 40 8 48 16 56 24 64 32</p>
-<p>• 39 7 47 15 55 23 63 31</p>
-<p>•  38 6 46 14 54 22 62 30</p>
-<p>•  37 5 45 13 53 21 61 29</p>
-<p>•  36 4 44 12 52 20 60 28</p>
-<p>•  35 3 43 11 51 19 59 27</p>
-<p>•  34 2 42 10 50 18 58 26</p>
-<p>•  33 1 41 9 49 17 57 25</p>
-<p>• 即在 L16(32位) = 0100 0011 0100 0010 0011 0010 0011 0100<br>R16(32位) = 0000 1010 0100 1100 1101 1001 1001 0101<br>R16L16(64位) = 00001010 01001100 11011001 10010101 01000011 01000010 00110010 00110100</p>
-<p>• 时，对R16L16运用IP-1，得 IP-1(64位) = 10000101 11101000 00010011 01010100 00001111 00001010 10110100 00000101 = 85E813540F0AB405</p>
-<p>• 从而，经过以上步骤，最终从明文 M = 0123456789ABCDEF 得到密文 C = IP-1 = 85E813540F0AB405</p>
-<p>• 以上为加密过程，要解密，依次反向计算即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	     *  用jdk实现DES: </span><br><span class="line">	     *  */</span><br><span class="line">	        public static void jdkDES(String src)&#123;</span><br><span class="line">	            try&#123;</span><br><span class="line">	                // 生成KEY</span><br><span class="line">	                KeyGenerator keyGenerator = KeyGenerator.getInstance(&quot;DES&quot;);            </span><br><span class="line">	                keyGenerator.init(56);</span><br><span class="line">	                // 产生密钥</span><br><span class="line">	                SecretKey secretKey = keyGenerator.generateKey();</span><br><span class="line">	                // 获取密钥</span><br><span class="line">	                byte[] bytesKey = secretKey.getEncoded();</span><br><span class="line">	                </span><br><span class="line">	                </span><br><span class="line">	                // KEY转换</span><br><span class="line">	                DESKeySpec desKeySpec = new DESKeySpec(bytesKey);</span><br><span class="line">	                SecretKeyFactory factory = SecretKeyFactory.getInstance(&quot;DES&quot;);</span><br><span class="line">	                Key convertSecretKey = factory.generateSecret(desKeySpec);</span><br><span class="line">	                </span><br><span class="line">	                </span><br><span class="line">	                // 加密（加解密方式：..工作模式/填充方式）</span><br><span class="line">	                Cipher cipher = Cipher.getInstance(&quot;DES/ECB/PKCS5Padding&quot;);</span><br><span class="line">	                cipher.init(Cipher.ENCRYPT_MODE, convertSecretKey);</span><br><span class="line">	                byte[] result = cipher.doFinal(src.getBytes());</span><br><span class="line">	                System.out.println(&quot;jdk des encrypt:&quot; + Hex.encodeHexString(result));</span><br><span class="line">	                </span><br><span class="line">	                // 解密</span><br><span class="line">	                cipher.init(Cipher.DECRYPT_MODE, convertSecretKey);</span><br><span class="line">	                result = cipher.doFinal(result);</span><br><span class="line">	                System.out.println(&quot;jdk des decrypt:&quot; + new String(result));</span><br><span class="line">	                </span><br><span class="line">	            &#125; catch (Exception e) &#123;</span><br><span class="line">	                e.printStackTrace();</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br></pre></td></tr></table></figure>
-
-<p>3DES是一种基于DES的加密算法，使用3个不同密匙对同一个分组数据块进行3次加密，如此以使得密文强度更高。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	 *  用jdk实现3DES: </span><br><span class="line">	 *  */</span><br><span class="line">	        public static void jdk3DES(String src)    &#123;</span><br><span class="line">	            try &#123;</span><br><span class="line">	                // 生成KEY</span><br><span class="line">	                KeyGenerator keyGenerator = KeyGenerator.getInstance(&quot;DESede&quot;); </span><br><span class="line">	                // 必须长度是：112或168</span><br><span class="line">//	              keyGenerator.init(168);</span><br><span class="line">	                keyGenerator.init(new SecureRandom());</span><br><span class="line">	                // 产生密钥</span><br><span class="line">	                SecretKey secretKey = keyGenerator.generateKey();</span><br><span class="line">	                // 获取密钥</span><br><span class="line">	                byte[] bytesKey = secretKey.getEncoded();</span><br><span class="line">	                </span><br><span class="line">	                </span><br><span class="line">	                // KEY转换</span><br><span class="line">	                DESedeKeySpec desKeySpec = new DESedeKeySpec(bytesKey);</span><br><span class="line">	                SecretKeyFactory factory = SecretKeyFactory.getInstance(&quot;DESede&quot;);</span><br><span class="line">	                Key convertSecretKey = factory.generateSecret(desKeySpec);</span><br><span class="line">	                </span><br><span class="line">	                </span><br><span class="line">	                // 加密</span><br><span class="line">	                Cipher cipher = Cipher.getInstance(&quot;DESede/ECB/PKCS5Padding&quot;);</span><br><span class="line">	                cipher.init(Cipher.ENCRYPT_MODE, convertSecretKey);</span><br><span class="line">	                byte[] result = cipher.doFinal(src.getBytes());</span><br><span class="line">	                System.out.println(&quot;jdk 3des encrypt:&quot; + Hex.encodeHexString(result));</span><br><span class="line">	                </span><br><span class="line">	                // 解密</span><br><span class="line">	                cipher.init(Cipher.DECRYPT_MODE, convertSecretKey);</span><br><span class="line">	                result = cipher.doFinal(result);</span><br><span class="line">	                System.out.println(&quot;jdk 3des decrypt:&quot; + new String(result));</span><br><span class="line">	                </span><br><span class="line">	            &#125; catch (Exception e) &#123;</span><br><span class="line">	                e.printStackTrace();</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br></pre></td></tr></table></figure>
-
-<p>相较于DES和3DES算法而言，AES算法有着更高的速度和资源使用效率，安全级别也较之更高了，被称为下一代加密标准。AES将是未来最主要，最常用的对称密码算法；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">	 *  用jdk实现AES: </span><br><span class="line">	 *  */</span><br><span class="line">	        public static void jdkAES(String src)&#123;</span><br><span class="line">	            try&#123;</span><br><span class="line">	                // 生成KEY</span><br><span class="line">	                KeyGenerator keyGenerator = KeyGenerator.getInstance(&quot;AES&quot;);            </span><br><span class="line">	                keyGenerator.init(128);</span><br><span class="line">	                // 产生密钥</span><br><span class="line">	                SecretKey secretKey = keyGenerator.generateKey();</span><br><span class="line">	                // 获取密钥</span><br><span class="line">	                byte[] keyBytes = secretKey.getEncoded();</span><br><span class="line">	                </span><br><span class="line">	                </span><br><span class="line">	                // KEY转换</span><br><span class="line">	                Key key = new SecretKeySpec(keyBytes, &quot;AES&quot;);</span><br><span class="line">	                </span><br><span class="line">	                </span><br><span class="line">	                // 加密</span><br><span class="line">	                Cipher cipher = Cipher.getInstance(&quot;AES/ECB/PKCS5Padding&quot;);</span><br><span class="line">	                cipher.init(Cipher.ENCRYPT_MODE, key);</span><br><span class="line">	                byte[] result = cipher.doFinal(src.getBytes());</span><br><span class="line">	                System.out.println(&quot;jdk aes encrypt:&quot; + Hex.encodeHexString(result));</span><br><span class="line">	                </span><br><span class="line">	                // 解密</span><br><span class="line">	                cipher.init(Cipher.DECRYPT_MODE, key);</span><br><span class="line">	                result = cipher.doFinal(result);</span><br><span class="line">	                System.out.println(&quot;jdk aes decrypt:&quot; + new String(result));</span><br><span class="line">	                </span><br><span class="line">	            &#125; catch (Exception e) &#123;</span><br><span class="line">	                e.printStackTrace();</span><br><span class="line">	            &#125;</span><br><span class="line">	        &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-ff5fb46325fd3ad9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="天涯惆怅客，孑然江湖行"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/网络安全-对称加密/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux网络管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1、网络基础"><a href="#1、网络基础" class="headerlink" title="1、网络基础"></a>1、网络基础</h1><p>##1.1、iso/osi七层模型</p>
-<p><strong>名词释义</strong></p>
-<ul>
-<li><p>ISO：国际标准化组织</p>
-</li>
-<li><p>OSI：开放系统互联模型</p>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-893f014bbf323100.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<ul>
-<li><p>比特：比特位010101..一个0/1一个单位</p>
-</li>
-<li><p>帧：计算机硬件地址，主要是网卡MAC地址（MAC地址负责局域网通信）</p>
-</li>
-<li><p>报文：ip地址（IP地址负责外网通信）</p>
-</li>
-<li><p>TPDU：传输协议数据单元</p>
-</li>
-<li><p>SPDU：会话协议数据单元</p>
-</li>
-<li><p>PPDU：表示层协议数据单元</p>
-</li>
-<li><p>APDU：应用协议数据单元</p>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-a74271d7ca5e2a01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>##1.2、TCP/IP四层模型</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-e610970750ccae13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7e0dbe04029d8770.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-fcd12088c4286259.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d3b44e85165f3834.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-228ea586f45cc277.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<ul>
-<li><p>TCP：可靠的、面向连接的协议</p>
-</li>
-<li><p>UDP: 不可靠的、面向无连接的协议</p>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-efd2c759794371e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-a16b1714666e7fa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-76b0e7695c91173e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-94ad10f8b265b714.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>##1.3、IP地址</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7748370ce9e262b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-92a48c069c5de7b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<ul>
-<li><p>A类IP：</p>
-<blockquote>
-<p>1.0.0.0代表网络本身，不能分配<br>1.255.255.255代表当前网络的广播地址<br>第一个数代表不同的网段，后三个数代表一个网段内不同的主机</p>
-</blockquote>
-</li>
-<li><p>B类IP：</p>
-<blockquote>
-<p>前两个数代表不同的网段（191.224和191.254不是同一个网络），后两个数代表一个网段内不同的主机</p>
-</blockquote>
-</li>
-<li><p>C类IP：</p>
-<blockquote>
-<p>前三个数代表不同网段，最后一个数代表一个网段内不同的主机</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>子网掩码的使用：</strong></p>
-<p>子网掩码和IP不能单独查看，必须同时查看</p>
-<p><strong>标准子网掩码：</strong></p>
-<ul>
-<li>A类：255.0.0.0</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-c3d52007cc43fd0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<ul>
-<li>B类：255.255.0.0</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-1d8afd963fc8bc46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<ul>
-<li>C类：255.255.255.0</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-58ac730a32f1a76b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-16f87848b2e67346.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>##1.4、端口作用</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-87ff692f35751cc1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-915683ac55626bc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-21e544547c98c2b3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-f52bf273be314062.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p> <em>netstat命令Windows和Linux都可以使用</em></p>
-<p>##1.5、DNS作用</p>
-<blockquote>
-<p><strong>DNS（Domain Name System）是域名系统的缩写，也称作名称解析</strong></p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-70d8c85bd238e03f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><em>Hosts文件的优先级是高于DNS解析的</em></p>
-<p><em>Hosts是做静态IP和域名对应</em></p>
-<p><strong>DNS服务：</strong></p>
-<ul>
-<li><p>层次性</p>
-</li>
-<li><p>分布式</p>
-</li>
-</ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2f9f56ac578977b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-042205ca729103bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><em>域名用“.”进行分割便于分级管理</em></p>
-<p><em>“.”表示根域名，根域名的服务器只有13台</em></p>
-<p><strong>顶级域：</strong></p>
-<ul>
-<li>由域名分配组织ISO决定</li>
-</ul>
-<p><strong>组织域：</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-70d0eb38c46f9fa0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>国家或地区域：</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-c46311186fb54d18.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>二级域：</strong></p>
-<ul>
-<li>企业或个人申请</li>
-</ul>
-<p><strong>主机名：</strong></p>
-<ul>
-<li><p>三级域名是申请完二级域名后自己规定的</p>
-</li>
-<li><p>三级域+二级域+顶级域组成完整域名空间，并且域名全球唯一</p>
-</li>
-</ul>
-<p><strong>域名空间意义：</strong></p>
-<p>1） 互联网中的域名是有结构有规划的</p>
-<p>2） 域名进行了分级在进行域名和IP地址解析时才能更容易找到</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-73e88805935772cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d24bf0f7b7ac57e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>##1.6、网关作用</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-4538bba0cbb6ccac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7581480e532737d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>1） 网关在所有内网计算机访问的不是本网段的数据报时使用。</strong></p>
-<p><strong>2） 网关负责将内网IP转换为公网IP，公网IP转换为内网IP。</strong></p>
-<p>#2、Linux网络配置</p>
-<p>##2.1、Linux配置IP地址</p>
-<p><strong>1） ifconfig命令临时配置IP地址</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2de616acd30a27ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>2） setup工具永久配置IP地址</strong></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-93af92ca507e019c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><strong>3） 修改网络配置文件</strong></p>
-<p><strong>4） 图形界面配置IP地址</strong></p>
-<p>##2.2、Linux网络配置文件</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2acea5eebfb88c31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-66592f968216ce71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-36c37fa78d4d3dfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>##2.3、虚拟机网络参数配置</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-5603dcb23e542dd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-61ae6952782fed85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d301ad49f8501118.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-b02bc8960af0025c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7c0e70d0d21777bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p>#3、Linux网络命令</p>
-<p>##3.1、网络环境查看命令</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-e0693b65716cd12f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-e0973e5f883b6e8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-95904c409780647f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-b1651c54e73badff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><em>在一台服务器里，连内网的网卡是不能设置网关的。</em></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-f2ea1b7ea83dc962.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><em>nslookup命令用来翻译域名对应哪个IP</em></p>
-<p>##3.2、网络测试命令</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-157b4b1218157122.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7723d3b7a5b41d26.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-00436a46fab066f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<blockquote>
-<p>ICMP是（Internet Control Message Protocol）Internet控制报文协议。</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-aa37b726ff4a5be9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-8a9e11b7c1c8280c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><em>抓包命令</em></p>
-<p>#4、远程登录</p>
-<p>##4.1、SSH协议原理</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-e43aa88649dac838.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-0a4a25c2f715a4fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2925cb1a90171db0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-945ee0f3335b59cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-e1ac88af2848a214.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt><br><img src="https://upload-images.jianshu.io/upload_images/11997621-09f988a39e19b244.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tobehero666.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/Linux网络管理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux基本命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###文件和目录命令<br><strong>ls 命令最基本的形式会显示当前目录下的文件和目录</strong><br><strong><em>-F</em></strong> 参数在目录名后加了正斜线（/），以方便用户在输出中分辨它们。类似地，它会在可执行文件（比如上面的my_script文件）的后面加个星号，以便用户找出可在系统上运行的文件</p>
-<p><strong><em>-R</em></strong> 参数是递归选项。它列出了当前目录下包含的子目录中的文件。</p>
-<p><strong><em>-l</em></strong> 参数会产生长列表格式的输出，包含了目录中每个文件的更多相关信息。</p>
-<p><strong><em>ls 命令还支持在命令行中定义过滤器进行简单文本匹配。</em></strong>ls 命令能够识别标准通配符（问号（? ）代表一个字符；星号（* ）代表零个或多个字符）。例如：</p>
-<figure class="highlight plain"><figcaption><span>ls -l my*```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">可以使用中括号表示一个字符位置并给出多个可能的选择，例如字母范围[a - i]。</span><br><span class="line">```$ ls -l f[a-i]ll</span><br></pre></td></tr></table></figure>
-
-<p>另外，可以使用感叹号（!）将不需要的内容排除在外。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l f[!a]ll</span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 13:44</span><br><span class="line"> fell</span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 13:44</span><br><span class="line"> fill</span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 13:44</span><br><span class="line"> Full</span><br></pre></td></tr></table></figure>
-
-<p>###处理文件命令<br><strong>touch 命令创建空文件或改变文件的修改时间。</strong>这个操作并不需要改变文件的内容。</p>
-<p><strong>cp 命令复制文件，需要两个参数——源对象和目标对象</strong>。如果目标文件已经存在，cp 命令可能并不会提醒这一点。最好是加上<strong><em>-i</em></strong> 选项，强制shell询问是否需要覆盖已有文件。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cp -i test_one  test_two</span><br><span class="line">cp: overwrite &apos;test_two&apos;? n</span><br></pre></td></tr></table></figure>
-
-<p>如果不回答y ，文件复制将不会继续。<br><strong><em>-R</em></strong> 参数在一条命令中递归地复制整个目录的内容。也可以在cp 命令中使用通配符。<br>在使用命令行输入文件名或目录名时按一下<strong><em>制表键</em></strong>，shell可以将剩下的文件名自动补充完整。</p>
-<p><strong>mv 命令可以将文件和目录移动到另一个位置或重新命名。</strong>和cp 命令类似，也可以在mv 命令中使用<strong><em>-i</em></strong> 参数。这样在命令试图覆盖已有的文件时，你就会得到提示。</p>
-<p><strong>rm命令删除文件 。</strong>文件一旦删除，就无法再找回。<br><strong><em>-i</em></strong>命令参数提示你是不是要真的删除该文件。<br>如果要删除很多文件且不受提示符的打扰，可以用<strong><em>-f</em></strong> 参数强制删除。</p>
-<p>###处理目录命令<br><strong>mkdir 命令创建目录</strong><br><strong><em>-p</em></strong> 参数可以根据需要创建缺失的父目录，例如：</p>
-<figure class="highlight plain"><figcaption><span>mkdir -p New_Dir/Sub_Dir/Under_Dir```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**rmdir删除目录命令，默认情况下，rmdir 命令只删除空目录。**rmdir 并没有***-i*** 选项来询问是否要删除目录。也可以在整个非空目录上使用rm 命令。***-R*** 参数同样可以递归地删除目录中的文件。</span><br><span class="line"></span><br><span class="line">###查看文件内容命令</span><br><span class="line">**file 命令查看文件类型**</span><br><span class="line"></span><br><span class="line">**cat 命令是显示文本文件中所有数据。**</span><br><span class="line">***-n*** 参数会给所有的行加上行号。如果只想给有文本的行加上行号，可以用***-b*** 参数。</span><br></pre></td></tr></table></figure>
-
-<p>$ cat -n test1<br>     1  hello<br>     2<br>     3  This is a test file.<br>     4<br>     5<br>     6  That we’ll use to       test the cat command.</p>
-<pre><code>***-T*** 参数会用^I 字符组合去替换文中的所有制表符。
-
-**more 命令是分页工具。**会显示文本文件的内容，但会在显示每页数据之后停下来。
-
-**less 命令为more 命令的升级版。**它提供了一些极为实用的特性，能够实现在文本文件中前后翻动，而且还有一些高级搜索功能。
-
-**tail 命令会显示文件最后几行的内容（默认显示文件的末尾10行）。**
-***-n*** 参数修改所显示的行数。
-***-f*** 参数允许你在其他进程使用该文件时查看文件的内容。
-
-**head 命令会显示文件开头那些行的内容（默认显示文件前10行的文本）.**
-***-n*** 参数指定想要显示的行数
-
-![天涯惆怅客，孑然江湖行](https://upload-images.jianshu.io/upload_images/11997621-958db3761cef9a07.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/Linux基本命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-snmp整理笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1.</strong> <strong>snmp是什么</strong></p>
-<p><strong>SNMP</strong>是英文”<strong>Simple Network Management Protocol</strong>“的缩写，中文意思是”<strong>简单网络管理协议</strong>“。<strong>SNMP</strong> <strong>是一种简单网络管理协议，它属于</strong> <strong>TCP/IP</strong> <strong>五层协议中的应用层协议，用于网络管理的协议。</strong> <strong>SNMP</strong> <strong>主要用于网络设备的管理。由于</strong> <strong>SNMP</strong> <strong>协议简单可靠</strong> <strong>，受到了众多厂商的欢迎，成为了目前最为广泛的网管协议。</strong></p>
-<p>　　SNMP协议主要由两大部分构成：SNMP管理站和SNMP代理。SNMP管理站是一个中心节点，负责收集维护各个SNMP元素的信息，并对这些信息进行处理，最后反馈给网络管理员；而SNMP代理是运行在各个被管理的网络节点之上，负责统计该节点的各项信息，并且负责与SNMP管理站交互，接收并执行管理站的命令，上传各种本地的网络信息。</p>
-<p>　　SNMP管理站和SNMP代理之间是松散耦合。他们之间的通信是通过UDP协议完成的。一般情况下，SNMP管理站通过UDP协议向SNMP代理发送各种命令，当SNMP代理收到命令后，返回SNMP管理站需要的参数。但是当SNMP代理检测到网络元素异常的时候，也可以主动向SNMP管理站发送消息，通告当前异常状况。</p>
-<p><strong>SNMP</strong> <strong>的基本思想：为不同种类的设备、不同厂家生产的设备、不同型号的设备，定义为一个统一的接口和协议，使得管理员可以是使用统一的外观面对这些需要管理的网络设备进行管理。通过网络，管理员可以管理位于不同物理空间的设备，从而大大提高网络管理的效率，简化网络管理员的工作。</strong></p>
-<p>　　SNMP的工作方式：管理员需要向设备获取数据，所以SNMP提供了【读】操作；管理员需要向设备执行设置操作，所以SNMP提供了【写】操作；设备需要在重要状况改变的时候，向管理员通报事件的发生，所以SNMP提供了【Trap】操作。</p>
-<p><strong>2.</strong> <strong>snmp应用哪些场景</strong></p>
-<p>利用SNMP，一个管理工作站可以远程管理所有支持这种协议的网络设备，包括监视网络状态、修改网络设备配置、接收网络事件警告等。SNMP的基本思想：为不同种类的设备、不同厂家生产的设备、不同型号的设备，定义为一个统一的接口和协议，使得管理员可以使用统一的网管面对这些需要管理的网络设备进行管理。通过网络，管理员可以管理位于不同物理空间的设备，从而大大提高网络管理的效率，简化网络管理员的工作。</p>
-<p><strong>3.</strong> <strong>snmp能做什么</strong></p>
-<p>SNMP为管理员提供了一个网管平台(NMS)，又称为【管理站】，负责网管命令的发出、数据存储、及数据分析。被监管的设备上运行一个SNMP代理(Agent))，代理实现设备与管理站的SNMP通信。</p>
-<p>网络管理员使用SNMP功能可以查询设备信息、修改设备的参数值、监控设备状态、自动发现网络故障、生成报告等。</p>
-<p>SNMP协议之所以易于使用，这是因为它对外提供了三种用于控制MIB对象的基本操作命令。它们是：Get、Set 和 Trap。</p>
-<p>Get：管理站读取代理者处对象的值。它是SNMP协议中使用率最高的一个命令，因为该命令是从网络设备中获得管理信息的基本方式。</p>
-<p>Set：管理站设置代理者处对象的值。它是一个特权命令，因为可以通过它来改动设备的配置或控制设备的运转状态。它可以设置设备的名称，关掉一个端口或清除一个地址解析表中的项等。</p>
-<p>Trap： 代理者主动向管理站通报重要事件。它的功能就是在网络管理系统没有明确要求的前提下，由管理代理通知网络管理系统有一些特别的情况或问题 发生了。如果发生意外情况，客户会向服务器的162端口发送一个消息，告知服务器指定的变量值发生了变化。通常由服务器请求而获得的数据由服务器的161 端口接收。Trap 消息可以用来通知管理站线路的故障、连接的终端和恢复、认证失败等消息。管理站可相应的作出处理。</p>
-<p>get-next-request操作：从代理进程处提取紧跟当前参数值的下一个参数值。</p>
-<p>get-response操作：返回的一个或多个参数值。这个操作是由代理进程发出的。</p>
-<p><strong>4.</strong> <strong>snmp示例Demo</strong></p>
-<p><strong>4.1、</strong> <strong>Get操作命令：</strong></p>
-<p>4.1.1、<strong>获得本机的信息</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">package me.gacl.snmp;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.snmp4j.CommunityTarget;</span><br><span class="line">import org.snmp4j.PDU;</span><br><span class="line">import org.snmp4j.Snmp;</span><br><span class="line">import org.snmp4j.TransportMapping;</span><br><span class="line">import org.snmp4j.event.ResponseEvent;</span><br><span class="line">import org.snmp4j.mp.SnmpConstants;</span><br><span class="line">import org.snmp4j.smi.Address;</span><br><span class="line">import org.snmp4j.smi.GenericAddress;</span><br><span class="line">import org.snmp4j.smi.OID;</span><br><span class="line">import org.snmp4j.smi.OctetString;</span><br><span class="line">import org.snmp4j.smi.VariableBinding;</span><br><span class="line">import org.snmp4j.transport.DefaultUdpTransportMapping;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * &lt;p&gt;ClassName: GetOID&lt;p&gt;</span><br><span class="line"> * &lt;p&gt;Description:获得本机的信息 &lt;p&gt;</span><br><span class="line"> */</span><br><span class="line">public class GetOID &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception&#123;  </span><br><span class="line">        </span><br><span class="line">        try&#123;  </span><br><span class="line">            //设定CommunityTarget   </span><br><span class="line">            CommunityTarget myTarget = new CommunityTarget();</span><br><span class="line">            //定义远程主机的地址  </span><br><span class="line">            //Address deviceAdd = GenericAddress.parse(&quot;udp:10.20.61.120/161&quot;); </span><br><span class="line">            //定义本机的地址   </span><br><span class="line">            Address localAdd = GenericAddress.parse(&quot;udp:localhost/161&quot;);</span><br><span class="line">            //设定远程主机的地址 </span><br><span class="line">            //myTarget.setAddress(deviceAdd); </span><br><span class="line">            //设定本地主机的地址</span><br><span class="line">            myTarget.setAddress(localAdd);</span><br><span class="line">            //设置snmp共同体   </span><br><span class="line">            myTarget.setCommunity(new OctetString(&quot;public&quot;)); </span><br><span class="line">            //设置超时重试次数   </span><br><span class="line">            myTarget.setRetries(2); </span><br><span class="line">            //设置超时的时间  </span><br><span class="line">            myTarget.setTimeout(5*60);</span><br><span class="line">            //设置使用的snmp版本 </span><br><span class="line">            myTarget.setVersion(SnmpConstants.version2c);  </span><br><span class="line">             </span><br><span class="line">            //设定采取的协议   </span><br><span class="line">            TransportMapping transport = new DefaultUdpTransportMapping();//设定传输协议为UDP</span><br><span class="line">            //调用TransportMapping中的listen()方法，启动监听进程，接收消息，由于该监听进程是守护进程，最后应调用close()方法来释放该进程</span><br><span class="line">            transport.listen();  </span><br><span class="line">            //创建SNMP对象，用于发送请求PDU</span><br><span class="line">            Snmp protocol = new Snmp(transport);  </span><br><span class="line">            //创建请求pdu,获取mib   </span><br><span class="line">            PDU request = new PDU(); </span><br><span class="line">            //调用的add方法绑定要查询的OID</span><br><span class="line">            request.add(new VariableBinding(new OID(&quot;1.3.6.1.2.1.1.1&quot;)));  </span><br><span class="line">            request.add(new VariableBinding(new OID(new int[] &#123;1,3,6,1,2,1,1,2&#125;)));</span><br><span class="line">            //调用setType()方法来确定该pdu的类型</span><br><span class="line">            request.setType(PDU.GETNEXT);</span><br><span class="line">            //调用 send(PDU pdu,Target target)发送pdu，返回一个ResponseEvent对象</span><br><span class="line">            ResponseEvent responseEvent = protocol.send(request, myTarget);  </span><br><span class="line">            //通过ResponseEvent对象来获得SNMP请求的应答pdu，方法：public PDU getResponse()</span><br><span class="line">            PDU response=responseEvent.getResponse();  </span><br><span class="line">            //输出   </span><br><span class="line">            if(response != null)&#123;  </span><br><span class="line">                System.out.println(&quot;request.size()=&quot;+request.size());  </span><br><span class="line">                System.out.println(&quot;response.size()=&quot;+response.size());</span><br><span class="line">                //通过应答pdu获得mib信息（之前绑定的OID的值），方法：VaribleBinding get(int index)</span><br><span class="line">                VariableBinding vb1 = response.get(0);  </span><br><span class="line">                VariableBinding vb2 = response.get(1);  </span><br><span class="line">                System.out.println(vb1);  </span><br><span class="line">                System.out.println(vb2);</span><br><span class="line">                //调用close()方法释放该进程</span><br><span class="line">                transport.close();  </span><br><span class="line">                </span><br><span class="line">                /**</span><br><span class="line">                 * 输出结果：</span><br><span class="line">                 * request.size()=2</span><br><span class="line">				   response.size()=2</span><br><span class="line">				   1.3.6.1.2.1.1.1.0 = Hardware: Intel64 Family 6 Model 60 Stepping 3 AT/AT COMPATIBLE - Software: Windows Version 6.3 (Build 17134 Multiprocessor Free)</span><br><span class="line">				   1.3.6.1.2.1.1.2.0 = 1.3.6.1.4.1.311.1.1.3.1.1</span><br><span class="line"></span><br><span class="line">                 */</span><br><span class="line">            &#125;  </span><br><span class="line">            </span><br><span class="line">          &#125;catch(IOException e)&#123;  </span><br><span class="line">              e.printStackTrace();  </span><br><span class="line">          &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行截图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-0654484cbf6bfa6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>4.1.2、获取远程计算机的名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line">package me.gacl.snmp;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.snmp4j.CommunityTarget;</span><br><span class="line">import org.snmp4j.PDU;</span><br><span class="line">import org.snmp4j.ScopedPDU;</span><br><span class="line">import org.snmp4j.Snmp;</span><br><span class="line">import org.snmp4j.Target;</span><br><span class="line">import org.snmp4j.TransportMapping;</span><br><span class="line">import org.snmp4j.UserTarget;</span><br><span class="line">import org.snmp4j.event.ResponseEvent;</span><br><span class="line">import org.snmp4j.event.ResponseListener;</span><br><span class="line">import org.snmp4j.mp.MPv3;</span><br><span class="line">import org.snmp4j.mp.SnmpConstants;</span><br><span class="line">import org.snmp4j.security.AuthMD5;</span><br><span class="line">import org.snmp4j.security.PrivDES;</span><br><span class="line">import org.snmp4j.security.SecurityLevel;</span><br><span class="line">import org.snmp4j.security.SecurityModels;</span><br><span class="line">import org.snmp4j.security.SecurityProtocols;</span><br><span class="line">import org.snmp4j.security.USM;</span><br><span class="line">import org.snmp4j.security.UsmUser;</span><br><span class="line">import org.snmp4j.smi.Address;</span><br><span class="line">import org.snmp4j.smi.GenericAddress;</span><br><span class="line">import org.snmp4j.smi.OID;</span><br><span class="line">import org.snmp4j.smi.OctetString;</span><br><span class="line">import org.snmp4j.smi.VariableBinding;</span><br><span class="line">import org.snmp4j.transport.DefaultUdpTransportMapping;</span><br><span class="line"></span><br><span class="line">public class Snmp4jFirstDemo &#123;</span><br><span class="line"></span><br><span class="line">    private Snmp snmp = null;</span><br><span class="line">    private int version ;</span><br><span class="line"></span><br><span class="line">    public Snmp4jFirstDemo(int version) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            this.version = version;</span><br><span class="line">            TransportMapping transport = new DefaultUdpTransportMapping();</span><br><span class="line">            snmp = new Snmp(transport);</span><br><span class="line">            if (version == SnmpConstants.version3) &#123;</span><br><span class="line">                // 设置安全模式</span><br><span class="line">                USM usm = new USM(SecurityProtocols.getInstance(),new OctetString(MPv3.createLocalEngineID()), 0);</span><br><span class="line">                SecurityModels.getInstance().addSecurityModel(usm);</span><br><span class="line">            &#125;</span><br><span class="line">            // 开始监听消息</span><br><span class="line">            transport.listen();</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void sendMessage(Boolean syn, final Boolean bro, PDU pdu, String addr)</span><br><span class="line">            throws IOException &#123;</span><br><span class="line">        // 生成目标地址对象</span><br><span class="line">        Address targetAddress = GenericAddress.parse(addr);</span><br><span class="line">        Target target = null;</span><br><span class="line">        if (version == SnmpConstants.version3) &#123;</span><br><span class="line">            // 添加用户</span><br><span class="line">            snmp.getUSM().addUser(new OctetString(&quot;MD5DES&quot;),new UsmUser(new OctetString(&quot;MD5DES&quot;), AuthMD5.ID,new OctetString(&quot;MD5DESUserAuthPassword&quot;),PrivDES.ID, new OctetString(&quot;MD5DESUserPrivPassword&quot;)));</span><br><span class="line">            target = new UserTarget();</span><br><span class="line">            // 设置安全级别</span><br><span class="line">            ((UserTarget) target).setSecurityLevel(SecurityLevel.AUTH_PRIV);</span><br><span class="line">            ((UserTarget) target).setSecurityName(new OctetString(&quot;MD5DES&quot;));</span><br><span class="line">            target.setVersion(SnmpConstants.version3);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            target = new CommunityTarget();</span><br><span class="line">            if (version == SnmpConstants.version1) &#123;</span><br><span class="line">                target.setVersion(SnmpConstants.version1);</span><br><span class="line">                ((CommunityTarget) target).setCommunity(new OctetString(&quot;public&quot;));</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                target.setVersion(SnmpConstants.version2c);</span><br><span class="line">                ((CommunityTarget) target).setCommunity(new OctetString(&quot;public&quot;));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        // 目标对象相关设置</span><br><span class="line">        target.setAddress(targetAddress);</span><br><span class="line">        target.setRetries(5);</span><br><span class="line">        target.setTimeout(1000);</span><br><span class="line"></span><br><span class="line">        if (!syn) &#123;</span><br><span class="line">            // 发送报文 并且接受响应</span><br><span class="line">            ResponseEvent response = snmp.send(pdu, target);</span><br><span class="line">            // 处理响应</span><br><span class="line">            System.out.println(&quot;Synchronize(同步) message(消息) from(来自) &quot;</span><br><span class="line">                    + response.getPeerAddress() + &quot;\r\n&quot;+&quot;request(发送的请求):&quot;</span><br><span class="line">                    + response.getRequest() + &quot;\r\n&quot;+&quot;response(返回的响应):&quot;</span><br><span class="line">                    + response.getResponse());</span><br><span class="line">            /**</span><br><span class="line">             * 输出结果：</span><br><span class="line">             * Synchronize(同步) message(消息) from(来自) 10.20.61.120/161</span><br><span class="line">			   request(发送的请求):GET[requestID=680783532, errorStatus=Success(0), errorIndex=0, VBS[1.3.6.1.2.1.1.5.0 = Null]]</span><br><span class="line">			   response(返回的响应):RESPONSE[requestID=680783532, errorStatus=Success(0), errorIndex=0, VBS[1.3.6.1.2.1.1.5.0 = IE11Win7]]</span><br><span class="line"></span><br><span class="line">             */</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 设置监听对象</span><br><span class="line">            ResponseListener listener = new ResponseListener() &#123;</span><br><span class="line"></span><br><span class="line">                public void onResponse(ResponseEvent event) &#123;</span><br><span class="line">                    if (bro.equals(false)) &#123;</span><br><span class="line">                        ((Snmp) event.getSource()).cancel(event.getRequest(),this);</span><br><span class="line">                    &#125;</span><br><span class="line">                    // 处理响应</span><br><span class="line">                    PDU request = event.getRequest();</span><br><span class="line">                    PDU response = event.getResponse();</span><br><span class="line">                    System.out.println(&quot;Asynchronise(异步) message(消息) from(来自) &quot;</span><br><span class="line">                            + event.getPeerAddress() + &quot;\r\n&quot;+&quot;request(发送的请求):&quot; + request</span><br><span class="line">                            + &quot;\r\n&quot;+&quot;response(返回的响应):&quot; + response);</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;;</span><br><span class="line">            // 发送报文</span><br><span class="line">            snmp.send(pdu, target, null, listener);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        //Snmp的三个版本号</span><br><span class="line">        //int ver3 = SnmpConstants.version3;</span><br><span class="line">        int ver2c = SnmpConstants.version2c;</span><br><span class="line">        //int ver1 = SnmpConstants.version1;</span><br><span class="line">        Snmp4jFirstDemo manager = new Snmp4jFirstDemo(ver2c);</span><br><span class="line">        // 构造报文</span><br><span class="line">        PDU pdu = new PDU();</span><br><span class="line">         //PDU pdu = new ScopedPDU();</span><br><span class="line">        // 设置要获取的对象ID，这个OID代表远程计算机的名称</span><br><span class="line">        OID oids = new OID(&quot;1.3.6.1.2.1.1.5.0&quot;);</span><br><span class="line">        pdu.add(new VariableBinding(oids));</span><br><span class="line">        // 设置报文类型</span><br><span class="line">        pdu.setType(PDU.GET);</span><br><span class="line">        //((ScopedPDU) pdu).setContextName(new OctetString(&quot;priv&quot;));</span><br><span class="line">        try &#123;</span><br><span class="line">            // 发送消息 其中最后一个是想要发送的目标地址</span><br><span class="line">            manager.sendMessage(false, true, pdu, &quot;udp:10.20.61.120/161&quot;);//10.20.61.120 Win7虚拟机</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行截图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-6e0012bcef3cab8e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>4.2、</strong> <strong>Set操作命令：</strong></p>
-<p>4.2.1、修改读取的远程计算机的名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line">package me.gacl.snmp;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.util.Vector;</span><br><span class="line"></span><br><span class="line">import org.snmp4j.CommunityTarget;</span><br><span class="line">import org.snmp4j.PDU;</span><br><span class="line">import org.snmp4j.Snmp;</span><br><span class="line">import org.snmp4j.TransportMapping;</span><br><span class="line">import org.snmp4j.event.ResponseEvent;</span><br><span class="line">import org.snmp4j.mp.SnmpConstants;</span><br><span class="line">import org.snmp4j.smi.Address;</span><br><span class="line">import org.snmp4j.smi.GenericAddress;</span><br><span class="line">import org.snmp4j.smi.OID;</span><br><span class="line">import org.snmp4j.smi.OctetString;</span><br><span class="line">import org.snmp4j.smi.VariableBinding;</span><br><span class="line">import org.snmp4j.transport.DefaultUdpTransportMapping;</span><br><span class="line"></span><br><span class="line">public class SnmpUtil &#123;</span><br><span class="line"> </span><br><span class="line">       private Snmp snmp = null;</span><br><span class="line"></span><br><span class="line">       private Address targetAddress = null;</span><br><span class="line"> </span><br><span class="line">       public void initComm() throws IOException &#123;</span><br><span class="line">             </span><br><span class="line">              // 设置Agent方的IP和端口</span><br><span class="line">              targetAddress = GenericAddress.parse(&quot;udp:10.20.61.120/161&quot;);</span><br><span class="line"></span><br><span class="line">              TransportMapping transport = new DefaultUdpTransportMapping();</span><br><span class="line"></span><br><span class="line">              snmp = new Snmp(transport);</span><br><span class="line"></span><br><span class="line">              transport.listen();</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">       public ResponseEvent sendPDU(PDU pdu) throws IOException &#123;</span><br><span class="line"></span><br><span class="line">              // 设置 target</span><br><span class="line">              CommunityTarget target = new CommunityTarget();</span><br><span class="line"></span><br><span class="line">              target.setCommunity(new OctetString(&quot;public&quot;));</span><br><span class="line"></span><br><span class="line">              target.setAddress(targetAddress);</span><br><span class="line"></span><br><span class="line">              // 通信不成功时的重试次数</span><br><span class="line">              target.setRetries(2);</span><br><span class="line"></span><br><span class="line">              // 超时时间</span><br><span class="line">              target.setTimeout(1500);</span><br><span class="line"></span><br><span class="line">              target.setVersion(SnmpConstants.version1);</span><br><span class="line"></span><br><span class="line">              // 向Agent发送PDU，并返回Response</span><br><span class="line">              return snmp.send(pdu, target);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">       public void setPDU() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">              // set PDU</span><br><span class="line">              PDU pdu = new PDU();</span><br><span class="line"></span><br><span class="line">              pdu.add(new VariableBinding(new OID(new int[] &#123; 1, 3, 6, 1, 2, 1, 1, 5, 0 &#125;), new OctetString(&quot;SNMPTEST&quot;)));</span><br><span class="line"></span><br><span class="line">              pdu.setType(PDU.SET);</span><br><span class="line"></span><br><span class="line">              sendPDU(pdu);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">       public void getPDU() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">              // get PDU</span><br><span class="line">              PDU pdu = new PDU();</span><br><span class="line"></span><br><span class="line">              pdu.add(new VariableBinding(new OID(new int[] &#123; 1, 3, 6, 1, 2, 1, 1, 5, 0 &#125;)));</span><br><span class="line"></span><br><span class="line">              pdu.setType(PDU.GET);</span><br><span class="line"></span><br><span class="line">              readResponse(sendPDU(pdu));</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">       public void readResponse(ResponseEvent respEvnt) &#123;</span><br><span class="line"></span><br><span class="line">              // 解析Response</span><br><span class="line">              if (respEvnt != null &amp;&amp; respEvnt.getResponse() != null) &#123;</span><br><span class="line"></span><br><span class="line">                     Vector&lt;VariableBinding&gt; recVBs = (Vector&lt;VariableBinding&gt;) respEvnt.getResponse().getVariableBindings();</span><br><span class="line"></span><br><span class="line">                     for (int i = 0; i &lt; recVBs.size(); i++) &#123;</span><br><span class="line"></span><br><span class="line">                            VariableBinding recVB = recVBs.elementAt(i);</span><br><span class="line"></span><br><span class="line">                            System.out.println(recVB.getOid() + &quot; : &quot; + recVB.getVariable());</span><br><span class="line"></span><br><span class="line">                     &#125;</span><br><span class="line"></span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">     </span><br><span class="line"></span><br><span class="line">       public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">              try &#123;</span><br><span class="line"></span><br><span class="line">                     SnmpUtil util = new SnmpUtil();</span><br><span class="line"></span><br><span class="line">                     util.initComm();</span><br><span class="line"></span><br><span class="line">                     util.setPDU();</span><br><span class="line"></span><br><span class="line">                     util.getPDU();</span><br><span class="line"></span><br><span class="line">              &#125; catch (IOException e) &#123;</span><br><span class="line"></span><br><span class="line">                     e.printStackTrace();</span><br><span class="line"></span><br><span class="line">              &#125;</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行截图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-59ec86feeff9f216.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>4.3、</strong> <strong>Trap操作命令：</strong></p>
-<p>4.3.1、发送Trap</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">package me.gacl.snmp;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import org.snmp4j.CommunityTarget;</span><br><span class="line">import org.snmp4j.PDU;</span><br><span class="line">import org.snmp4j.Snmp;</span><br><span class="line">import org.snmp4j.TransportMapping;</span><br><span class="line">import org.snmp4j.event.ResponseEvent;</span><br><span class="line">import org.snmp4j.mp.SnmpConstants;</span><br><span class="line">import org.snmp4j.smi.Address;</span><br><span class="line">import org.snmp4j.smi.GenericAddress;</span><br><span class="line">import org.snmp4j.smi.OID;</span><br><span class="line">import org.snmp4j.smi.OctetString;</span><br><span class="line">import org.snmp4j.smi.UdpAddress;</span><br><span class="line">import org.snmp4j.smi.VariableBinding;</span><br><span class="line">import org.snmp4j.transport.DefaultUdpTransportMapping;</span><br><span class="line"></span><br><span class="line">public class TrapUtil &#123;</span><br><span class="line"> </span><br><span class="line">       private Snmp snmp = null;</span><br><span class="line"></span><br><span class="line">       private Address targetAddress = null;</span><br><span class="line"> </span><br><span class="line">       private TransportMapping transport = null;</span><br><span class="line">       </span><br><span class="line">       public void initComm() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">              // 设置Agent方的IP和端口</span><br><span class="line">    	      targetAddress = GenericAddress.parse(&quot;udp:10.20.61.109/162&quot;);</span><br><span class="line">              // 设置send trap的IP和端口</span><br><span class="line">    	      transport = new DefaultUdpTransportMapping(new UdpAddress(&quot;10.20.61.120/161&quot;));</span><br><span class="line">              snmp = new Snmp(transport);</span><br><span class="line"></span><br><span class="line">              transport.listen();</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">       public ResponseEvent sendPDU(PDU pdu) throws IOException &#123;</span><br><span class="line"></span><br><span class="line">              // 设置 target</span><br><span class="line">              CommunityTarget target = new CommunityTarget();</span><br><span class="line"></span><br><span class="line">              target.setCommunity(new OctetString(&quot;public&quot;));</span><br><span class="line"></span><br><span class="line">              target.setAddress(targetAddress);</span><br><span class="line"></span><br><span class="line">              // 通信不成功时的重试次数</span><br><span class="line">              target.setRetries(2);</span><br><span class="line"></span><br><span class="line">              // 超时时间</span><br><span class="line">              target.setTimeout(1500);</span><br><span class="line"></span><br><span class="line">              target.setVersion(SnmpConstants.version2c);</span><br><span class="line"></span><br><span class="line">              // 向Agent发送PDU，并返回Response</span><br><span class="line">              return snmp.send(pdu, target);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">       public void setTrap() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">           // 构造Trap PDU</span><br><span class="line"></span><br><span class="line">           PDU pdu = new PDU();</span><br><span class="line"></span><br><span class="line">           pdu.add(new VariableBinding(new OID(&quot;.1.3.6.1.2.3377.10.1.1.1.1&quot;),</span><br><span class="line"></span><br><span class="line">                         new OctetString(&quot;SnmpTrap&quot;)));</span><br><span class="line"></span><br><span class="line">           pdu.setType(PDU.TRAP);</span><br><span class="line"></span><br><span class="line">           sendPDU(pdu);</span><br><span class="line"></span><br><span class="line">           System.out.println(&quot;Trap sent successfully.&quot;);</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">              try &#123;</span><br><span class="line"></span><br><span class="line">                     TrapUtil util = new TrapUtil();</span><br><span class="line"></span><br><span class="line">                     util.initComm();</span><br><span class="line"></span><br><span class="line">                     util.setTrap();</span><br><span class="line"></span><br><span class="line">              &#125; catch (IOException e) &#123;</span><br><span class="line"></span><br><span class="line">                     e.printStackTrace();</span><br><span class="line">              &#125;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行截图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d1af3e317f88ec33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>4.3.2、接收Trap</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">package me.gacl.snmp;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">import org.snmp4j.CommandResponder;</span><br><span class="line">import org.snmp4j.CommandResponderEvent;</span><br><span class="line">import org.snmp4j.PDU;</span><br><span class="line">import org.snmp4j.Snmp;</span><br><span class="line">import org.snmp4j.TransportMapping;</span><br><span class="line">import org.snmp4j.smi.Address;</span><br><span class="line">import org.snmp4j.smi.GenericAddress;</span><br><span class="line">import org.snmp4j.smi.UdpAddress;</span><br><span class="line">import org.snmp4j.transport.DefaultUdpTransportMapping;</span><br><span class="line"></span><br><span class="line">public class Snmp4jTrapDemo &#123;</span><br><span class="line">	</span><br><span class="line">	  private Snmp snmp = null;</span><br><span class="line">      private Address targetAddress = null;      </span><br><span class="line">      private TransportMapping transport = null;</span><br><span class="line">      </span><br><span class="line">      public void initComm() throws IOException &#123;</span><br><span class="line"></span><br><span class="line">             // 设置Agent方的IP和端口</span><br><span class="line">             targetAddress = GenericAddress.parse(&quot;udp:10.20.61.120/161&quot;);</span><br><span class="line">             // 设置接收trap的IP和端口</span><br><span class="line">             transport = new DefaultUdpTransportMapping(new UdpAddress(&quot;10.20.61.109/162&quot;));</span><br><span class="line">             snmp = new Snmp(transport);</span><br><span class="line"></span><br><span class="line">             CommandResponder trapRec = new CommandResponder() &#123;</span><br><span class="line"></span><br><span class="line">                    public synchronized void processPdu(CommandResponderEvent e) &#123;</span><br><span class="line"></span><br><span class="line">                           // 接收trap</span><br><span class="line">                           PDU command = e.getPDU();</span><br><span class="line">                           if (command != null) &#123;</span><br><span class="line">                                  System.out.println(command.toString());</span><br><span class="line">                           &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">             &#125;;</span><br><span class="line"></span><br><span class="line">             snmp.addCommandResponder(trapRec);</span><br><span class="line">             transport.listen();</span><br><span class="line">      &#125;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">      public synchronized void listen() &#123;</span><br><span class="line"></span><br><span class="line">          System.out.println(&quot;Waiting for traps..&quot;);</span><br><span class="line">          </span><br><span class="line">          try &#123;</span><br><span class="line">                 this.wait();//Wait for traps to come in</span><br><span class="line">          &#125; catch (InterruptedException ex) &#123;</span><br><span class="line">                 System.out.println(&quot;Interrupted while waiting for traps: &quot; + ex);</span><br><span class="line">                 System.exit(-1);</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">          try &#123;</span><br><span class="line">        	  Snmp4jTrapDemo traputil = new Snmp4jTrapDemo();</span><br><span class="line">        	  traputil.initComm();</span><br><span class="line">        	  traputil.listen();</span><br><span class="line">          &#125; catch (IOException e) &#123;</span><br><span class="line">                 e.printStackTrace();</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行截图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-fdab1814de8987d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2cdf81e7a4ef1ccc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tobehero666.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/snmp整理笔记/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring知识点笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Spring知识点笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -1508,6 +493,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Beer, drugs, chickens all have to be spent<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -1515,16 +531,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/Spring知识点笔记/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/17/Spring知识点笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/11/17/snmp整理笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/17/CSS设计指南/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1544,206 +628,14 @@
 
 
 
-
-  
-    <article id="post-CSS设计指南" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-1-CSS-语法"><a href="#1-1-CSS-语法" class="headerlink" title="1.1 CSS 语法"></a>1.1 CSS 语法</h2><p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selector &#123;declaration1; declaration2; ... declarationN &#125;</span><br></pre></td></tr></table></figure>
-
-<p>选择器通常是您需要改变样式的 HTML 元素。</p>
-<p>每条声明由一个属性和一个值组成。</p>
-<p>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">selector &#123;property: value&#125;</span><br></pre></td></tr></table></figure>
-
-<p>下面这行代码的作用是将 h1 元素内的文字颜色定义为红色，同时将字体大小设置为 14 像素。</p>
-<p>在这个例子中，h1 是选择器，color 和 font-size 是属性，red 和 14px 是值。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;color:red; font-size:14px;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>下面的示意图为您展示了上面这段代码的结构：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-34db28928b347aa5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h3 id="1-1-1-字体属性："><a href="#1-1-1-字体属性：" class="headerlink" title="1.1.1 字体属性："></a>1.1.1 字体属性：</h3><p>属性 含义 属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">font-family 字体 各种字体</span><br><span class="line"></span><br><span class="line">font-style 字体样式 italic、oblique</span><br><span class="line"></span><br><span class="line">font-variant 小体大写 small-caps</span><br><span class="line"></span><br><span class="line">font-weight 字体粗细 bold、bolder、lighter…</span><br><span class="line"></span><br><span class="line">font-size 字体大小 absolute、relative、%</span><br><span class="line"></span><br><span class="line">color 字体颜色 颜色值</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-2-颜色与背景属性："><a href="#1-1-2-颜色与背景属性：" class="headerlink" title="1.1.2 颜色与背景属性："></a>1.1.2 颜色与背景属性：</h3><p>属性  含义  属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Color 颜色  颜色值</span><br><span class="line"></span><br><span class="line">Background-color 背景色  颜色值</span><br><span class="line"></span><br><span class="line">Background-image 背景图案  图片路径</span><br><span class="line"></span><br><span class="line">Background-repeat 背景图案重复方式 Repeat-x | repeat-y | no-repeat</span><br><span class="line"></span><br><span class="line">Background-attachment 背景的滚动 Scroll | fix</span><br><span class="line"></span><br><span class="line">Background-position 背景图案初始位置 % | n em | top | left | right | bottom</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-3-文本属性"><a href="#1-1-3-文本属性" class="headerlink" title="1.1.3 文本属性:"></a>1.1.3 文本属性:</h3><p>属性 含义 属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">word-spacing 单词间距 n em</span><br><span class="line"></span><br><span class="line">letter-spacing 字母间距 n em</span><br><span class="line"></span><br><span class="line">text-decoration 装饰样式 underline| overline| line-through| blink</span><br><span class="line"></span><br><span class="line">vertical-align 垂直方向位置 sub| super |top |text-top| middle| bottom| text-bottom</span><br><span class="line"></span><br><span class="line">text-transform 转为其他形式 capitalize| uppercase| lowercase</span><br><span class="line"></span><br><span class="line">text-align 对齐 left| right| center| justify</span><br><span class="line"></span><br><span class="line">text-indent 缩进 n em| %</span><br><span class="line"></span><br><span class="line">line-height 行高 pixels、n em、%</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-4-边距属性"><a href="#1-1-4-边距属性" class="headerlink" title="1.1.4 边距属性:"></a>1.1.4 边距属性:</h3><p> 属性 含义 属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">margin-top 上边距 n em | %</span><br><span class="line"></span><br><span class="line">margin-right 右 n em | %</span><br><span class="line"></span><br><span class="line">margin-bottom 下 n em | %</span><br><span class="line"></span><br><span class="line">margin-left 左 n em | %</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-5-边框属性"><a href="#1-1-5-边框属性" class="headerlink" title="1.1.5 边框属性:"></a>1.1.5 边框属性:</h3><p>属性 含义 属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Border-top-width 上边框宽度 n em | thin | medium | thick</span><br><span class="line"></span><br><span class="line">Border-right-width 右 同上</span><br><span class="line"></span><br><span class="line">Border-bottom-width 下 同上</span><br><span class="line"></span><br><span class="line">Border-left-width 左 同上</span><br><span class="line"></span><br><span class="line">Border-width 四边 同上</span><br><span class="line"></span><br><span class="line">Border-color 边框颜色 Color</span><br><span class="line"></span><br><span class="line">Border-style 边框样式 Dotted | dash | solid | double | groove | ridge | inset | outset</span><br><span class="line"></span><br><span class="line">Border-top|right|bottom|left 上(右|底|左)所有属性 Border-width | border-style | color</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-6-图文混排"><a href="#1-1-6-图文混排" class="headerlink" title="1.1.6 图文混排:"></a>1.1.6 图文混排:</h3><p> 属性 含义 属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Width 宽度 n em | %</span><br><span class="line"></span><br><span class="line">Height 高度 n em</span><br><span class="line"></span><br><span class="line">Float 文字环绕 Left | right</span><br><span class="line"></span><br><span class="line">clear 去除文字环绕 Left | right | both</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-7-列表属性"><a href="#1-1-7-列表属性" class="headerlink" title="1.1.7 列表属性:"></a>1.1.7 列表属性:</h3><p>属性 含义 属性值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Display 是否显示 Block | inline | list-item | none</span><br><span class="line"></span><br><span class="line">White-space 空白部分 Pre | nowrap | normal（是否合并)</span><br><span class="line"></span><br><span class="line">List-style-type 项目编号 Disc|circle|square|decimal|lower-roman|upper-roman|lower-alpha|upper-alpha|none</span><br><span class="line"></span><br><span class="line">List-style-image 项目前图片 Img-url</span><br><span class="line"></span><br><span class="line">List-style-position 第二行位置 Inside | outside</span><br><span class="line"></span><br><span class="line">List-style 全部属性 Keyword | position | url</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-1-8-鼠标属性"><a href="#1-1-8-鼠标属性" class="headerlink" title="1.1.8 鼠标属性:"></a>1.1.8 鼠标属性:</h3><p>属性值 含义 属性值 含义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Auto 自动 N-resize 上箭头</span><br><span class="line"></span><br><span class="line">Crosshair &quot;+&quot; Se-resize 右下</span><br><span class="line"></span><br><span class="line">Default 默认 Sw-resize 左下</span><br><span class="line"></span><br><span class="line">Hand 手形 S-resize 下箭头</span><br><span class="line"></span><br><span class="line">Move 移动 W-resize 左箭头</span><br><span class="line"></span><br><span class="line">E-resize 右箭头 Text &quot;I&quot;</span><br><span class="line"></span><br><span class="line">Ne-resize 右上 Wait 沙漏</span><br><span class="line"></span><br><span class="line">Nw-resize 左上 help 帮助</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-2-CSS选择器"><a href="#1-2-CSS选择器" class="headerlink" title="1.2 CSS选择器"></a>1.2 CSS选择器</h2><h3 id="1-2-1-li标签选择器"><a href="#1-2-1-li标签选择器" class="headerlink" title="1.2.1 li标签选择器"></a>1.2.1 li标签选择器</h3><p>html:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;li&gt;列表项1&lt;/li&gt;（改变标签里的样式类型）</span><br></pre></td></tr></table></figure>
-
-<p>css:</p>
-<p>针对所有列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">li&#123;</span><br><span class="line"></span><br><span class="line"> color: rgb(255,0,0); /*#ff0000 red*/</span><br><span class="line"></span><br><span class="line">  font-size: 30px;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-2-类选择器-class（把一堆样式划为一类）"><a href="#1-2-2-类选择器-class（把一堆样式划为一类）" class="headerlink" title="1.2.2 类选择器 class（把一堆样式划为一类）"></a>1.2.2 类选择器 class（把一堆样式划为一类）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre style=&quot;margin-bottom:18.0pt;line-height:16.5pt;background:#F6F8FA;</span><br><span class="line">word-break:break-all&quot;&gt;div`.topBar +Tab = &lt;`divclass`=`&quot;topBar&quot;`&gt;&lt;/`div`&gt;`&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<p>当前页面内可以多个同样 html:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre style=&quot;margin-bottom:18.0pt;line-height:16.5pt;background:#F6F8FA;</span><br><span class="line">word-break:break-all&quot;&gt;&lt;li  class=&quot;blue&quot;&gt;`列表项``2`&lt;/li&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<p>css:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre style=&quot;margin-bottom:18.0pt;</span><br><span class="line">line-height:16.5pt;background:#F6F8FA;word-break:break-all&quot;&gt;  color:  #0000ff;&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&lt;pre style=&quot;margin-bottom:18.0pt;</span><br><span class="line">line-height:16.5pt;background:#F6F8FA;word-break:break-all&quot;&gt;  &#125;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-2-3-ID选择器-id（也可控制某个DIV样式）"><a href="#1-2-3-ID选择器-id（也可控制某个DIV样式）" class="headerlink" title="1.2.3 ID选择器 id（也可控制某个DIV样式）"></a>1.2.3 ID选择器 id（也可控制某个DIV样式）</h3><p>当前页面内唯一id；  如果页面内出现多个相同id，虽然可以解析出，但不规范，不建议</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;li id=&quot;item&quot;&gt;列表项1&lt;/li&gt;</span><br><span class="line"></span><br><span class="line">  #item&#123;</span><br><span class="line"></span><br><span class="line"> color: #00FF00;</span><br><span class="line"></span><br><span class="line"> font-size:40px;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>权重越大，优先级越高，优先级高的覆盖优先级低的</p>
-<p>各种选择器可以用在列表li、容器div等中</p>
-<p>html:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;这是一个Div&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>CSS:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line"></span><br><span class="line">background-color:  #ccc;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-3-CSS样式规则"><a href="#1-3-CSS样式规则" class="headerlink" title="1.3 CSS样式规则"></a>1.3 CSS样式规则</h2><h3 id="1-3-1-三种定义样式的方法"><a href="#1-3-1-三种定义样式的方法" class="headerlink" title="1.3.1 三种定义样式的方法"></a>1.3.1 三种定义样式的方法</h3><p><strong>①**</strong>在本文件下的表示方法**</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> &lt;head&gt;</span><br><span class="line"></span><br><span class="line"> &lt;style  type=&quot;text/css&quot;&gt; //样式</span><br><span class="line"></span><br><span class="line"> 选择器（即修饰对象）&#123; //.g&#123; &#125;</span><br><span class="line"></span><br><span class="line"> 对象属性1：属性值1； //font：</span><br><span class="line"></span><br><span class="line"> 对象属性2：属性值2； //height：50px；</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> &lt;/style&gt;</span><br><span class="line"></span><br><span class="line"> &lt;/head&gt;</span><br></pre></td></tr></table></figure>
-
-<p>②在1.css文件中的表示方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot;  type=&quot;text/css&quot; href=&quot;1.css&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>③直接跟着定义样式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot; size show show-1&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>每个样式间用空格隔开，有三个样式 size、show、show-1</p>
-<h3 id="1-3-2-颜色"><a href="#1-3-2-颜色" class="headerlink" title="1.3.2 颜色"></a>1.3.2 颜色</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">red = #FF0000 = rgb(255,0,0) 红色</span><br><span class="line"></span><br><span class="line">blue = #0000ff = 蓝色</span><br><span class="line"></span><br><span class="line">green = #00FF00 = 绿色</span><br><span class="line"></span><br><span class="line"> #ccc = #cccccc 灰色</span><br><span class="line"></span><br><span class="line"> #fff = #ffffff 白色</span><br><span class="line"></span><br><span class="line">black = #333 黑色</span><br><span class="line"></span><br><span class="line">background: #fff; 背景为白色</span><br><span class="line"></span><br><span class="line">background: #fff; 背景为白色</span><br><span class="line"></span><br><span class="line"> cursor: pointer; 当移动到当前位置时（配合li:hover）变成小手</span><br><span class="line"></span><br><span class="line"> transition: all 1s ease; 渐变效果（有些浏览器不支持）</span><br><span class="line"></span><br><span class="line"> -webkit-transition:all 1s ease;</span><br><span class="line"></span><br><span class="line"> -o-transition:all 1s ease;</span><br><span class="line"></span><br><span class="line"> -moz-transition:all 1s ease;</span><br><span class="line"></span><br><span class="line"> -ms-transition: all 1s ease; 对于不支持的浏览器，解决方案</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-3-字体font"><a href="#1-3-3-字体font" class="headerlink" title="1.3.3 字体font"></a>1.3.3 字体font</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> width: 200px;宽度</span><br><span class="line"></span><br><span class="line"> font-weight: bold; 字体粗细（粗体）</span><br><span class="line"></span><br><span class="line"> font-size: 12px; 字体大小</span><br><span class="line"></span><br><span class="line"> color: #ff7300; 字体颜色</span><br><span class="line"></span><br><span class="line"> background-color: #ccc; 背景色</span><br><span class="line"></span><br><span class="line"> height 高度</span><br><span class="line"></span><br><span class="line">width 宽度（可以认为是长度）</span><br><span class="line"></span><br><span class="line">font-family：隶书；字体</span><br></pre></td></tr></table></figure>
-
-<p>长度单位：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">px 像素</span><br></pre></td></tr></table></figure>
-
-<p>  颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">十六进制：#ffffff</span><br><span class="line"></span><br><span class="line">颜色名称：red</span><br></pre></td></tr></table></figure>
-
-<p>  尺寸属性：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Height、max_height、min_height</span><br><span class="line"></span><br><span class="line">width、max_width、min_width</span><br></pre></td></tr></table></figure>
-
-<p>  字体、字号：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">font 缩写形式</span><br><span class="line"></span><br><span class="line">font-weight 粗细</span><br><span class="line"></span><br><span class="line">font-size 大小</span><br><span class="line"></span><br><span class="line">font-family 字体系列</span><br><span class="line"></span><br><span class="line">font-style 字体样式</span><br></pre></td></tr></table></figure>
-
-<p>  字体颜色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">color</span><br><span class="line"></span><br><span class="line">opacity 透明度 css3</span><br></pre></td></tr></table></figure>
-
-<p>  行距、对齐等</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">line-height 行高</span><br><span class="line"></span><br><span class="line">text-align 对齐</span><br><span class="line"></span><br><span class="line">letter-spacing 字符间距</span><br><span class="line"></span><br><span class="line">text-decoration 文本修饰</span><br><span class="line"></span><br><span class="line">overflow 浮动</span><br><span class="line"></span><br><span class="line">text-overflow</span><br><span class="line"></span><br><span class="line">text-indent</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-4-列表宽度决定了列表项宽度"><a href="#1-3-4-列表宽度决定了列表项宽度" class="headerlink" title="1.3.4 列表宽度决定了列表项宽度"></a>1.3.4 列表宽度决定了列表项宽度</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">height: 100px;</span><br><span class="line"></span><br><span class="line">line-height: 100px; 使其上下居中对齐</span><br><span class="line"></span><br><span class="line">text-align: right; 水平对齐方式：水平靠右</span><br><span class="line"></span><br><span class="line">text-align: center; 水平对齐方式：水平居中</span><br><span class="line"></span><br><span class="line">letter-spacing: 10px; 字间距</span><br><span class="line"></span><br><span class="line">text-decoration: none; 下划线设置（去除）</span><br><span class="line"></span><br><span class="line">white-space: nowrap; 设为一行显示</span><br><span class="line"></span><br><span class="line">overflow: hidden;</span><br><span class="line"></span><br><span class="line">display: block; 隐藏多余内容</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-5-图片"><a href="#1-3-5-图片" class="headerlink" title="1.3.5 图片"></a>1.3.5 图片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">background-image: url(images/1.jpg); 插入图片</span><br><span class="line"></span><br><span class="line">background-image: url(../images/1.jpg); 插入上一级文件夹中images文件夹中的图片1.jpg</span><br><span class="line"></span><br><span class="line">background-repeat: no-repeat; 图片默认多大就是多大（不加自动复制显示）</span><br><span class="line"></span><br><span class="line">background-position: 50px 50px; 移动图片（正数为右下角，负数为左上角）</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-6-块级元素-默认占一行"><a href="#1-3-6-块级元素-默认占一行" class="headerlink" title="1.3.6 块级元素 默认占一行"></a>1.3.6 块级元素 默认占一行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">★float: left; 浮动 将块级元素变为行级元素 让多行在一行  如果一行放不下，自动转第二行</span><br><span class="line"></span><br><span class="line"> height: 50px; /*使其上下居中对齐*/</span><br><span class="line"></span><br><span class="line"> line-height: 50px; /*使其上下居中对齐*/</span><br><span class="line"></span><br><span class="line"> text-align: center; 水平对齐方式：水平居中</span><br><span class="line"></span><br><span class="line"> margin-right: 5px; 每个元素间间隔5px</span><br><span class="line"></span><br><span class="line"> font-size: 20px; 字体大小</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-7-焦点"><a href="#1-3-7-焦点" class="headerlink" title="1.3.7 焦点"></a>1.3.7 焦点</h3><p>  鼠标移到当前位置时的状态</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a:hover&#123;</span><br><span class="line"></span><br><span class="line">color: red;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*鼠标激活选定状态*/</span><br><span class="line"></span><br><span class="line">a:active&#123;</span><br><span class="line"></span><br><span class="line">color: green;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-8-超链接样式的四种状态"><a href="#1-3-8-超链接样式的四种状态" class="headerlink" title="1.3.8 超链接样式的四种状态"></a>1.3.8 超链接样式的四种状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">未访问状态 a:link</span><br><span class="line"></span><br><span class="line">已访问状态 a:visited</span><br><span class="line"></span><br><span class="line">鼠标移上状态 a：hover</span><br><span class="line"></span><br><span class="line">激活选定状态 a：active</span><br></pre></td></tr></table></figure>
-
-<p>、</p>
-<h3 id="1-3-9-盒子（矩形方框）"><a href="#1-3-9-盒子（矩形方框）" class="headerlink" title="1.3.9 盒子（矩形方框）"></a>1.3.9 盒子（矩形方框）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">margin（外边距/边界）</span><br><span class="line"></span><br><span class="line">border（边框）</span><br><span class="line"></span><br><span class="line">padding（内边距/填充）</span><br><span class="line"></span><br><span class="line">width 宽度</span><br><span class="line"></span><br><span class="line">height 高度</span><br><span class="line"></span><br><span class="line">margin 外边距/边界</span><br><span class="line"></span><br><span class="line">margin：1px 2px 3px 4px 外边距/边界（上右下左）</span><br><span class="line"></span><br><span class="line">margin：1px 2px 外边距/边界（上下、左右）</span><br><span class="line"></span><br><span class="line">margin：1px 外边距/边界（上下左右、通常表现出来上左）</span><br></pre></td></tr></table></figure>
-
-<p>margin</p>
-<p>一个值：4边</p>
-<p>两个值：上下、左右</p>
-<p>四个值：上右下左</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">margin-left: auto; 左边距自动</span><br><span class="line"></span><br><span class="line">margin-left: auto; /水平居中/</span><br><span class="line"></span><br><span class="line">margin-right: auto; /水平居中/</span><br><span class="line"></span><br><span class="line">margin: 0px auto; /水平居中，有的浏览器不支持/</span><br></pre></td></tr></table></figure>
-
-<p>默认下，div没有边框border（有颜色）</p>
-<p>默认不显示border</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">border-color: blue;</span><br><span class="line"></span><br><span class="line">border-width: 10px;</span><br><span class="line"></span><br><span class="line">border-style: solid; 以上三句话使其最终显示 solid实心的</span><br><span class="line"></span><br><span class="line">border width style color</span><br><span class="line"></span><br><span class="line">border：20px solid green 一句话也可以显示</span><br><span class="line"></span><br><span class="line">border-top:30px solid #ccc; 设置上边框属性</span><br><span class="line"></span><br><span class="line">padding-top: 20px; 内边距（上）</span><br><span class="line"></span><br><span class="line">padding: 20px; 内边距（上下左右）</span><br><span class="line"></span><br><span class="line">padding: 20px 50px; 内边距（上下、左右）</span><br></pre></td></tr></table></figure>
-
-<p>对同一属性做设置，后面的优先级高</p>
-<p>对外边距/边界设置，一般统一格式，不要上边设下边距，下边设上边距；如果设置，按大的显示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">margin-bottom: 30px;</span><br><span class="line"></span><br><span class="line">.topbar .search .topabar .link&#123;float:right;&#125; 共用一种样式&#123;浮动 将块级元素变为行级元素&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-10-解决浮动问题，使用尾类"><a href="#1-3-10-解决浮动问题，使用尾类" class="headerlink" title="1.3.10 解决浮动问题，使用尾类"></a>1.3.10 解决浮动问题，使用尾类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">.fix&#123;*zoom:1;*clear:both;&#125; </span><br><span class="line"></span><br><span class="line">.fix:before,.fix:after&#123;</span><br><span class="line"></span><br><span class="line">display: table;clear:both;</span><br><span class="line"></span><br><span class="line">content: &apos;&apos;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;wrap fix&quot;&gt; +fix谁的子元素浮动，就可以清除影响</span><br><span class="line"></span><br><span class="line">.fix&#123;*zoom:1;*clear:both;&#125;</span><br><span class="line"></span><br><span class="line">.fix:before,.fix:after&#123;</span><br><span class="line"></span><br><span class="line">display: table;clear:both;</span><br><span class="line"></span><br><span class="line">content: &apos;&apos;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-11-定位"><a href="#1-3-11-定位" class="headerlink" title="1.3.11 定位"></a>1.3.11 定位</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">position: absolute; 绝对定位</span><br><span class="line"></span><br><span class="line">position: relative; 相对定位</span><br></pre></td></tr></table></figure>
-
-<p>  参照物是距离最近 定位的父元素</p>
-<h3 id="1-3-12-对定位元素显示排序"><a href="#1-3-12-对定位元素显示排序" class="headerlink" title="1.3.12 对定位元素显示排序"></a>1.3.12 对定位元素显示排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z-index: 1; 数字越大，优先级越高</span><br></pre></td></tr></table></figure>
-
-<p>  设置 鼠标指到哪里，哪里在上边</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.c4:hover&#123;</span><br><span class="line"></span><br><span class="line">z-index: 3;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-13-响应式"><a href="#1-3-13-响应式" class="headerlink" title="1.3.13 响应式"></a>1.3.13 响应式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">viewport</span><br><span class="line"></span><br><span class="line"> 设备方向：Orientation</span><br><span class="line"></span><br><span class="line"> 设备方向：Orientation</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-14-其他样式"><a href="#1-3-14-其他样式" class="headerlink" title="1.3.14 其他样式"></a>1.3.14 其他样式</h3><p><code>header、footer、center、left、right</code></p>
-<p>头 尾 中间 左 右</p>
-<p>链接 默认带下划线</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot; size show show-1&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>每个样式间用空格隔开，有三个样式 size、show、show-1</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">list-style:none; 去除前面的列表序列号</span><br><span class="line"></span><br><span class="line">border 边框</span><br><span class="line"></span><br><span class="line">border: 1px solid red; 添加边框</span><br><span class="line"></span><br><span class="line">&lt;div style=&quot;clear: both&quot;&gt;&lt;/div&gt; 用于消除浮动效果导致的顺序错乱</span><br><span class="line"></span><br><span class="line">height 高度</span><br><span class="line"></span><br><span class="line">width 宽度（可以认为是长度）</span><br><span class="line"></span><br><span class="line">font-family：隶书；字体</span><br><span class="line"></span><br><span class="line"> top: 25px; 距离上方25px</span><br><span class="line"></span><br><span class="line"> left: 15px; 距离左边15px</span><br><span class="line"></span><br><span class="line">display: none;不显示</span><br><span class="line"></span><br><span class="line">@media screen and (max-width: 900px)&#123; &#125; 当分辨率小于900px时</span><br><span class="line"></span><br><span class="line">line-height: 1.8; 行高</span><br></pre></td></tr></table></figure>
-
-<h2 id="1-4-为CSS单独建立文件（建立链接link）"><a href="#1-4-为CSS单独建立文件（建立链接link）" class="headerlink" title="1.4 为CSS单独建立文件（建立链接link）"></a>1.4 为CSS单独建立文件（建立链接link）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  &lt;link rel=&quot;stylesheet&quot;  type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;link  + Enter</span><br><span class="line"></span><br><span class="line">style.css 新建文件</span><br><span class="line"></span><br><span class="line">@charset  &apos;utf-8&apos;;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://upload-images.jianshu.io/upload_images/11997621-fb3b91f210d4450b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tobehero666.png"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/17/CSS设计指南/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -1766,8 +658,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

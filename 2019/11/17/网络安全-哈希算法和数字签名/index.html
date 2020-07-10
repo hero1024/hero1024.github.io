@@ -16,8 +16,7 @@
 <meta property="og:description" content="1. 单向散列算法 单向散列算法也称为哈希算法，它是一种不可逆的单向数学函数，把哈希算法应用于任意长度的一块数据，可以将它映射为一段数据唯一的、不可逆的、定长的、极其紧凑的字符串，这个字符串便称为散列值、哈希值或消息摘要。 常见的单向散列算法有由Ron Rivest设计的可以产生128位散列值的MD5和由NSA设计的可以产生160位的散列值的SHA-1，还有SHA-224、 SHA-256、SHA">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11997621-78c1663b3c0bf8be.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11997621-388a6240c25c5067.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-11-17T10:59:45.610Z">
+<meta property="og:updated_time" content="2020-07-10T08:48:36.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全-哈希算法和数字签名">
 <meta name="twitter:description" content="1. 单向散列算法 单向散列算法也称为哈希算法，它是一种不可逆的单向数学函数，把哈希算法应用于任意长度的一块数据，可以将它映射为一段数据唯一的、不可逆的、定长的、极其紧凑的字符串，这个字符串便称为散列值、哈希值或消息摘要。 常见的单向散列算法有由Ron Rivest设计的可以产生128位散列值的MD5和由NSA设计的可以产生160位的散列值的SHA-1，还有SHA-224、 SHA-256、SHA">
@@ -241,7 +240,7 @@
 <p>2. PKCS7签名：签名中可以带有其他的附加信息，例如签名证书信息、签名原文信息、时间戳信息等。</p>
 <p><strong>PKCS7</strong> <strong>的</strong> <strong>attached</strong> <strong>和</strong> <strong>detached</strong> <strong>方式的数字签名：</strong></p>
 <p>1. attached 方式是将签名内容和原文放在一起，按 PKCS7 的格式打包。PKCS7的结构中有一段可以放明文，但明文必需进行ASN.1编码。在进行数字签名验证的同时，提取明文。这里的明文实际上是真正内容的摘要。</p>
-<p>2. detached 方式打包的 PKCS7格式包中不包含明文信息。因此在验证的时候，还需要传递明文才能验证成功。同理，这里的明文实际上是真正内容的摘要。<br><img src="https://upload-images.jianshu.io/upload_images/11997621-388a6240c25c5067.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信公众号：海若Hero"></p>
+<p>2. detached 方式打包的 PKCS7格式包中不包含明文信息。因此在验证的时候，还需要传递明文才能验证成功。同理，这里的明文实际上是真正内容的摘要。</p>
 
       
 

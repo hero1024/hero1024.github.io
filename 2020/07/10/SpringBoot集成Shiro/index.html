@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 海若Hero</title>
+  <title>SpringBoot集成Shiro（自定义过滤器、自定义Token、加盐加密、记住密码、自动登录、Session管理） | 海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
-<meta property="og:type" content="website">
-<meta property="og:title" content="海若Hero">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="导入依赖1234567891011&amp;lt;!--thymeleaf集成shiro模版--&amp;gt;&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;com.github.theborakompanioni&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;thymeleaf-extras-shiro&amp;lt;/artifactId&amp;gt;    &amp;lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringBoot集成Shiro（自定义过滤器、自定义Token、加盐加密、记住密码、自动登录、Session管理）">
+<meta property="og:url" content="http://yoursite.com/2020/07/10/SpringBoot集成Shiro/index.html">
 <meta property="og:site_name" content="海若Hero">
-<meta property="og:description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
+<meta property="og:description" content="导入依赖1234567891011&amp;lt;!--thymeleaf集成shiro模版--&amp;gt;&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;com.github.theborakompanioni&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;thymeleaf-extras-shiro&amp;lt;/artifactId&amp;gt;    &amp;lt;">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-07-10T08:47:48.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="海若Hero">
-<meta name="twitter:description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
+<meta name="twitter:title" content="SpringBoot集成Shiro（自定义过滤器、自定义Token、加盐加密、记住密码、自动登录、Session管理）">
+<meta name="twitter:description" content="导入依赖1234567891011&amp;lt;!--thymeleaf集成shiro模版--&amp;gt;&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;com.github.theborakompanioni&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;thymeleaf-extras-shiro&amp;lt;/artifactId&amp;gt;    &amp;lt;">
   
     <link rel="alternative" href="/atom.xml" title="海若Hero" type="application/atom+xml">
   
@@ -153,241 +154,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringBoot集成Shiro" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      SpringBoot集成Shiro（自定义过滤器、自定义Token、加盐加密、记住密码、自动登录、Session管理）
+    </h1>
+  
+
+        
+        <a href="/2020/07/10/SpringBoot集成Shiro/" class="archive-article-date">
+  	<time datetime="2020-07-10T08:44:17.534Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="导入依赖"><a href="#导入依赖" class="headerlink" title="导入依赖"></a>导入依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--thymeleaf集成shiro模版--&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.github.theborakompanioni&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;thymeleaf-extras-shiro&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.0.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.apache.shiro&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;shiro-spring-boot-web-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;1.4.0&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="springboot配置类"><a href="#springboot配置类" class="headerlink" title="springboot配置类"></a>springboot配置类</h4><p>在springboot项目中配置shiro，包括密码加盐处理、记住密码、自动登录session管理等Bean以及自定义过滤器的配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Description: shiro相关配置</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">@Configuration</span><br><span class="line">public class ShiroConf &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * shiro session的管理</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public DefaultWebSessionManager sessionManager() &#123;</span><br><span class="line">        DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();</span><br><span class="line">        // 会话超时时间，单位：毫秒，默认30分钟(1800000)</span><br><span class="line">        sessionManager.setGlobalSessionTimeout(1800000);</span><br><span class="line">        // 定时清理失效会话, 清理用户直接关闭浏览器造成的孤立会话</span><br><span class="line">        sessionManager.setSessionValidationInterval(1800000);</span><br><span class="line">        sessionManager.setSessionValidationSchedulerEnabled(true);</span><br><span class="line">        // 指定sessionid</span><br><span class="line">        sessionManager.setSessionIdCookie(sessionIdCookie());</span><br><span class="line">        sessionManager.setSessionIdCookieEnabled(true);</span><br><span class="line">        sessionManager.getSessionIdCookie().setSecure(false);</span><br><span class="line">        // 去掉shiro登录时url里的JSESSIONID</span><br><span class="line">        sessionManager.setSessionIdUrlRewritingEnabled(false);</span><br><span class="line">        return sessionManager;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * cookie对象;</span><br><span class="line">     * rememberMeCookie()方法是设置Cookie的生成模版，比如cookie的name，cookie的有效时间等等。</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public SimpleCookie rememberMeCookie()&#123;</span><br><span class="line">        //这个参数是cookie的名称，对应前端的name = rememberMe</span><br><span class="line">        SimpleCookie simpleCookie = new SimpleCookie(&quot;rememberMe&quot;);</span><br><span class="line">        //&lt;!-- 记住我cookie生效时间 ,单位秒;--&gt;</span><br><span class="line">        simpleCookie.setMaxAge(Cookie.ONE_YEAR);</span><br><span class="line">        return simpleCookie;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * cookie管理对象;</span><br><span class="line">     * rememberMeManager()方法是生成rememberMe管理器，而且要将这个rememberMe管理器设置到securityManager中</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public CookieRememberMeManager rememberMeManager()&#123;</span><br><span class="line">        CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();</span><br><span class="line">        cookieRememberMeManager.setCookie(rememberMeCookie());</span><br><span class="line">        //rememberMe cookie加密的密钥 默认AES算法 密钥长度(128 256 512 位)</span><br><span class="line">        cookieRememberMeManager.setCipherKey(&quot;x5+126q47832#4*k&quot;.getBytes());</span><br><span class="line">        return cookieRememberMeManager;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">     /**</span><br><span class="line">     * 防止放行的静态资源等请求修改存sessionid的cookie</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public SimpleCookie sessionIdCookie() &#123;</span><br><span class="line">        SimpleCookie sessionIdCookie = new SimpleCookie(&quot;sid&quot;);</span><br><span class="line">        sessionIdCookie.setHttpOnly(true);</span><br><span class="line">        sessionIdCookie.setMaxAge(-1);</span><br><span class="line">        return sessionIdCookie;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * shiro 加密登录 密码加盐处理</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public HashedCredentialsMatcher hashedCredentialsMatcher() &#123;</span><br><span class="line">        HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();</span><br><span class="line">        // 散列算法</span><br><span class="line">        hashedCredentialsMatcher.setHashAlgorithmName(EncryptUtil.ALGORITHM_NAME);</span><br><span class="line">        // 散列次数</span><br><span class="line">        hashedCredentialsMatcher.setHashIterations(EncryptUtil.HASH_ITERATIONS);</span><br><span class="line">        return hashedCredentialsMatcher;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * shiro realm</span><br><span class="line">     *</span><br><span class="line">     * @return 自定义loginRealm</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public Realm loginRealm() &#123;</span><br><span class="line">        LoginRealm loginRealm = new LoginRealm();</span><br><span class="line">        loginRealm.setCredentialsMatcher(hashedCredentialsMatcher());</span><br><span class="line">        return loginRealm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 安全管理器</span><br><span class="line">     *</span><br><span class="line">     * @return DefaultWebSecurityManager</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public DefaultWebSecurityManager securityManager() &#123;</span><br><span class="line">        DefaultWebSecurityManager webSecurityManager = new DefaultWebSecurityManager();</span><br><span class="line">        webSecurityManager.setCacheManager(new MemoryConstrainedCacheManager());</span><br><span class="line">        // 自定义session管理</span><br><span class="line">        webSecurityManager.setSessionManager(sessionManager());</span><br><span class="line">        //注入记住我管理器</span><br><span class="line">        webSecurityManager.setRememberMeManager(rememberMeManager());</span><br><span class="line">        webSecurityManager.setRealm(loginRealm());</span><br><span class="line">        return webSecurityManager;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 为了在thymeleaf里使用shiro的标签的bean</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public ShiroDialect shiroDialect() &#123;</span><br><span class="line">        return new ShiroDialect();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 开启Shiro的注解(如@RequiresRoles,@RequiresPermissions)</span><br><span class="line">     * 配置以下两个bean(DefaultAdvisorAutoProxyCreator和AuthorizationAttributeSourceAdvisor)即可实现此功能</span><br><span class="line">     *</span><br><span class="line">     * @return DefaultAdvisorAutoProxyCreator</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator() &#123;</span><br><span class="line">        DefaultAdvisorAutoProxyCreator advisorAutoProxyCreator = new DefaultAdvisorAutoProxyCreator();</span><br><span class="line">        advisorAutoProxyCreator.setProxyTargetClass(true);</span><br><span class="line">        return advisorAutoProxyCreator;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 开启shiro注解</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor() &#123;</span><br><span class="line">        AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();</span><br><span class="line">        authorizationAttributeSourceAdvisor.setSecurityManager(securityManager());</span><br><span class="line">        return authorizationAttributeSourceAdvisor;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * ShiroFilterFactoryBean 使用自定义过滤器并定义过滤规则和优先级顺序，loginFilter为自定义过滤器，user为shiro框架中的过滤器，当前用于记住密码自动登录功能</span><br><span class="line">     *</span><br><span class="line">     * @return ShiroFilterFactoryBean</span><br><span class="line">     */</span><br><span class="line">    @Bean</span><br><span class="line">    public ShiroFilterFactoryBean shiroFilterFactoryBean() &#123;</span><br><span class="line">        ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();</span><br><span class="line">        bean.setSecurityManager(securityManager());</span><br><span class="line">        bean.setFilterChainDefinitions(</span><br><span class="line">                &quot;/css/** = anon\n&quot; +</span><br><span class="line">                        &quot;/images/** = anon\n&quot; +</span><br><span class="line">                        &quot;/webjars/** = anon\n&quot; +</span><br><span class="line">                        &quot;/img/** = anon\n&quot; +</span><br><span class="line">                        &quot;/js/** = anon\n&quot; +</span><br><span class="line">                        &quot;/fonts/** = anon\n&quot; +</span><br><span class="line">                        &quot;/error = anon\n&quot; +</span><br><span class="line">                        &quot;/** = loginFilter,user&quot;);</span><br><span class="line">        bean.setSuccessUrl(&quot;/&quot;);</span><br><span class="line">        bean.setLoginUrl(&quot;/login&quot;);</span><br><span class="line">        HashMap&lt;String, Filter&gt; filters = new HashMap&lt;&gt;();</span><br><span class="line">        filters.put(&quot;loginFilter&quot;, new LoginFilter());</span><br><span class="line">        bean.setFilters(filters);</span><br><span class="line">        return bean;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义Realm实现认证和授权"><a href="#自定义Realm实现认证和授权" class="headerlink" title="自定义Realm实现认证和授权"></a>自定义Realm实现认证和授权</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class LoginRealm extends AuthorizingRealm &#123;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    IUserService userServiceImpl;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Description: 授权</span><br><span class="line">     *</span><br><span class="line">     * @param principals principals</span><br><span class="line">     * @return AuthorizationInfo</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) &#123;</span><br><span class="line">        UserInfo userInfo = (UserInfo) getAvailablePrincipal(principals);</span><br><span class="line">        List&lt;PermissionInfo&gt; perInfos = userServiceImpl.findByLoginName(userInfo.getUserName()).getRoleInfo().getPermissionList();</span><br><span class="line">        SimpleAuthorizationInfo simpleAuthorInfo = new SimpleAuthorizationInfo();</span><br><span class="line">        List&lt;String&gt; permissionName = new ArrayList&lt;String&gt;();</span><br><span class="line">        for (PermissionInfo perInfo : perInfos) &#123;</span><br><span class="line">            permissionName.add(perInfo.getName());</span><br><span class="line">        &#125;</span><br><span class="line">        // 授权用户</span><br><span class="line">        simpleAuthorInfo.addRoles(permissionName);</span><br><span class="line">        return simpleAuthorInfo;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Description: 验证</span><br><span class="line">     *</span><br><span class="line">     * @param token AuthenticationToken</span><br><span class="line">     * @return AuthenticationInfo</span><br><span class="line">     * @throws AuthenticationException AuthenticationException</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException &#123;</span><br><span class="line">        UserToken userToken = (UserToken) token;</span><br><span class="line">        // 根据用户名查询用户信息</span><br><span class="line">        UserInfo user = userServiceImpl.findByLoginName(userToken.getUserName());</span><br><span class="line">        if (user == null) &#123;</span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">        return new SimpleAuthenticationInfo(user, user.getPassWord(),</span><br><span class="line">                ByteSource.Util.bytes(user.getUserId()), getName());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 此方法必须重写，只有重写了才可以使用自己的token</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    public boolean supports(AuthenticationToken token) &#123;</span><br><span class="line">        return token instanceof UserToken;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 如果需要用shiro缓存授权信息，每次请求都会走AuthorizingRealm中的getAuthorizationInfo方法，如果配置了使用了缓存，</span><br><span class="line">     * 这两句代码（Object key = getAuthorizationCacheKey(principals); info = cache.get(key);）会首先从缓存</span><br><span class="line">     * 中取授权信息，因为用了spring session，默认的取缓存的方法是得到之前登录成功的PrincipalCollection principals，</span><br><span class="line">     * 但是因为每次都是从spring session表中去反序列化得到此对象，所以每次的对象都是新的，</span><br><span class="line">     * 导致每次从缓存中取都取不到，现在重写此方法，将key改成每次登录后的登录名称，类型是String，这样cache.get(key)</span><br><span class="line">     * 时，比较的是String的equals方法，则只要登录名称不变就能取到缓存中的值。</span><br><span class="line">     *</span><br><span class="line">     * @param principals 登录成功的凭证（user信息）</span><br><span class="line">     * @return 从</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected Object getAuthorizationCacheKey(PrincipalCollection principals) &#123;</span><br><span class="line">        MallUserInfo userInfo = (MallUserInfo) principals.getPrimaryPrincipal();</span><br><span class="line">        return userInfo.getUserName();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用自定义的token必须重写supports方法，如果要实现记住我等功能，自定义的token一定要继承自UsernamePasswordToken。</p>
+<h4 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">public class LoginFilter extends FormAuthenticationFilter &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 创建token</span><br><span class="line">     *</span><br><span class="line">     * @param request  请求</span><br><span class="line">     * @param response 返回</span><br><span class="line">     * @return userToken</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected AuthenticationToken createToken(ServletRequest request, ServletResponse response) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            //获取用户名\密码\图片验证码</span><br><span class="line">            String username = request.getParameter(&quot;username&quot;).trim();</span><br><span class="line">            String password = request.getParameter(&quot;password&quot;);</span><br><span class="line">            String verifyCode = request.getParameter(&quot;verifyCode&quot;).trim();</span><br><span class="line">            String clientRandom = request.getParameter(&quot;clientRandom&quot;);</span><br><span class="line">            String serverRandom = request.getParameter(&quot;serverRandom&quot;);</span><br><span class="line">            if (password == null || password.isEmpty()) &#123;</span><br><span class="line">                LogUtil.warn(&quot;create token failed...miss password&quot;);</span><br><span class="line">            &#125; else if (username.isEmpty()) &#123;</span><br><span class="line">                LogUtil.warn(&quot;create token failed...miss username&quot;);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return new UserToken(username, sipDecryptor.decrypt(serverRandom, clientRandom, password), verifyCode);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; catch (DecryptionException e) &#123;</span><br><span class="line">            LogUtil.error(&quot;create token failed...decrypt password failed&quot;, e);</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 所有请求都会经过的方法。</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected boolean onAccessDenied(ServletRequest request,</span><br><span class="line">                                     ServletResponse response) throws Exception &#123;</span><br><span class="line"></span><br><span class="line">        if (isLoginRequest(request, response)) &#123;</span><br><span class="line">            if (isLoginSubmission(request, response)) &#123;</span><br><span class="line">                Session oldSession = SecurityUtils.getSubject().getSession();</span><br><span class="line">                //获取用户名、图片验证码</span><br><span class="line">                String username = request.getParameter(&quot;username&quot;).trim();</span><br><span class="line">                String verifyCode = request.getParameter(&quot;verifyCode&quot;).trim();</span><br><span class="line">                SavedRequest savedRequest = (SavedRequest) oldSession.getAttribute(&quot;shiroSavedRequest&quot;);</span><br><span class="line">                String randomCode = (String) oldSession.getAttribute(&quot;randomCode&quot;);</span><br><span class="line">                // 判断图形验证码是否正确</span><br><span class="line">                if (randomCode == null || !randomCode.equals(verifyCode)) &#123;</span><br><span class="line">                    oldSession.setAttribute(&quot;errorMsg&quot;, &quot;图形验证码输入有误&quot;);</span><br><span class="line">                    return true;</span><br><span class="line">                &#125; else if (!checkLoginFailCount(username, host, oldSession)) &#123;</span><br><span class="line">                    // 判断在一定的时间范围内用户是否可以登录</span><br><span class="line">                    return true;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    oldSession.stop();</span><br><span class="line">                    Session session = SecurityUtils.getSubject().getSession();</span><br><span class="line">                    session.setAttribute(&quot;shiroSavedRequest&quot;, savedRequest);</span><br><span class="line">                    //调用认证</span><br><span class="line">                    return executeLogin(request, response);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                // allow them to see the login page ;)</span><br><span class="line">                return true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            // 不是登录请求</span><br><span class="line">            saveRequestAndRedirectToLogin(request, response);</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 主要是针对登入成功的处理方法。</span><br><span class="line">     * 可在这定义一些登陆成功时返回的数据</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected boolean onLoginSuccess(AuthenticationToken token,</span><br><span class="line">                                     Subject subject, ServletRequest request, ServletResponse response)</span><br><span class="line">            throws Exception &#123;</span><br><span class="line">        Session session = SecurityUtils.getSubject().getSession();</span><br><span class="line">        UserInfo user = (UserInfo) subject.getPrincipal();</span><br><span class="line">        session.setAttribute(&quot;userName&quot;, user.getUserName());</span><br><span class="line">        session.setAttribute(&quot;userId&quot;, user.getUserId());</span><br><span class="line">        issueSuccessRedirect(request, response);</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 主要是处理登入失败的方法</span><br><span class="line">     */</span><br><span class="line">    @Override</span><br><span class="line">    protected boolean onLoginFailure(AuthenticationToken token,</span><br><span class="line">                                     AuthenticationException e, ServletRequest request,</span><br><span class="line">                                     ServletResponse response) &#123;</span><br><span class="line">        Session session = SecurityUtils.getSubject().getSession();</span><br><span class="line">        if (e instanceof IncorrectCredentialsException) &#123;</span><br><span class="line">            session.setAttribute(&quot;errorMsg&quot;, &quot;密码输入错误&quot;);</span><br><span class="line">        &#125; else if (e instanceof UnknownAccountException) &#123;</span><br><span class="line">            session.setAttribute(&quot;errorMsg&quot;, &quot;该用户不存在&quot;);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            session.setAttribute(&quot;errorMsg&quot;, &quot;系统异常，请联系管理员&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        setFailureAttribute(request, e);</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>isAccessAllowed：判断是否登录。在登录的情况下会走此方法，此方法返回true直接访问控制器<br>onAccessDenied：是否是拒绝登录。没有登录的情况下会走此方法<br>如果isAccessAllowed方法返回True，则不会再调用onAccessDenied方法，如果isAccessAllowed方法返回Flase,则会继续调用onAccessDenied方法。而onAccessDenied方法里面则是具体执行登陆的地方。<br>onLoginSuccess：主要是针对登入成功的处理方法。可在这定义一些登陆成功时返回的数据<br>onLoginFailure：主要是处理登入失败的方法。可在这定义一些登陆失败时返回的数据</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>Beer, drugs, chickens all have to be spent<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wxpay.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/Linux基本命令/" class="archive-article-date">
-  	<time datetime="2019-11-17T09:41:08.628Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/Linux基本命令/">Linux基本命令</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/10/SpringBoot集成Shiro/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/snmp整理笔记/" class="archive-article-date">
-  	<time datetime="2019-11-17T09:40:11.173Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/09/springboot注解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot注解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/snmp整理笔记/">snmp整理笔记</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/Spring知识点笔记/" class="archive-article-date">
-  	<time datetime="2019-11-17T09:39:09.869Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/Spring知识点笔记/">Spring知识点笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/CSS设计指南/" class="archive-article-date">
-  	<time datetime="2019-11-17T09:38:06.922Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/CSS设计指南/">CSS设计指南</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/JavaScript学习指南/" class="archive-article-date">
-  	<time datetime="2019-11-17T09:37:19.909Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/JavaScript学习指南/">JavaScript学习指南</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/17/Oracle知识点笔记/" class="archive-article-date">
-  	<time datetime="2019-11-17T09:36:38.699Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/17/Oracle知识点笔记/">Oracle知识点笔记</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/21/HTML网页开发手册/" class="archive-article-date">
-  	<time datetime="2019-07-21T09:59:37.420Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/21/HTML网页开发手册/">HTML网页开发手册</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/21/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-21T07:26:22.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -411,8 +346,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

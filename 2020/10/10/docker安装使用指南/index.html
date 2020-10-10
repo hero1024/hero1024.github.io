@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="海若Hero">
 <meta property="og:description" content="带你进入Docker的世界Docker优势操作系统： debain&#x2F;unbuntu &#x2F;FreeBSD&#x2F;Centos&#x2F;openSUSE 编程语言： java、C &#x2F;C++ python、Ruby、Golang Web服务器：resin、tomcat、 apache、nginx、lighttpd、jetty 数据库：mysql、redis、mongoDB、sqlserver、H2、DB2、MariaD">
 <meta property="og:locale">
-<meta property="og:image" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/media/7a636490b1cfb074d12b12b6287ef63b.png">
-<meta property="og:image" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/media/661b5df31f66ff92064d5b0f45c79445.png">
+<meta property="og:image" content="https://hero1024.github.io/media/7a636490b1cfb074d12b12b6287ef63b.png">
+<meta property="og:image" content="https://hero1024.github.io/media/661b5df31f66ff92064d5b0f45c79445.png">
 <meta property="article:published_time" content="2020-10-10T06:12:53.104Z">
-<meta property="article:modified_time" content="2020-10-10T06:13:34.644Z">
+<meta property="article:modified_time" content="2020-10-10T08:38:52.923Z">
 <meta property="article:author" content="海若">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/media/7a636490b1cfb074d12b12b6287ef63b.png">
+<meta name="twitter:image" content="https://hero1024.github.io/media/7a636490b1cfb074d12b12b6287ef63b.png">
   
     <link rel="alternative" href="/atom.xml" title="海若Hero" type="application/atom+xml">
   
@@ -198,10 +198,8 @@
 </ol>
 <p>测试人员</p>
 <ol>
-<li><p>环境问题测试出bug</p>
-</li>
-<li><p>配置不同的测试环境所浪费的时间</p>
-</li>
+<li>环境问题测试出bug</li>
+<li>配置不同的测试环境所浪费的时间</li>
 </ol>
 <p>运维人员</p>
 <ol>
@@ -221,9 +219,9 @@
 <p># 安装指定版本的Docker-CE:</p>
 <p># Step 1: 查找Docker-CE的版本:</p>
 <p># apt-cache madison docker-ce</p>
-<p># docker-ce | 17.03.1~ce-0~ubuntu-xenial |<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> xenial/stable amd64 Packages</p>
-<p># docker-ce | 17.03.0~ce-0~ubuntu-xenial |<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> xenial/stable amd64 Packages</p>
-<p># Step 2: 安装指定版本的Docker-CE: (VERSION 例如上面的<br>17.03.1~ce-0~ubuntu-xenial)</p>
+<p># docker-ce | 17.03.1<del>ce-0</del>ubuntu-xenial |<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> xenial/stable amd64 Packages</p>
+<p># docker-ce | 17.03.0<del>ce-0</del>ubuntu-xenial |<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> xenial/stable amd64 Packages</p>
+<p># Step 2: 安装指定版本的Docker-CE: (VERSION 例如上面的<br>17.03.1<del>ce-0</del>ubuntu-xenial)</p>
 <p># sudo apt-get -y install docker-ce=[VERSION]</p>
 <h3 id="CentOS-7-使用yum进行安装"><a href="#CentOS-7-使用yum进行安装" class="headerlink" title="CentOS 7 (使用yum进行安装)"></a>CentOS 7 (使用yum进行安装)</h3><p># step 1: 安装必要的一些系统工具</p>
 <p>sudo yum install -y yum-utils device-mapper-persistent-data lvm2</p>
@@ -268,29 +266,23 @@
 <p>Experimental: false</p>
 <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>一个阿里云、另一个是DaoCloud; 都是免费的</p>
 <ol>
-<li><p>阿里云容器配置</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://cs.console.aliyun.com/?spm=5176.2020520152.1001.44.RGHfhm#/repo">https://cs.console.aliyun.com/?spm=5176.2020520152.1001.44.RGHfhm#/repo</a></p>
-</li>
-<li><p>打开上面链接登录阿里云账户-点击镜像-点击右上角【容器镜像服务控制台】</p>
-</li>
-<li><p>第一次登录【容器镜像服务控制台】会初始化密码设置密码</p>
-</li>
-<li><p>选择【镜像加速器】复制加速器地址：<a target="_blank" rel="noopener" href="https://0426y50l.mirror.aliyuncs.com/">https://0426y50l.mirror.aliyuncs.com</a></p>
-</li>
-<li><p>修改 vi /etc/docker/daemon.json 把加速器地址设置进去</p>
-</li>
+<li>阿里云容器配置</li>
+<li><a target="_blank" rel="noopener" href="https://cs.console.aliyun.com/?spm=5176.2020520152.1001.44.RGHfhm#/repo">https://cs.console.aliyun.com/?spm=5176.2020520152.1001.44.RGHfhm#/repo</a></li>
+<li>打开上面链接登录阿里云账户-点击镜像-点击右上角【容器镜像服务控制台】</li>
+<li>第一次登录【容器镜像服务控制台】会初始化密码设置密码</li>
+<li>选择【镜像加速器】复制加速器地址：<a target="_blank" rel="noopener" href="https://0426y50l.mirror.aliyuncs.com/">https://0426y50l.mirror.aliyuncs.com</a></li>
+<li>修改 vi /etc/docker/daemon.json 把加速器地址设置进去</li>
 </ol>
 <p>sudo mkdir -p /etc/docker</p>
 <p>sudo tee /etc/docker/daemon.json &lt;&lt;-‘EOF’</p>
 <p>{</p>
-<p>“registry-mirrors”: [“<a href="https://0426y50l.mirror.aliyuncs.com&quot;]">https://0426y50l.mirror.aliyuncs.com&quot;]</a></p>
+<p>“registry-mirrors”: [“<a target="_blank" rel="noopener" href="https://0426y50l.mirror.aliyuncs.com"]/">https://0426y50l.mirror.aliyuncs.com”]</a></p>
 <p>}</p>
 <p>EOF</p>
 <p>sudo systemctl daemon-reload</p>
 <p>sudo systemctl restart docker</p>
 <h3 id="测试安装成功"><a href="#测试安装成功" class="headerlink" title="测试安装成功"></a>测试安装成功</h3><p>docker run hello-word</p>
-<p><img src="media/7a636490b1cfb074d12b12b6287ef63b.png"></p>
+<p><img src="https://hero1024.github.io/media/7a636490b1cfb074d12b12b6287ef63b.png" alt="img"></p>
 <h2 id="Docker安装tomcat"><a href="#Docker安装tomcat" class="headerlink" title="Docker安装tomcat"></a>Docker安装tomcat</h2><h3 id="运行tomcat容器"><a href="#运行tomcat容器" class="headerlink" title="运行tomcat容器"></a>运行tomcat容器</h3><p>docker run -it -d -p 8080:8080 tomcat:8.0</p>
 <h3 id="访问tomcat容器"><a href="#访问tomcat容器" class="headerlink" title="访问tomcat容器"></a>访问tomcat容器</h3><p><a target="_blank" rel="noopener" href="http://localhost:8888/">http://localhost:8888</a></p>
 <h2 id="Docker的操作指令"><a href="#Docker的操作指令" class="headerlink" title="Docker的操作指令"></a>Docker的操作指令</h2><p>Docker中有三个重要的点：仓库（repository）、镜像（image）、容器（Container）</p>
@@ -310,7 +302,7 @@
 <p>Docker exec 容器名 容器内部执行的命令</p>
 <p>docker exec <strong>-it</strong>【container id/name】/bin/bash</p>
 <p>执行完以后，通过exit来退出</p>
-<h3 id="多容器管理"><a href="#多容器管理" class="headerlink" title="多容器管理"></a>多容器管理</h3><h4 id="安装wordpress"><a href="#安装wordpress" class="headerlink" title="安装wordpress"></a>安装wordpress</h4><ol>
+<h3 id="多容器管理"><a href="#多容器管理" class="headerlink" title="多容器管理"></a>多容器管理</h3><h4 id="安装WORDPRESS"><a href="#安装WORDPRESS" class="headerlink" title="安装WORDPRESS"></a>安装WORDPRESS</h4><ol>
 <li><p>安装mariaDb</p>
 <p>Docker run –name <strong>mydb</strong> –env MYSQL_ROOT_PASSWORD=example -d<br>mariadb【mydb表示的自定义的那么 、 –env配置数据的帐号密码】</p>
 </li>
@@ -323,16 +315,10 @@
 </li>
 </ol>
 <h3 id="Dockercompose"><a href="#Dockercompose" class="headerlink" title="Dockercompose"></a>Dockercompose</h3><p>Docker提供了一个容器编排工具 docker<br>compose,允许用户在一个YAML的文件中定义一组相关联的应用容器</p>
-<p>可以在：<a target="_blank" rel="noopener" href="https://github.com/docker/compose/">https://github.com/docker/compose/</a>下载docker-compose</p>
+<p>可以在：<a target="_blank" rel="noopener" href="https://github.com/docker/compose/%E4%B8%8B%E8%BD%BDdocker-compose">https://github.com/docker/compose/下载docker-compose</a></p>
 <p>放在 /usr/local/bin/docker-compose ; chmod+xdocker-compose</p>
 <p>创建文件 ~/wordpress/docker-compose.yml</p>
-<table>
-<thead>
-<tr>
-<th>wordpress:  image: wordpress  link:  db:mysql  ports:  8080:80 –后面的80是wordpress容器默认的端口。8080是映射出来的端口 db:   image: mariadb  environment:   MYSQL_ROOT_PASSWORD: example</th>
-</tr>
-</thead>
-</table>
+<p>wordpress: image: wordpress link: db:mysql ports: 8080:80 –后面的80是wordpress容器默认的端口。8080是映射出来的端口 db: image: mariadb environment: MYSQL_ROOT_PASSWORD: example</p>
 <p>cd ~/wordpress &amp;&amp; docker-compose up</p>
 <p>docker-compose start/stop</p>
 <p>docker-compose ~/wordpress/docker-compose.yml down</p>
@@ -346,12 +332,10 @@
 <p>{Union filesystem}</p>
 <p>Docker镜像的层的特性：</p>
 <ol>
-<li><p>已有的分层只能读不能修改</p>
-</li>
-<li><p>上层镜像的优先级高于底层镜像</p>
-</li>
+<li>已有的分层只能读不能修改</li>
+<li>上层镜像的优先级高于底层镜像</li>
 </ol>
-<p><img src="media/661b5df31f66ff92064d5b0f45c79445.png"></p>
+<p><img src="https://hero1024.github.io/media/661b5df31f66ff92064d5b0f45c79445.png" alt="img"></p>
 <h2 id="搭建私有仓库"><a href="#搭建私有仓库" class="headerlink" title="搭建私有仓库"></a>搭建私有仓库</h2><p>待续。。。。</p>
 
       

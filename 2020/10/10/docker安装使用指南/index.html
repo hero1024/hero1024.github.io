@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>代理介绍 | 海若Hero</title>
+  <title>docker安装使用指南 | 海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代理概念设计模式的一种 设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。">
+  <meta name="description" content="带你进入Docker的世界Docker优势操作系统： debain&#x2F;unbuntu &#x2F;FreeBSD&#x2F;Centos&#x2F;openSUSE 编程语言： java、C &#x2F;C++ python、Ruby、Golang Web服务器：resin、tomcat、 apache、nginx、lighttpd、jetty 数据库：mysql、redis、mongoDB、sqlserver、H2、DB2、MariaD">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代理介绍">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="docker安装使用指南">
+<meta property="og:url" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="海若Hero">
-<meta property="og:description" content="代理概念设计模式的一种 设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。">
+<meta property="og:description" content="带你进入Docker的世界Docker优势操作系统： debain&#x2F;unbuntu &#x2F;FreeBSD&#x2F;Centos&#x2F;openSUSE 编程语言： java、C &#x2F;C++ python、Ruby、Golang Web服务器：resin、tomcat、 apache、nginx、lighttpd、jetty 数据库：mysql、redis、mongoDB、sqlserver、H2、DB2、MariaD">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-07-08T08:28:15.440Z">
-<meta property="article:modified_time" content="2020-07-08T08:41:13.514Z">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/media/7a636490b1cfb074d12b12b6287ef63b.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/media/661b5df31f66ff92064d5b0f45c79445.png">
+<meta property="article:published_time" content="2020-10-10T06:12:53.104Z">
+<meta property="article:modified_time" content="2020-10-10T06:13:34.644Z">
 <meta property="article:author" content="海若">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/media/7a636490b1cfb074d12b12b6287ef63b.png">
   
     <link rel="alternative" href="/atom.xml" title="海若Hero" type="application/atom+xml">
   
@@ -150,97 +153,205 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-代理介绍" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-docker安装使用指南" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      代理介绍
+      docker安装使用指南
     </h1>
   
 
         
-        <a href="/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-07-08T08:28:15.440Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+        <a href="/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="archive-article-date">
+  	<time datetime="2020-10-10T06:12:53.104Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><h4 id="设计模式的一种"><a href="#设计模式的一种" class="headerlink" title="设计模式的一种"></a>设计模式的一种</h4><ul>
-<li><p>设计模式的分类</p>
-<p>总体来说设计模式分为三大类：</p>
-<p>创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
-<p><strong>结构型模式</strong>，共七种：适配器模式、装饰器模式、<strong>代理模式</strong>、外观模式、桥接模式、组合模式、享元模式。</p>
-<p>行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+        <h1 id="带你进入Docker的世界"><a href="#带你进入Docker的世界" class="headerlink" title="带你进入Docker的世界"></a>带你进入Docker的世界</h1><h2 id="Docker优势"><a href="#Docker优势" class="headerlink" title="Docker优势"></a>Docker优势</h2><p>操作系统： debain/unbuntu /FreeBSD/Centos/openSUSE</p>
+<p>编程语言： java、C /C++ python、Ruby、Golang</p>
+<p>Web服务器：resin、tomcat、 apache、nginx、lighttpd、jetty</p>
+<p>数据库：mysql、redis、mongoDB、sqlserver、H2、DB2、MariaDB</p>
+<h2 id="Docker是什么"><a href="#Docker是什么" class="headerlink" title="Docker是什么"></a>Docker是什么</h2><h4 id="应用容器"><a href="#应用容器" class="headerlink" title="应用容器"></a>应用容器</h4><p>docker是一个开源的应用容器</p>
+<p>Java:write once, run anywhere ; java的核心是jvm</p>
+<p>docker:build once ,run any where ,configure once run anthing</p>
+<h4 id="软件的生态圈"><a href="#软件的生态圈" class="headerlink" title="软件的生态圈"></a>软件的生态圈</h4><p>Docker有自己的软件生态圈，那么应用是以镜像的方式存在于仓库上。然后用户可以根据需要去下载对应的镜像</p>
+<h2 id="Docker能够解决哪些问题"><a href="#Docker能够解决哪些问题" class="headerlink" title="Docker能够解决哪些问题"></a>Docker能够解决哪些问题</h2><p>开发人员</p>
+<ol>
+<li>为了节约成本，很多时候是一台虚拟机由多个人或者多个团队去做</li>
+</ol>
+<p>使用docker容器虚拟化技术，那么每一个应用都可以运行在独立的虚拟化环境中。相互隔离的</p>
+<ol>
+<li><p>一个开发团队往往只有一套开发或者测试环境，但是会存在同时有多个开发任务。所以会导致反复去修改环境或者软件包</p>
 </li>
-<li><p>代理模式定义：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。通俗的来讲代理模式就是我们生活中常见的中介。或者最常见的就是朋友圈中卖面膜的同学了。</p>
+<li><p>多个开发团队可能对软件环境的版本有严格要求，但是在开发迭代的过程中，软件的升级或者各个团队对软件本本的升级都会导致环境的变化</p>
+<p>这样就很容易引起虚拟机环境对我们应用产生影响</p>
 </li>
-<li><p>代理模式的有点</p>
-<ul>
-<li>职责清晰<br> 具体角色是实现具体的业务逻辑，不用关心其他非本职责的事务，通过后期的代理完成一件事务，代码清晰。在某些情况下，一个客户类不想或者不能直接引用一个委托对象，而代理类对象可以在客户类和委托对象之间起到中介的作用，其<strong>特征是代理类和委托类实现相同的接口</strong>。</li>
-<li>高扩展性<br> 具体主题角色随时会发生变化，但是只要实现了接口，接口不变，代理类就可以不做任何修改继续使用，符合“<strong>开闭原则</strong>”。<br> 另外，代理类除了是客户类和委托类的中介之外，我们还可以通过给代理类增加额外的功能来扩展委托类的功能，这样做我们只需要修改代理类而不需要再修改委托类，<strong>同样符合开闭原则</strong>。</li>
-</ul>
+<li><p>机器硬件故障，导致系统需要重装</p>
 </li>
-</ul>
-<h4 id="代理分类"><a href="#代理分类" class="headerlink" title="代理分类"></a>代理分类</h4><ul>
-<li><p>静态代理：</p>
-<ul>
-<li><p>代理类和被代理类应该共同实现一个接口，或者是共同继承某个类。为什么叫做静态呢？因为它的类型是事先预定好的</p>
+</ol>
+<p>测试人员</p>
+<ol>
+<li><p>环境问题测试出bug</p>
 </li>
-<li><p>优点<br> 业务类只需要关注业务逻辑本身，保证了业务类的重用性。这是代理的共有优点。代理使客户端不需要知道实现类是什么，怎么做的，而客户端只需知道代理即可（解耦合）。对于如上的客户端代码，<code>Subject subject = new ConcreteSubject(); Proxy proxy = new Proxy(subject);</code>可以应用工厂方法将它隐藏。</p>
+<li><p>配置不同的测试环境所浪费的时间</p>
 </li>
-<li><p>缺点</p>
-<ul>
-<li>代理类和委托类实现了相同的接口，代理类通过委托类实现了相同的方法。这样就出现了大量的代码重复。如果接口增加一个方法，除了所有实现类需要实现这个方法外，所有代理类也需要实现此方法。增加了代码维护的复杂度。</li>
-<li>代理对象只服务于一种类型的对象，如果要服务多类型的对象。势必要为每一种对象都进行代理，静态代理在程序规模稍大时就无法胜任了。如上的代码是只为Subject类的访问提供了代理，但是如果还要为其他类如AnotherSubject类提供代理的话，就需要我们再次添加代理AnotherSubject的代理类。<br> 由于静态代理的这个缺点，就需要使用动态代理。</li>
-</ul>
+</ol>
+<p>运维人员</p>
+<ol>
+<li>环境的安装、配置、部署、扩容、故障服务器迁移</li>
+</ol>
+<h2 id="Docker安装配置"><a href="#Docker安装配置" class="headerlink" title="Docker安装配置"></a>Docker安装配置</h2><p><strong>Docker对操作系统的要求是，必须是64位的、以及是linux3.8以上版本的内核</strong></p>
+<h3 id="Ubuntu-14-04-16-04-使用apt-get进行安装"><a href="#Ubuntu-14-04-16-04-使用apt-get进行安装" class="headerlink" title="Ubuntu 14.04 16.04 (使用apt-get进行安装)"></a>Ubuntu 14.04 16.04 (使用apt-get进行安装)</h3><p># step 1: 安装必要的一些系统工具</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get -y install apt-transport-https ca-certificates curl<br>software-properties-common</p>
+<p># step 2: 安装GPG证书</p>
+<p>curl -fsSL <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg">http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg</a> | sudo apt-key<br>add -</p>
+<p># Step 3: 写入软件源信息</p>
+<p>sudo add-apt-repository “deb [arch=amd64]<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> $(lsb_release -cs) stable”</p>
+<p># Step 4: 更新并安装 Docker-CE</p>
+<p>sudo apt-get -y update</p>
+<p>sudo apt-get -y install docker-ce</p>
+<p># 安装指定版本的Docker-CE:</p>
+<p># Step 1: 查找Docker-CE的版本:</p>
+<p># apt-cache madison docker-ce</p>
+<p># docker-ce | 17.03.1~ce-0~ubuntu-xenial |<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> xenial/stable amd64 Packages</p>
+<p># docker-ce | 17.03.0~ce-0~ubuntu-xenial |<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/ubuntu">http://mirrors.aliyun.com/docker-ce/linux/ubuntu</a> xenial/stable amd64 Packages</p>
+<p># Step 2: 安装指定版本的Docker-CE: (VERSION 例如上面的<br>17.03.1~ce-0~ubuntu-xenial)</p>
+<p># sudo apt-get -y install docker-ce=[VERSION]</p>
+<h3 id="CentOS-7-使用yum进行安装"><a href="#CentOS-7-使用yum进行安装" class="headerlink" title="CentOS 7 (使用yum进行安装)"></a>CentOS 7 (使用yum进行安装)</h3><p># step 1: 安装必要的一些系统工具</p>
+<p>sudo yum install -y yum-utils device-mapper-persistent-data lvm2</p>
+<p># Step 2: 添加软件源信息</p>
+<p>sudo yum-config-manager –add-repo<br><a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo">http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</a></p>
+<p># Step 3: 更新并安装 Docker-CE</p>
+<p>sudo yum makecache fast</p>
+<p>sudo yum -y install docker-ce</p>
+<p># Step 4: 开启Docker服务</p>
+<p>sudo service docker start</p>
+<p># 注意：</p>
+<p>#<br>官方软件源默认启用了最新的软件，您可以通过编辑软件源的方式获取各个版本的软件包。例如官方并没有将测试版本的软件源置为可用，你可以通过以下方式开启。同理可以开启各种测试版本等。</p>
+<p># vim /etc/yum.repos.d/docker-ee.repo</p>
+<p># 将 [docker-ce-test] 下方的 enabled=0 修改为 enabled=1</p>
+<p>#</p>
+<p># 安装指定版本的Docker-CE:</p>
+<p># Step 1: 查找Docker-CE的版本:</p>
+<p># yum list docker-ce.x86_64 –showduplicates | sort -r</p>
+<p># Loading mirror speeds from cached hostfile</p>
+<p># Loaded plugins: branch, fastestmirror, langpacks</p>
+<p># docker-ce.x86_64 17.03.1.ce-1.el7.centos docker-ce-stable</p>
+<p># docker-ce.x86_64 17.03.1.ce-1.el7.centos @docker-ce-stable</p>
+<p># docker-ce.x86_64 17.03.0.ce-1.el7.centos docker-ce-stable</p>
+<p># Available Packages</p>
+<p># Step2 : 安装指定版本的Docker-CE: (VERSION 例如上面的<br>17.03.0.ce.1-1.el7.centos)</p>
+<p># sudo yum -y install docker-ce-[VERSION]</p>
+<h3 id="安装校验"><a href="#安装校验" class="headerlink" title="安装校验"></a>安装校验</h3><p>root@iZbp12adskpuoxodbkqzjfZ:$ docker version</p>
+<p>Client:</p>
+<p>Version: 17.03.0-ce</p>
+<p>API version: 1.26</p>
+<p>Go version: go1.7.5</p>
+<p>Git commit: 3a232c8</p>
+<p>Built: Tue Feb 28 07:52:04 2017</p>
+<p>OS/Arch: linux/amd64</p>
+<p>Server:</p>
+<p>Version: 17.03.0-ce</p>
+<p>API version: 1.26 (minimum version 1.12)</p>
+<p>Go version: go1.7.5</p>
+<p>Git commit: 3a232c8</p>
+<p>Built: Tue Feb 28 07:52:04 2017</p>
+<p>OS/Arch: linux/amd64</p>
+<p>Experimental: false</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>一个阿里云、另一个是DaoCloud; 都是免费的</p>
+<ol>
+<li><p>阿里云容器配置</p>
 </li>
-</ul>
+<li><p><a target="_blank" rel="noopener" href="https://cs.console.aliyun.com/?spm=5176.2020520152.1001.44.RGHfhm#/repo">https://cs.console.aliyun.com/?spm=5176.2020520152.1001.44.RGHfhm#/repo</a></p>
 </li>
-<li><p>jdk代理</p>
-<ul>
-<li>jdk动态代理的逻辑其实就是通过InvocationHandler接口来实现的<ul>
-<li>优点<br> 动态代理与静态代理相比较，最大的好处是接口中声明的所有方法都被转移到调用处理器一个集中的方法中处理（<code>InvocationHandler.invoke</code>）。这样，在接口方法数量比较多的时候，我们可以进行灵活处理，而不需要像静态代理那样每一个方法进行中转。而且动态代理的应用使我们的类职责更加单一，复用性更强。</li>
-<li>缺点<br> Proxy已经设计得非常优美，但是还是有一点点小小的遗憾之处——<strong>它始终无法摆脱仅支持 interface代理的桎梏</strong>，因为它的设计注定了这个遗憾。动态生成的代理类的继承关系图，已经注定有一个共同的父类叫 Proxy。Java 的继承机制注定了这些动态代理类们无法实现对 class 的动态代理，原因是多继承在 Java 中本质上就行不通。</li>
-</ul>
+<li><p>打开上面链接登录阿里云账户-点击镜像-点击右上角【容器镜像服务控制台】</p>
 </li>
-</ul>
+<li><p>第一次登录【容器镜像服务控制台】会初始化密码设置密码</p>
 </li>
-<li><p>CGLIB代理</p>
-<ul>
-<li><p>CGLIB 原理：动态生成一个要代理类的子类，子类重写要代理的类的所有不是final的方法。在子类中采用方法拦截的技术拦截所有父类方法的调用，顺势织入横切逻辑。效率方面</p>
-<ul>
-<li>在jdk6之前比使用Java反射效率要高。唯一需要注意的是，CGLib不能对声明为final的方法进行代理，</li>
-</ul>
-<p>​       因为CGLib原理是动态生成被代理类的子类。</p>
-<ul>
-<li>在jdk6、jdk7、jdk8逐步对JDK动态代理优化之后，在调用次数较少的情况下，JDK代理效率高于CGLIB代理效率，</li>
-</ul>
-<p>​       只有当进行大量调用的时候，jdk6和jdk7比CGLIB代理效率低一点，但是到jdk8的时候，jdk代理效率高于CGLIB代理，</p>
-<p>​       总之，每一次jdk版本升级，jdk代理效率都得到提升，而CGLIB代理消息确有点跟不上步伐。。</p>
+<li><p>选择【镜像加速器】复制加速器地址：<a target="_blank" rel="noopener" href="https://0426y50l.mirror.aliyuncs.com/">https://0426y50l.mirror.aliyuncs.com</a></p>
 </li>
-</ul>
+<li><p>修改 vi /etc/docker/daemon.json 把加速器地址设置进去</p>
 </li>
-</ul>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><ul>
-<li><p>AOP/@Transational</p>
-<ul>
-<li><p>源码参考</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1）SpringTransactionAnnotationParser:parseTransactionAnnotation()</span><br><span class="line">（2）AbstractFallbackTransactionAttributeSource:112</span><br><span class="line">     TransactionAttribute txAttr &#x3D; computeTransactionAttribute(method, targetClass);</span><br><span class="line"> （3）AbstractAutoProxyCreator:348</span><br><span class="line">     if (specificInterceptors !&#x3D; DO_NOT_PROXY)</span><br></pre></td></tr></table></figure>
-
-
-
+</ol>
+<p>sudo mkdir -p /etc/docker</p>
+<p>sudo tee /etc/docker/daemon.json &lt;&lt;-‘EOF’</p>
+<p>{</p>
+<p>“registry-mirrors”: [“<a href="https://0426y50l.mirror.aliyuncs.com&quot;]">https://0426y50l.mirror.aliyuncs.com&quot;]</a></p>
+<p>}</p>
+<p>EOF</p>
+<p>sudo systemctl daemon-reload</p>
+<p>sudo systemctl restart docker</p>
+<h3 id="测试安装成功"><a href="#测试安装成功" class="headerlink" title="测试安装成功"></a>测试安装成功</h3><p>docker run hello-word</p>
+<p><img src="media/7a636490b1cfb074d12b12b6287ef63b.png"></p>
+<h2 id="Docker安装tomcat"><a href="#Docker安装tomcat" class="headerlink" title="Docker安装tomcat"></a>Docker安装tomcat</h2><h3 id="运行tomcat容器"><a href="#运行tomcat容器" class="headerlink" title="运行tomcat容器"></a>运行tomcat容器</h3><p>docker run -it -d -p 8080:8080 tomcat:8.0</p>
+<h3 id="访问tomcat容器"><a href="#访问tomcat容器" class="headerlink" title="访问tomcat容器"></a>访问tomcat容器</h3><p><a target="_blank" rel="noopener" href="http://localhost:8888/">http://localhost:8888</a></p>
+<h2 id="Docker的操作指令"><a href="#Docker的操作指令" class="headerlink" title="Docker的操作指令"></a>Docker的操作指令</h2><p>Docker中有三个重要的点：仓库（repository）、镜像（image）、容器（Container）</p>
+<p>仓库是存储镜像的</p>
+<p>而镜像是软件包</p>
+<p>容器是基于镜像去创建的，基于一个镜像可以创建若干个不同名字但功能相同的容器</p>
+<p>docker run / docker ps</p>
+<p>查看tomcat的日志：docker logs -f [container id / name]</p>
+<h3 id="docker的指令"><a href="#docker的指令" class="headerlink" title="docker的指令"></a>docker的指令</h3><p>针对守护进程的系统资源设置和全局信息的获取： docker info /docker daemon</p>
+<p>针对docker仓库的查询、下载：docker search / docker pull</p>
+<p>针对docker镜像的查询、创建、删除： docker images , docker build ,docker delete<br>docker rmi [image id]</p>
+<p>针对docker容器的查询、开启、停止: docker run /docker ps /docker stop [image id<br>/container id]</p>
+<p>单个容器的详细信息： docker inspect f6071fc4ccc9</p>
+<h2 id="Docker容器管理"><a href="#Docker容器管理" class="headerlink" title="Docker容器管理"></a>Docker容器管理</h2><h3 id="容器标识符"><a href="#容器标识符" class="headerlink" title="容器标识符"></a>容器标识符</h3><p>每个容器被创建以后，都会分配一个Container Id<br>作为容器唯一的标识符，后续对容器的所有操作命令都是通过container id来执行</p>
+<p>使用dockerps查看容器的信息、 dockerps –no-trunc 查看containerid的完整形式</p>
+<h3 id="容器内部命令"><a href="#容器内部命令" class="headerlink" title="容器内部命令"></a>容器内部命令</h3><p>有时候我们需要登录到容器内部执行一些命令或者配置，那么docker可以通过原生的方式去登录到容器</p>
+<p>Docker exec 容器名 容器内部执行的命令</p>
+<p>docker exec <strong>-it</strong>【container id/name】/bin/bash</p>
+<p>执行完以后，通过exit来退出</p>
+<h3 id="多容器管理"><a href="#多容器管理" class="headerlink" title="多容器管理"></a>多容器管理</h3><h4 id="安装wordpress"><a href="#安装wordpress" class="headerlink" title="安装wordpress"></a>安装wordpress</h4><ol>
+<li><p>安装mariaDb</p>
+<p>Docker run –name <strong>mydb</strong> –env MYSQL_ROOT_PASSWORD=example -d<br>mariadb【mydb表示的自定义的那么 、 –env配置数据的帐号密码】</p>
 </li>
-</ul>
+<li><p>安装wordpress并关联mariaDb</p>
+<p>Docker run –name <strong>myWordPress</strong> –link <strong>mydb:mysql</strong> -p 8080:80 -d<br>wordpress[myWordPress自定义名称]【mydb表示的是第一步所运行的容器名称】</p>
 </li>
-</ul>
-<ul>
-<li>自定义标签优化项目结构-xw-server</li>
-</ul>
+<li><p>Apache web服务器</p>
+</li>
+<li><p>Mariadb</p>
+</li>
+</ol>
+<h3 id="Dockercompose"><a href="#Dockercompose" class="headerlink" title="Dockercompose"></a>Dockercompose</h3><p>Docker提供了一个容器编排工具 docker<br>compose,允许用户在一个YAML的文件中定义一组相关联的应用容器</p>
+<p>可以在：<a target="_blank" rel="noopener" href="https://github.com/docker/compose/">https://github.com/docker/compose/</a>下载docker-compose</p>
+<p>放在 /usr/local/bin/docker-compose ; chmod+xdocker-compose</p>
+<p>创建文件 ~/wordpress/docker-compose.yml</p>
+<table>
+<thead>
+<tr>
+<th>wordpress:  image: wordpress  link:  db:mysql  ports:  8080:80 –后面的80是wordpress容器默认的端口。8080是映射出来的端口 db:   image: mariadb  environment:   MYSQL_ROOT_PASSWORD: example</th>
+</tr>
+</thead>
+</table>
+<p>cd ~/wordpress &amp;&amp; docker-compose up</p>
+<p>docker-compose start/stop</p>
+<p>docker-compose ~/wordpress/docker-compose.yml down</p>
+<h2 id="镜像管理"><a href="#镜像管理" class="headerlink" title="镜像管理"></a>镜像管理</h2><p>镜像可以认为是在docker上执行的软件包。通过docker image -a查看所有镜像</p>
+<p>镜像分层的概念</p>
+<p>mariaDB</p>
+<p>Wordpress</p>
+<p>应用层</p>
+<p>系统</p>
+<p>Ubuntu</p>
+<p>{Union filesystem}</p>
+<p>Docker镜像的层的特性：</p>
+<ol>
+<li><p>已有的分层只能读不能修改</p>
+</li>
+<li><p>上层镜像的优先级高于底层镜像</p>
+</li>
+</ol>
+<p><img src="media/661b5df31f66ff92064d5b0f45c79445.png"></p>
+<h2 id="搭建私有仓库"><a href="#搭建私有仓库" class="headerlink" title="搭建私有仓库"></a>搭建私有仓库</h2><p>待续。。。。</p>
 
       
 
@@ -330,7 +441,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +455,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/09/springboot%E6%B3%A8%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/10/kafka%E4%BB%8B%E7%BB%8D/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          springboot注解
+          kafka介绍
         
       </div>
     </a>
   
   
-    <a href="/2020/07/08/spring%20session%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">spring session入门</div>
+    <a href="/2020/10/10/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8-%E8%AF%81%E4%B9%A6%E6%A0%87%E5%87%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网络安全-证书标准</div>
       <i class="icon-circle-right"></i>
     </a>
   

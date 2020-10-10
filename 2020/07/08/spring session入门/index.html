@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>spring session入门 | 海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="spring sesion 环境：在spring boot基础上开发 spring-session是spring旗下的一个项目，把servlet容器实现的httpSession替换为spring-session，专注于解决 session管理问题。可简单快速且无缝的集成到我们的应用中。  spring session jdbcspring session jdbc使用 环境：使用mysql数据库存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring session入门">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/spring session入门/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/07/08/spring%20session%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="海若Hero">
 <meta property="og:description" content="spring sesion 环境：在spring boot基础上开发 spring-session是spring旗下的一个项目，把servlet容器实现的httpSession替换为spring-session，专注于解决 session管理问题。可简单快速且无缝的集成到我们的应用中。  spring session jdbcspring session jdbc使用 环境：使用mysql数据库存">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-07-08T08:37:57.492Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-07-08T08:28:15.435Z">
+<meta property="article:modified_time" content="2020-07-08T08:37:57.492Z">
+<meta property="article:author" content="海若">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="spring session入门">
-<meta name="twitter:description" content="spring sesion 环境：在spring boot基础上开发 spring-session是spring旗下的一个项目，把servlet容器实现的httpSession替换为spring-session，专注于解决 session管理问题。可简单快速且无缝的集成到我们的应用中。  spring session jdbcspring session jdbc使用 环境：使用mysql数据库存">
   
     <link rel="alternative" href="/atom.xml" title="海若Hero" type="application/atom+xml">
   
@@ -36,8 +36,8 @@
 
   
 
-</head>
-</html>
+<meta name="generator" content="Hexo 5.2.0"></head>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -50,10 +50,8 @@
 			<img src="/img/user.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">海若</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
-		
-		<p class="header-subtitle">天涯惆怅客，孑然江湖行</p>
 		
 
 		<nav class="header-menu">
@@ -61,7 +59,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -108,10 +106,8 @@
 				<img src="/img/user.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">海若</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
-			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>天涯惆怅客，孑然江湖行<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -139,7 +135,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -166,7 +162,7 @@
   
 
         
-        <a href="/2020/07/08/spring session入门/" class="archive-article-date">
+        <a href="/2020/07/08/spring%20session%E5%85%A5%E9%97%A8/" class="archive-article-date">
   	<time datetime="2020-07-08T08:28:15.435Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
 </a>
         
@@ -182,11 +178,11 @@
 <li>环境：使用mysql数据库存储sesion信息</li>
 <li>pom.xml文件添加session jdbc的依赖</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.session&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-session-jdbc&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line"> 	&lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line"> 	&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line"> &lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.session&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-session-jdbc&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line"> &lt;dependency&gt;</span><br><span class="line"> 	&lt;groupId&gt;mysql&lt;&#x2F;groupId&gt;</span><br><span class="line"> 	&lt;artifactId&gt;mysql-connector-java&lt;&#x2F;artifactId&gt;</span><br><span class="line"> &lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><p>application.yml配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  servlet:</span><br><span class="line">    session:</span><br><span class="line">      # sesion失效时间配置，默认30分钟</span><br><span class="line">      #     *    &quot;PT20.345S&quot; -- parses as &quot;20.345 seconds&quot;</span><br><span class="line">      #     *    &quot;PT15M&quot;     -- parses as &quot;15 minutes&quot; (where a minute is 60 seconds)</span><br><span class="line">      #     *    &quot;PT10H&quot;     -- parses as &quot;10 hours&quot; (where an hour is 3600 seconds)</span><br><span class="line">      #     *    &quot;P2D&quot;       -- parses as &quot;2 days&quot; (where a day is 24 hours or 86400 seconds)</span><br><span class="line">      #     *    &quot;P2DT3H4M&quot;  -- parses as &quot;2 days, 3 hours and 4 minutes&quot;</span><br><span class="line">      #     *    &quot;P-6H3M&quot;    -- parses as &quot;-6 hours and +3 minutes&quot;</span><br><span class="line">      #     *    &quot;-P6H3M&quot;    -- parses as &quot;-6 hours and -3 minutes&quot;</span><br><span class="line">      #     *    &quot;-P-6H+3M&quot;  -- parses as &quot;+6 hours and -3 minutes&quot;</span><br><span class="line">      timeout: PT30M</span><br><span class="line">      </span><br><span class="line">spring:</span><br><span class="line">  # 数据库配置</span><br><span class="line">  datasource:</span><br><span class="line">    ##引用自己的mysql</span><br><span class="line">    url: jdbc:mysql://localhost:3306/xw?serverTimezone=UTC</span><br><span class="line">    username: xw</span><br><span class="line">    password: 111111</span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">   # session配置</span><br><span class="line">  session:</span><br><span class="line">    # jdbc关系型数据库，等价于@EnableJdbcHttpSession注解</span><br><span class="line">    # redis 使用redis数据库存储，等价于@EnableRedisHttpSession注解</span><br><span class="line">    store-type: jdbc</span><br><span class="line">    # 同server.servlet.session.timeout属性</span><br><span class="line">    #timeout: PT30M</span><br><span class="line">    jdbc:</span><br><span class="line">      # 过期会话清理作业的Cron表达式</span><br><span class="line">      cleanup-cron: 10 * * * * *</span><br><span class="line">      # 支持跟踪和保存会话更改到会话存储的模式。</span><br><span class="line">      # ON_SET_ATTRIBUTE，对session更改的时候，保存属性，默认使用</span><br><span class="line">      # ON_GET_ATTRIBUTE，对session更改和读取都保存数据</span><br><span class="line">      # ALWAYS，始终保存所有会话属性，不管与会话的交互如何。（测试和ON_SET_ATTRIBUTE一样）</span><br><span class="line">      save-mode: ON_GET_ATTRIBUTE</span><br><span class="line">      # 支持将会话写入会话存储的模式</span><br><span class="line">      # ON_SAVE：响应完成调用SessionRepository#save(Session)的时候才保存到数据库，默认使用</span><br><span class="line">      # IMMEDIATE：创建session和设置session值后就立即保存到数据库</span><br><span class="line">      flush-mode: ON_SAVE</span><br><span class="line">      #指定表名，默认表名为spring_session(还会在这个基础上创spring_session_attributes表)</span><br><span class="line">      # table-name: spring_session</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  servlet:</span><br><span class="line">    session:</span><br><span class="line">      # sesion失效时间配置，默认30分钟</span><br><span class="line">      #     *    &quot;PT20.345S&quot; -- parses as &quot;20.345 seconds&quot;</span><br><span class="line">      #     *    &quot;PT15M&quot;     -- parses as &quot;15 minutes&quot; (where a minute is 60 seconds)</span><br><span class="line">      #     *    &quot;PT10H&quot;     -- parses as &quot;10 hours&quot; (where an hour is 3600 seconds)</span><br><span class="line">      #     *    &quot;P2D&quot;       -- parses as &quot;2 days&quot; (where a day is 24 hours or 86400 seconds)</span><br><span class="line">      #     *    &quot;P2DT3H4M&quot;  -- parses as &quot;2 days, 3 hours and 4 minutes&quot;</span><br><span class="line">      #     *    &quot;P-6H3M&quot;    -- parses as &quot;-6 hours and +3 minutes&quot;</span><br><span class="line">      #     *    &quot;-P6H3M&quot;    -- parses as &quot;-6 hours and -3 minutes&quot;</span><br><span class="line">      #     *    &quot;-P-6H+3M&quot;  -- parses as &quot;+6 hours and -3 minutes&quot;</span><br><span class="line">      timeout: PT30M</span><br><span class="line">      </span><br><span class="line">spring:</span><br><span class="line">  # 数据库配置</span><br><span class="line">  datasource:</span><br><span class="line">    ##引用自己的mysql</span><br><span class="line">    url: jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;xw?serverTimezone&#x3D;UTC</span><br><span class="line">    username: xw</span><br><span class="line">    password: 111111</span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">   # session配置</span><br><span class="line">  session:</span><br><span class="line">    # jdbc关系型数据库，等价于@EnableJdbcHttpSession注解</span><br><span class="line">    # redis 使用redis数据库存储，等价于@EnableRedisHttpSession注解</span><br><span class="line">    store-type: jdbc</span><br><span class="line">    # 同server.servlet.session.timeout属性</span><br><span class="line">    #timeout: PT30M</span><br><span class="line">    jdbc:</span><br><span class="line">      # 过期会话清理作业的Cron表达式</span><br><span class="line">      cleanup-cron: 10 * * * * *</span><br><span class="line">      # 支持跟踪和保存会话更改到会话存储的模式。</span><br><span class="line">      # ON_SET_ATTRIBUTE，对session更改的时候，保存属性，默认使用</span><br><span class="line">      # ON_GET_ATTRIBUTE，对session更改和读取都保存数据</span><br><span class="line">      # ALWAYS，始终保存所有会话属性，不管与会话的交互如何。（测试和ON_SET_ATTRIBUTE一样）</span><br><span class="line">      save-mode: ON_GET_ATTRIBUTE</span><br><span class="line">      # 支持将会话写入会话存储的模式</span><br><span class="line">      # ON_SAVE：响应完成调用SessionRepository#save(Session)的时候才保存到数据库，默认使用</span><br><span class="line">      # IMMEDIATE：创建session和设置session值后就立即保存到数据库</span><br><span class="line">      flush-mode: ON_SAVE</span><br><span class="line">      #指定表名，默认表名为spring_session(还会在这个基础上创spring_session_attributes表)</span><br><span class="line">      # table-name: spring_session</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>初始化sql，以mysql为例，其他的可以在spring-session-jdbc包下的schema-*.sql查找，如果表名修改了，只需要把相应的SPRING_SESSION修改即可</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE SPRING_SESSION (</span><br><span class="line">   PRIMARY_ID CHAR(36) NOT NULL,</span><br><span class="line">   SESSION_ID CHAR(36) NOT NULL,</span><br><span class="line">   CREATION_TIME BIGINT NOT NULL,</span><br><span class="line">   LAST_ACCESS_TIME BIGINT NOT NULL,</span><br><span class="line">   MAX_INACTIVE_INTERVAL INT NOT NULL,</span><br><span class="line">   EXPIRY_TIME BIGINT NOT NULL,</span><br><span class="line">   PRINCIPAL_NAME VARCHAR(100),</span><br><span class="line">   CONSTRAINT SPRING_SESSION_PK PRIMARY KEY (PRIMARY_ID)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">CREATE UNIQUE INDEX SPRING_SESSION_IX1 ON SPRING_SESSION (SESSION_ID);</span><br><span class="line">CREATE INDEX SPRING_SESSION_IX2 ON SPRING_SESSION (EXPIRY_TIME);</span><br><span class="line">CREATE INDEX SPRING_SESSION_IX3 ON SPRING_SESSION (PRINCIPAL_NAME);</span><br><span class="line"></span><br><span class="line">CREATE TABLE SPRING_SESSION_ATTRIBUTES (</span><br><span class="line">   SESSION_PRIMARY_ID CHAR(36) NOT NULL,</span><br><span class="line">   ATTRIBUTE_NAME VARCHAR(200) NOT NULL,</span><br><span class="line">   ATTRIBUTE_BYTES LONGVARBINARY NOT NULL,</span><br><span class="line">   CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),</span><br><span class="line">   CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASCADE</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
@@ -207,7 +203,7 @@
 <li><p>环境：使用redis数据库存储sesion信息，存储类型为哈希格式</p>
 </li>
 <li><p>pom.xml文件添加session redis的依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.session&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.session&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-session-data-redis&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;&#x2F;artifactId&gt;</span><br><span class="line">&lt;&#x2F;dependency&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>application.yml配置</p>
 </li>
@@ -255,7 +251,8 @@ spring:
       # IMMEDIATE：创建session和设置session值后就立即保存到数据库
       flush-mode: ON_SAVE
       #指定表名，默认表名为spring_session(还会在这个基础上创spring_session_attributes表)
-      # table-name: spring_session</code></pre><h3 id="spring-session-redis实现session同步的原理"><a href="#spring-session-redis实现session同步的原理" class="headerlink" title="spring session redis实现session同步的原理"></a>spring session redis实现session同步的原理</h3><ul>
+      # table-name: spring_session</code></pre>
+<h3 id="spring-session-redis实现session同步的原理"><a href="#spring-session-redis实现session同步的原理" class="headerlink" title="spring session redis实现session同步的原理"></a>spring session redis实现session同步的原理</h3><ul>
 <li>通过SessionRepositoryFilter实现把servlet容器实现的httpSession替换为spring-session</li>
 <li>RedisIndexedSessionRepository实现session的增删改查，可以自定义该类 </li>
 </ul>
@@ -348,7 +345,7 @@ spring:
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/spring session入门/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/spring%20session%E5%85%A5%E9%97%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -362,7 +359,7 @@ spring:
   
 <nav id="article-nav">
   
-    <a href="/2020/07/08/代理介绍/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -372,7 +369,7 @@ spring:
     </a>
   
   
-    <a href="/2019/11/17/网络安全协议与PKI应用/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/17/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE%E4%B8%8EPKI%E5%BA%94%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">网络安全-网络安全协议与PKI应用</div>
       <i class="icon-circle-right"></i>
     </a>

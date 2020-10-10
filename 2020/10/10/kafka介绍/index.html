@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>代理介绍 | 海若Hero</title>
+  <title>kafka介绍 | 海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代理概念设计模式的一种 设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。">
+  <meta name="description" content="设计原理   kafka的设计初衷是希望作为一个统一的信息收集平台,能够实时的收集反馈信息,并需要能够支撑较大的数据量,且具备良好的容错能力。     这就需要kafka具有以下特性：     1)高吞吐量，低延迟     每秒处理消息的数。我们希望消息引擎的吞吐量越大越好。     延迟：客户端发起请求与服务端处理请求并发送响应给客户端之间的这一段时间。     顺序读写     零拷贝：在Li">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代理介绍">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="kafka介绍">
+<meta property="og:url" content="http://yoursite.com/2020/10/10/kafka%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="海若Hero">
-<meta property="og:description" content="代理概念设计模式的一种 设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。">
+<meta property="og:description" content="设计原理   kafka的设计初衷是希望作为一个统一的信息收集平台,能够实时的收集反馈信息,并需要能够支撑较大的数据量,且具备良好的容错能力。     这就需要kafka具有以下特性：     1)高吞吐量，低延迟     每秒处理消息的数。我们希望消息引擎的吞吐量越大越好。     延迟：客户端发起请求与服务端处理请求并发送响应给客户端之间的这一段时间。     顺序读写     零拷贝：在Li">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-07-08T08:28:15.440Z">
-<meta property="article:modified_time" content="2020-07-08T08:41:13.514Z">
+<meta property="article:published_time" content="2020-10-10T06:14:37.472Z">
+<meta property="article:modified_time" content="2020-10-10T06:15:22.759Z">
 <meta property="article:author" content="海若">
 <meta name="twitter:card" content="summary">
   
@@ -150,97 +150,280 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-代理介绍" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-kafka介绍" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      代理介绍
+      kafka介绍
     </h1>
   
 
         
-        <a href="/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-07-08T08:28:15.440Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+        <a href="/2020/10/10/kafka%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
+  	<time datetime="2020-10-10T06:14:37.472Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><h4 id="设计模式的一种"><a href="#设计模式的一种" class="headerlink" title="设计模式的一种"></a>设计模式的一种</h4><ul>
-<li><p>设计模式的分类</p>
-<p>总体来说设计模式分为三大类：</p>
-<p>创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
-<p><strong>结构型模式</strong>，共七种：适配器模式、装饰器模式、<strong>代理模式</strong>、外观模式、桥接模式、组合模式、享元模式。</p>
-<p>行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+        <h2 id="设计原理"><a href="#设计原理" class="headerlink" title="设计原理"></a>设计原理</h2><blockquote>
+<p>  kafka的设计初衷是希望作为一个统一的信息收集平台,能够实时的收集反馈信息,并需要能够支撑较大的数据量,且具备良好的容错能力。</p>
+</blockquote>
+<blockquote>
+<p>  这就需要kafka具有以下特性：</p>
+</blockquote>
+<blockquote>
+<p>  1)高吞吐量，低延迟</p>
+</blockquote>
+<blockquote>
+<p>  每秒处理消息的数。我们希望消息引擎的吞吐量越大越好。</p>
+</blockquote>
+<blockquote>
+<p>  延迟：客户端发起请求与服务端处理请求并发送响应给客户端之间的这一段时间。</p>
+</blockquote>
+<blockquote>
+<p>  顺序读写</p>
+</blockquote>
+<blockquote>
+<p>  零拷贝：在Linux kernel2.2<br>  之后出现了一种叫做”零拷贝(zero-copy)”系统调用机制，就是跳过“用户缓冲区”的拷贝，建立一个磁盘空间和内存的直接映射，数据不再复制到“用户态缓冲区”。</p>
+</blockquote>
+<blockquote>
+<p>  分区：</p>
+</blockquote>
+<blockquote>
+<p>  kafka中的topic中的内容可以被分为多分partition存在,每个partition又分为多个段segment,所以每次操作都是针对一小部分做操作，很轻便，并且增加并行操作的能力</p>
+</blockquote>
+<blockquote>
+<p>  批量发送：</p>
+</blockquote>
+<blockquote>
+<p>  kafka允许进行批量发送消息，producter发送消息的时候，可以将消息缓存在本地,等到了固定条件发送到kafka。等消息条数到固定条数<br>  ，一段时间发送一次。</p>
+</blockquote>
+<blockquote>
+<p>  数据压缩:<br>  Kafka还支持对消息集合进行压缩，Producer可以通过GZIP或Snappy格式对消息集合进行压缩<br>  压缩的好处就是减少传输的数据量，减轻对网络传输的压力</p>
+</blockquote>
+<blockquote>
+<p>  2）消息持久化</p>
+</blockquote>
+<blockquote>
+<p>  解耦消息发送与消息消费</p>
+</blockquote>
+<blockquote>
+<p>  实现灵活的消息处理: 已经处理过的消息在未来的某个时间需要重新处理。</p>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>负载均衡和故障转移</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>  Kafka提供了智能的leader选举算法，可以在集群的所有机器上以均等的机会分散各个partition的leader,从而整体上实现了负载均衡。</p>
+</blockquote>
+<blockquote>
+<p>  当服务器意外终止时，整个集群可以快速检测到，并立即将该服务器上的应用或服务转移到其他服务器上。Kafka启动后每个节点会议会话的形式将自己注册到zookeeper服务器上。一旦服务出现问题，则会话超时，集群会选举出另一台服务器来代替他的工作。</p>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>伸缩性</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>  分布式系统中增加额外的计算资源时吞吐量提升的能力。</p>
+</blockquote>
+<blockquote>
+<p>  例如:一个cpu的处理能力是U,我们希望两个是2U（即线性扩容）</p>
+</blockquote>
+<blockquote>
+<p>  阻碍线性扩容的很常见的因素是状态保存。</p>
+</blockquote>
+<blockquote>
+<p>  Kafka解决这个问题的方法:每台kafka服务器上的状态统一交由zookeeper管理，扩展kafka集群只需要一步,<br>  启动新的kafka服务器。</p>
+</blockquote>
+<h2 id="部分名词解释"><a href="#部分名词解释" class="headerlink" title="部分名词解释"></a>部分名词解释</h2><ul>
+<li><p><strong>Broker</strong>：Kafka节点，一个Kafka节点就是一个broker，多个broker可以组成一个Kafka集群。</p>
 </li>
-<li><p>代理模式定义：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。通俗的来讲代理模式就是我们生活中常见的中介。或者最常见的就是朋友圈中卖面膜的同学了。</p>
+<li><p><strong>Topic</strong>：一类消息，消息存放的目录即主题，例如page<br>view日志、click日志等都可以以topic的形式存在，Kafka集群能够同时负责多个topic的分发。</p>
 </li>
-<li><p>代理模式的有点</p>
-<ul>
-<li>职责清晰<br> 具体角色是实现具体的业务逻辑，不用关心其他非本职责的事务，通过后期的代理完成一件事务，代码清晰。在某些情况下，一个客户类不想或者不能直接引用一个委托对象，而代理类对象可以在客户类和委托对象之间起到中介的作用，其<strong>特征是代理类和委托类实现相同的接口</strong>。</li>
-<li>高扩展性<br> 具体主题角色随时会发生变化，但是只要实现了接口，接口不变，代理类就可以不做任何修改继续使用，符合“<strong>开闭原则</strong>”。<br> 另外，代理类除了是客户类和委托类的中介之外，我们还可以通过给代理类增加额外的功能来扩展委托类的功能，这样做我们只需要修改代理类而不需要再修改委托类，<strong>同样符合开闭原则</strong>。</li>
-</ul>
+<li><p><strong>Partition</strong>：topic物理上的分组，一个topic可以分为多个partition，每个partition是一个有序的队列</p>
 </li>
-</ul>
-<h4 id="代理分类"><a href="#代理分类" class="headerlink" title="代理分类"></a>代理分类</h4><ul>
-<li><p>静态代理：</p>
-<ul>
-<li><p>代理类和被代理类应该共同实现一个接口，或者是共同继承某个类。为什么叫做静态呢？因为它的类型是事先预定好的</p>
+<li><p><strong>Segment</strong>：partition物理上由多个segment组成，每个Segment存着message信息</p>
 </li>
-<li><p>优点<br> 业务类只需要关注业务逻辑本身，保证了业务类的重用性。这是代理的共有优点。代理使客户端不需要知道实现类是什么，怎么做的，而客户端只需知道代理即可（解耦合）。对于如上的客户端代码，<code>Subject subject = new ConcreteSubject(); Proxy proxy = new Proxy(subject);</code>可以应用工厂方法将它隐藏。</p>
+<li><p><strong>Producer</strong> : 生产message发送到topic</p>
 </li>
-<li><p>缺点</p>
-<ul>
-<li>代理类和委托类实现了相同的接口，代理类通过委托类实现了相同的方法。这样就出现了大量的代码重复。如果接口增加一个方法，除了所有实现类需要实现这个方法外，所有代理类也需要实现此方法。增加了代码维护的复杂度。</li>
-<li>代理对象只服务于一种类型的对象，如果要服务多类型的对象。势必要为每一种对象都进行代理，静态代理在程序规模稍大时就无法胜任了。如上的代码是只为Subject类的访问提供了代理，但是如果还要为其他类如AnotherSubject类提供代理的话，就需要我们再次添加代理AnotherSubject的代理类。<br> 由于静态代理的这个缺点，就需要使用动态代理。</li>
-</ul>
+<li><p><strong>Consumer</strong> : 订阅topic消费message, consumer作为一个线程来消费</p>
+</li>
+<li><p><strong>Consumer Group</strong>：一个Consumer Group包含多个consumer,<br>这个是预先在配置文件中配置好的。各个consumer（consumer<br>线程）可以组成一个组（Consumer group<br>），partition中的每个message只能被组（Consumer group ）<br>中的一个consumer（consumer 线程<br>）消费，如果一个message可以被多个consumer（consumer 线程 ）<br>消费的话，那么这些consumer必须在不同的组。（它不能像MQ那样可以多个线程作为consumer去处理message，这是因为多个线程去消费一个Queue中的数据的时候，由于要保证不能多个线程拿同一条message，所以就需要行级别悲观所（for<br>update）,这就导致了consume的性能下降，吞吐量不够。而kafka为了保证吞吐量，只允许一个consumer线程去访问一个partition。如果觉得效率不高的时候，可以加partition的数量来横向扩展，那么再加新的consumer<br>thread去消费。这样没有锁竞争，充分发挥了横向的扩展性，吞吐量极高。这也就形成了分布式消费的概念。）</p>
 </li>
 </ul>
+<h2 id="主要配置"><a href="#主要配置" class="headerlink" title="主要配置"></a>主要配置</h2><p>Broker主要参数配置:</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>listeners</td>
+<td>broker监听列表。格式是[协议]://[主机名]:[端口], [[协议]://[主机名]:[端口]]。该参数主要用于客户端连接broker使用，可以认为是broker端开放给clients的监听端口。</td>
+</tr>
+<tr>
+<td>log.retention.{hours|minutes|ms}</td>
+<td>日志留存时间，默认只保留最近7天的数据。</td>
+</tr>
+<tr>
+<td>num.partitions</td>
+<td>Partition数量</td>
+</tr>
+<tr>
+<td>zookeeper.connection.timeout.ms</td>
+<td>Broker与zookeeper之间的超时时间</td>
+</tr>
+<tr>
+<td>zookeeper.connect</td>
+<td>Zookeeper 地址列表</td>
+</tr>
+<tr>
+<td>log.roll.hours</td>
+<td>这个参数会在日志segment没有达到log.segment.bytes设置的大小，也会强制新建一个segment 会被 topic创建时的指定参数覆盖</td>
+</tr>
+<tr>
+<td>log.segment.bytes</td>
+<td>topic的分区是以一堆segment文件存储的，这个控制每个segment的大小，会被topic创建时的指定参数覆盖</td>
+</tr>
+<tr>
+<td>num.io.threads</td>
+<td>broker处理磁盘IO 的线程数</td>
+</tr>
+<tr>
+<td>num.network.threads</td>
+<td>broker 处理消息的最大线程数，一般情况下不需要去修改</td>
+</tr>
+<tr>
+<td>message.max.bytes</td>
+<td>消息体的最大大小，单位是字节</td>
+</tr>
+<tr>
+<td>log.dirs</td>
+<td>kafka数据的存放地址，多个地址的话用逗号分割 /tmp/kafka-logs-1，/tmp/kafka-logs-2</td>
+</tr>
+<tr>
+<td>broker.id</td>
+<td>每一个broker在集群中的唯一标示，要求是正数。在改变IP地址，不改变broker.id的话不会影响consumers</td>
+</tr>
+</tbody></table>
+<p>Consumer参数配置：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>socket.timeout.ms</td>
+<td>socket的超时时间。如果消费者没有在 session.timeout.ms 指定的时间内发送心跳给群组协调器，就被认为已经死亡，协调器就会触发再均衡，把它的分区分配给群组里的其他消费者 。该属性与 heartbeat.interval.ms紧密相关。heartbeat.interval.ms 指定了poll()方法向协调器 发送心跳的频 率， session.timeout.ms 则指定了消费者可以多久不发送心跳。所以， 一般需要同时修改这两个属性， heartbeat.interval.ms 必须比 session.timeout.ms 小， 一般是 session.timeout.ms 的三分之一</td>
+</tr>
+<tr>
+<td>auto.commit.enable</td>
+<td>是否在消费消息后将offset自动提交</td>
+</tr>
+<tr>
+<td>auto.commit.interval.ms</td>
+<td>自动提交的时间间隔</td>
+</tr>
+<tr>
+<td>auto.offset.reset</td>
+<td>该属性指定了消费者在读取一个没有偏移量的分区或者偏移量无效的情况下(因消费者长时间失效，包含偏移量的记录已经过时井被删除)该作何处理。它的默认值是latest， 意 思是说，在偏移量无效的情况下，消费者将从最新的记录开始读取数据(在消费者 启动之 后生成的记录)。另一个值是 earliest，意思是说，在偏移量无效的情况下，消费者将从 起始位置读取分区的记录</td>
+</tr>
+<tr>
+<td>fetch.min.bytes</td>
+<td>该属性指定了消费者从服务器获取记录的最小字节数。 broker 在收到消费者的数据请求时， 如果可用的数据量小于 fetch.min.bytes指定的大小，那么它会等到有足够的可用数据时才把它返回给消费者</td>
+</tr>
+<tr>
+<td>fetch.max.wait.ms</td>
+<td>我们通过 fetch.min.bytes 告诉 Kafka，等到有足够的数据时才把它返回给消费者。而 fetch.max.wait.ms则用于指定 broker的等待时间，默认是 500ms。如果没有足够的数据流入 Kafka，消费者获取最小数据量的要求就得不到满足，最终导致500ms的延迟</td>
+</tr>
+<tr>
+<td>max.parition.fetch.bytes</td>
+<td>该属性指定了服务器从每个分区里返回给消费者的最大字节数。它的默认值是 1MB，也 就是说， KafkaConsumer.poll() 方法从每个分区里返回的记录最多不超过 max.parition.fetch.bytes 指定的字节。如果一个主题有 20个分区和 5 个消费者，那么每个消费者需要至少 4MB 的可用内存来接收记录。在为消费者分配内存时，可以给它们多分配一些，因 为如果群组里有消费者发生崩溃，剩下的消费者需要处理更多的分区。 max.parition.fetch.bytes 的值必须比 broker能够接收的最大消息的字节数(通过 max.message.size属 性配置 )大， 否则消费者可能无法读取这些消息，导致消费者一直挂起重试。在设置该属性时，另一个需要考虑的因素是消费者处理数据的时间。 消费者需要频繁调用 poll() 方法来避免会话过期和发生分区再均衡，如果单次调用 poll() 返回的数据太多，消费者需要更多的时间来处理，可能无法及时进行下一个轮询来避免会话过期。如果出现这种情况， 可以把 max.parition.fetch.bytes 值改小 ，或者延长会话过期时间。</td>
+</tr>
+</tbody></table>
+<p>Producer参数配置：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>acks</td>
+<td>acks 参数指定了必须要有多少个分区副本收到消息，生产者才会认为消息写入是成功的</td>
+</tr>
+<tr>
+<td>retries</td>
+<td>生产者从服务器收到的错误有可能是临时性的错误(比如分区找不到首领)。在这种情况下， retries参数的值决定了生产者可以重发消息的次数，如果达到这个次数，生产者会放弃重试并返回错误。</td>
+</tr>
+<tr>
+<td>retry.backoff.ms</td>
+<td>每次失败重试的间隔时间</td>
+</tr>
+<tr>
+<td>max.block.ms</td>
+<td>配置控制了KafkaProducer.send()并将KafkaProducer.partitionsFor()被阻塞多长时间。由于缓冲区已满或元数据不可用，这些方法可能会被阻塞止</td>
+</tr>
+<tr>
+<td>bootstrap.servers</td>
+<td>用于建立到Kafka集群的初始连接的主机/端口对列表。该列表应该以表格的形式出现host1:port1,host2:port2,…</td>
+</tr>
+<tr>
+<td>batch.size</td>
+<td>只要有多个记录被发送到同一个分区，生产者就会尝试将记录一起分成更少的请求。这有助于客户端和服务器的性能。该配置以字节为单位控制默认的批量大小</td>
+</tr>
+<tr>
+<td>linger.ms</td>
+<td>批量延迟的上限：一旦我们得到batch.size值得记录的分区，它将被立即发送而不管这个设置如何，但是如果我们为这个分区累积的字节数少于这个数字，我们将在指定的时间内“等待”，等待更多的记录出现。</td>
+</tr>
+<tr>
+<td>request.timeout.ms</td>
+<td>指定了生产者在发送数据时等待服务器返回响应的时间</td>
+</tr>
+<tr>
+<td>metadata.fetch.timeout.ms</td>
+<td>指定了生产者在获取元数据(比如目标分区的首领是谁)时等待服务器返回响应的时间。如果等待响应超时，那么生产者要么重试发送数据，要么返回 一个错误 (抛出异常或执行回调)。</td>
+</tr>
+</tbody></table>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
+<li><p>创建topic</p>
+<p>sh kafka-topics.sh –create –topic test –partitions 12 –zookeeper<br>22.188.144.194:2182, 22.188.144.195:2182, 22.188.147.120:2183</p>
 </li>
-<li><p>jdk代理</p>
-<ul>
-<li>jdk动态代理的逻辑其实就是通过InvocationHandler接口来实现的<ul>
-<li>优点<br> 动态代理与静态代理相比较，最大的好处是接口中声明的所有方法都被转移到调用处理器一个集中的方法中处理（<code>InvocationHandler.invoke</code>）。这样，在接口方法数量比较多的时候，我们可以进行灵活处理，而不需要像静态代理那样每一个方法进行中转。而且动态代理的应用使我们的类职责更加单一，复用性更强。</li>
-<li>缺点<br> Proxy已经设计得非常优美，但是还是有一点点小小的遗憾之处——<strong>它始终无法摆脱仅支持 interface代理的桎梏</strong>，因为它的设计注定了这个遗憾。动态生成的代理类的继承关系图，已经注定有一个共同的父类叫 Proxy。Java 的继承机制注定了这些动态代理类们无法实现对 class 的动态代理，原因是多继承在 Java 中本质上就行不通。</li>
-</ul>
+<li><p>删除topic(server配置中的delete.topic.enable设置为ture,执行以下命令才会删除，否则删除不生效)</p>
+<p>sh kafka-topics.sh –delete –topic test –zookeeper<br>22.188.144.194:2181,22.188.144.195:2182,22.188.147.120:2183</p>
 </li>
-</ul>
+<li><p>查看topic列表</p>
+<p>sh kafka-topics.sh –list –zookeeper<br>22.188.144.194:2181,22.188.144.195:2182,22.188.147.120:2183</p>
 </li>
-<li><p>CGLIB代理</p>
-<ul>
-<li><p>CGLIB 原理：动态生成一个要代理类的子类，子类重写要代理的类的所有不是final的方法。在子类中采用方法拦截的技术拦截所有父类方法的调用，顺势织入横切逻辑。效率方面</p>
-<ul>
-<li>在jdk6之前比使用Java反射效率要高。唯一需要注意的是，CGLib不能对声明为final的方法进行代理，</li>
-</ul>
-<p>​       因为CGLib原理是动态生成被代理类的子类。</p>
-<ul>
-<li>在jdk6、jdk7、jdk8逐步对JDK动态代理优化之后，在调用次数较少的情况下，JDK代理效率高于CGLIB代理效率，</li>
-</ul>
-<p>​       只有当进行大量调用的时候，jdk6和jdk7比CGLIB代理效率低一点，但是到jdk8的时候，jdk代理效率高于CGLIB代理，</p>
-<p>​       总之，每一次jdk版本升级，jdk代理效率都得到提升，而CGLIB代理消息确有点跟不上步伐。。</p>
+<li><p>查具体的topic</p>
+<p>sh kafka-topics.sh –describe –topic –topic test –zookeeper<br>22.188.144.194:2181,22.188.144.195:2182,22.188.147.120:2183</p>
 </li>
-</ul>
-</li>
-</ul>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><ul>
-<li><p>AOP/@Transational</p>
-<ul>
-<li><p>源码参考</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1）SpringTransactionAnnotationParser:parseTransactionAnnotation()</span><br><span class="line">（2）AbstractFallbackTransactionAttributeSource:112</span><br><span class="line">     TransactionAttribute txAttr &#x3D; computeTransactionAttribute(method, targetClass);</span><br><span class="line"> （3）AbstractAutoProxyCreator:348</span><br><span class="line">     if (specificInterceptors !&#x3D; DO_NOT_PROXY)</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>自定义标签优化项目结构-xw-server</li>
-</ul>
+</ol>
+<p>5）修改topic的partition数量(注意：只能改大，不能改小)</p>
+<blockquote>
+<p>  sh kafka-topics.sh –alter –partitions 12 –topic test –zookeeper<br>  22.188.144.194:2181,22.188.144.195:2182,22.188.147.120:2183</p>
+</blockquote>
+<p>6） 发送消息</p>
+<p>sh kafka-console-producer.sh –broker-list 22.188.144.194:50005 –topic test</p>
+<ol start="7">
+<li>消费消息</li>
+</ol>
+<blockquote>
+<p>  sh kafka-console-consumer.sh –zookeeper 22.188.126.86:2181 –from-beginning<br>  –topic test</p>
+</blockquote>
 
       
 
@@ -330,7 +513,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/10/kafka%E4%BB%8B%E7%BB%8D/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +527,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/09/springboot%E6%B3%A8%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/10/https%E4%BB%8B%E7%BB%8D/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          springboot注解
+          https介绍
         
       </div>
     </a>
   
   
-    <a href="/2020/07/08/spring%20session%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">spring session入门</div>
+    <a href="/2020/10/10/docker%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker安装使用指南</div>
       <i class="icon-circle-right"></i>
     </a>
   

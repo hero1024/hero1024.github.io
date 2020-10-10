@@ -6,17 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HTML网页开发手册 | 海若Hero</title>
+  <title>海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.1 HTML基础1.1.1  什么是 HTML？HTML 是用来描述网页的一种语言。 · HTML 指的是超文本标记语言 (Hyper Text Markup Language) · HTML 不是一种编程语言，而是一种标记语言 (markup language) · 标记语言是一套标记标签 (markup tag) · HTML 使用标记标签来描述网页 1.1.2 HTML结构1234567">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTML网页开发手册">
-<meta property="og:url" content="http://yoursite.com/2019/07/21/HTML%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/index.html">
+  <meta name="description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
+<meta property="og:type" content="website">
+<meta property="og:title" content="海若Hero">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="海若Hero">
-<meta property="og:description" content="1.1 HTML基础1.1.1  什么是 HTML？HTML 是用来描述网页的一种语言。 · HTML 指的是超文本标记语言 (Hyper Text Markup Language) · HTML 不是一种编程语言，而是一种标记语言 (markup language) · 标记语言是一套标记标签 (markup tag) · HTML 使用标记标签来描述网页 1.1.2 HTML结构1234567">
+<meta property="og:description" content="唯本色英雄方能到此，是飘零儿女莫问人家">
 <meta property="og:locale">
-<meta property="article:published_time" content="2019-07-21T09:59:37.420Z">
-<meta property="article:modified_time" content="2020-07-10T08:50:05.284Z">
 <meta property="article:author" content="海若">
 <meta name="twitter:card" content="summary">
   
@@ -150,14 +148,489 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HTML网页开发手册" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-Oracle知识点笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      HTML网页开发手册
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/17/Oracle%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/">Oracle知识点笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/17/Oracle%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2019-11-17T09:36:38.699Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-1-Oracle基本配置"><a href="#1-1-Oracle基本配置" class="headerlink" title="1.1 Oracle基本配置"></a>1.1 Oracle基本配置</h2><h3 id="1-1-1-Oracle安装与启动"><a href="#1-1-1-Oracle安装与启动" class="headerlink" title="1.1.1 Oracle安装与启动"></a>1.1.1 Oracle安装与启动</h3><p>Oracle安装：用户种类及初始密码</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7ca0901e8b3c0317.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>在oracle10g\11g中默认scott被锁定。</p>
+<p>Oracle数据库的启动</p>
+<p>a) 启动两个服务**<em>Listener/**</em>Service</p>
+<p>b) “开始-》运行”-》sqlplus或 sqlplusw</p>
+<h2 id="1-2-Oracle用户管理"><a href="#1-2-Oracle用户管理" class="headerlink" title="1.2 Oracle用户管理"></a>1.2 Oracle用户管理</h2><h3 id="1-2-1-基本命令"><a href="#1-2-1-基本命令" class="headerlink" title="1.2.1 基本命令"></a>1.2.1 基本命令</h3><p>用户连接、解锁、锁定</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">c) conn&#x2F;connect scott&#x2F;tiger; system&#x2F;orcl; sys&#x2F;orcl as sysdba;  </span><br><span class="line"></span><br><span class="line">d) 解锁&#x2F;锁定：alter user 用户名 account unlock&#x2F;lock;</span><br><span class="line"></span><br><span class="line">解锁： alter user scott account unlock 用户解锁</span><br><span class="line"></span><br><span class="line">锁定： alter user scott sccount lock 用户锁定</span><br><span class="line"></span><br><span class="line"> alter user scott account password expire;设置密码过期</span><br></pre></td></tr></table></figure>
+<p>用户的查找</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">e) 显示当前的用户：show user;</span><br><span class="line"></span><br><span class="line">f) 显示系统默认的用户：select * from all_users;  所有用户</span><br><span class="line"></span><br><span class="line"> dba_users 管理员用户</span><br></pre></td></tr></table></figure>
+<p>创建新用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g) 创建用户密码：SQL&gt; create user xxx identified by 密码 default tablespace xx;</span><br><span class="line"></span><br><span class="line">h) 更改密码：SQL&gt; alter user xxx identified by 密码;</span><br></pre></td></tr></table></figure>
+<p>i) 给用户授系统权限：</p>
+<p> i. 授予连接数据库权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a) SQL&gt; grant create session to test;</span><br><span class="line"></span><br><span class="line">b) grant connect,resource to xxx;</span><br></pre></td></tr></table></figure>
+<p> ii. 授予创建数据库表权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a) SQL&gt; grant create table to test;</span><br></pre></td></tr></table></figure>
+<p>j) 给用户授对象权限：</p>
+<p> i. 授予查询表修改等的权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a) SQL&gt; grant select on dept to test;</span><br><span class="line"></span><br><span class="line">b) SQL&gt; grant all on scott.dept to test;</span><br></pre></td></tr></table></figure>
+<p>k) 给用户授角色：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> i. SQL&gt;grant connect,resource to test;</span><br><span class="line"></span><br><span class="line"> ii. 管理权限 with grant option 看一下收回权限后，级联授权的能否收回</span><br><span class="line"></span><br><span class="line">grant all on emp to xxx with grant option;按照角色授予权限</span><br></pre></td></tr></table></figure>
+<p>l) 收回权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">i. SQL&gt; revoke select on dept from test;</span><br><span class="line"></span><br><span class="line">ii. SQL&gt; revoke all on dept from test;</span><br><span class="line"></span><br><span class="line">iii. 撤销权限 revoke xx on 表名 from 用户</span><br></pre></td></tr></table></figure>
+<p>删除用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">m) SQL&gt; drop user test;</span><br><span class="line"></span><br><span class="line">n) SQL&gt; drop user xx cascade;</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-2-实例"><a href="#1-2-2-实例" class="headerlink" title="1.2.2 实例"></a>1.2.2 实例</h3><ol>
+<li>创建用户：必需以dba的身份才能创建用户，否则会提示权限不足</li>
+</ol>
+<p>a) 例：以scott的身份创建用户</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-82c2c4a9fc1f49cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>b) 例：使用system来创建用户</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-9f4d50af3972b267.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ol start="2">
+<li>一般以dba的身份去删除某个用户，如果用其他用户去删除用户，则需要有drop user 的权限。在删除用户时注意，如果要删除的用户已经创建了表，那么就需要在删除时带一个参数cascade。</li>
+</ol>
+<p>a) 例1，使用scott删除本身</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-896dcd507191a2bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ol start="3">
+<li>给用户创建权限，我们创建的用户刚开始是什么权限都没有，登录都不可以</li>
+</ol>
+<p>a) 使用刚刚创建的chenzhou来登录</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-a535c794c5007641.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>提示缺少权限，登录被取消</p>
+<p>b) Oracle中权限的分类</p>
+<p> i. 系统权限：用户对数据库的相关权限</p>
+<p> ii. 对象权限：用户对数据库的数据对象操作的权限（select,insert,update,delete,all,create index……）</p>
+<p>c) Oracle中角色的分类</p>
+<p> i. 预定义角色</p>
+<p> ii. 自定义角色</p>
+<p>d) 给用户赋予connect角色</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-b6a2d466c6acfb11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>再登录：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-9ab2ca1b9bcc1c31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>e) 给用户赋予resource的角色，用户有了该角色就能够自己建表</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d396e6cadfb3ff56.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>f) 用户自己建表</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-f7ab81387d64b798.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>g) 如何使用chenzhou用户来访问scott的emp表</p>
+<p> i. 首先给用户赋权</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-6bc3241740c87245.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p> ii. 赋权之后使用该用户来查询scott中的emp表，结果如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-8d5f4f5759442a32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p> iii. 如果要赋予该用户对该表修改权限，则grant update……</p>
+<p> iv. 如果想把对该表的所有权限够赋给该用户则 grant all on emp to chenzhou</p>
+<ol start="4">
+<li>给用户赋权使用grant，收回权限使用revoke</li>
+</ol>
+<p>a) 例子：收回chenzhou用户对emp表的查询权限</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-12c5e70c2359ceab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>再次查询scott中的emp表时：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d0e0047c6214ada0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ol start="5">
+<li>对权限进行维护</li>
+</ol>
+<p>a) 希望chenzhou用户可以去查询scott中的emp表，还希望他可以把这个权限交给别的对象</p>
+<p> i. 如果是对象权限，就加入with grant option</p>
+<p>例：grant select on emp to chenzhou with grant option</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-841697eec3a4d574.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p> ii. 如果是系统权限，就加入with admin option</p>
+<p> <strong>iii.</strong> <strong>注：如果A对象把权限赋给B,然后B再赋给C，当A把B的权限revoke后，C拥有的权限也会被回收掉。</strong></p>
+<ol start="6">
+<li>使用profile管理用户口令</li>
+</ol>
+<p>a) 账户锁定</p>
+<p> i. 概述：指定该账户登陆时最多可以输入密码的次数，也可以指定用户锁定的时间（天），一般用dba的身份去执行该命令</p>
+<p> ii. 例子：指定scott这个用户最多只能尝试3次登陆，锁定时间为2天</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create profile lock_account limit failed_login_attempts 3 password_lock_time 2;</span><br><span class="line"></span><br><span class="line">alter user scott profile lock_account;</span><br></pre></td></tr></table></figure>
+<p>b) 给账户解锁（dba操作）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i. alter user scott account unlock;</span><br></pre></td></tr></table></figure>
+<p>c) 终止口令</p>
+<p> i. 概述：为了让用户定期修改密码可以使用终止口令的指令来完成（dba操作）</p>
+<p> ii. 例子：给chenzhou用户创建一个profile文件，要求该用户每隔10天要修改自家的登录密码，宽限期为2天。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> iii. create profile profilename limit password_life_time 10 password_grace_time 2;</span><br><span class="line"></span><br><span class="line">alter user chenzhou profile profilename;</span><br></pre></td></tr></table></figure>
+<p>d) 口令历史</p>
+<p> i. 概述：如果希望用户在修改密码时，不能使用以前使用过的密码，可以使用口令历史，这样oracle就会将口令修改的信息存放到数据字典中，这样当用户修改密码时，oracle就会对新旧密码进行比较，当发现新旧密码一样时，就提示用户重新输入密码。</p>
+<p> ii. 例子：</p>
+<ol>
+<li>建立profile<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create profile password_history limit password_life_time 10 password_grace_time 3 password_reuse_time 10;</span><br><span class="line"></span><br><span class="line">psssword_reuse_time &#x2F;&#x2F;指定口令可以重用时间，即10天后就可以重用</span><br></pre></td></tr></table></figure></li>
+<li>分配给某个用户：</li>
+</ol>
+<p>e) 删除profile</p>
+<p> i. 概述：当不需要某个profile文件时，可以删除该文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ii. drop profile password_history[cascade]</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-基本数据类型及其sql语法"><a href="#1-3-基本数据类型及其sql语法" class="headerlink" title="1.3 基本数据类型及其sql语法"></a>1.3 基本数据类型及其sql语法</h2><h3 id="1-3-1-表管理"><a href="#1-3-1-表管理" class="headerlink" title="1.3.1 表管理"></a>1.3.1 表管理</h3><p>o) 查询数据库中有哪些表：select * from tab;</p>
+<p>p) 查询某张表的结构：desc 表名;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-a3bbce258669fd97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">q)      create table users(</span><br><span class="line"></span><br><span class="line"> userId number primary key,</span><br><span class="line"></span><br><span class="line"> userName varchar2(10),</span><br><span class="line"></span><br><span class="line"> password varchar2(20),</span><br><span class="line"></span><br><span class="line"> addr varchar2(20));</span><br></pre></td></tr></table></figure>
+<p>r) 添加字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alter table users add(pubdate date);</span><br><span class="line"></span><br><span class="line">desc users;</span><br><span class="line"></span><br><span class="line">alter table users add(age number)</span><br></pre></td></tr></table></figure>
+<p>s) 修改字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table users modify(userName varchar2(20));</span><br><span class="line"></span><br><span class="line">insert into users values(32,&#39;aa&#39;,&#39;aa&#39;,&#39;aa&#39;,sysdate,10);</span><br></pre></td></tr></table></figure>
+<p>t) 删除字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">alter table users drop(password);</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">alter table users drop column password</span><br><span class="line"></span><br><span class="line">desc users;</span><br></pre></td></tr></table></figure>
+<p>u) 给表添加约束</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alter table users add constraint ck check(age&gt;10 and age&lt;60)</span><br><span class="line"></span><br><span class="line">alter table users drop primary key;</span><br><span class="line"></span><br><span class="line">alter table users add primary key(userId)</span><br></pre></td></tr></table></figure>
+<p>v) 重新命名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rename users to test;&#x2F;&#x2F;将users表重新命名为test</span><br><span class="line"></span><br><span class="line">drop table users;&#x2F;&#x2F;删除表结构</span><br><span class="line"></span><br><span class="line">truncate table users &#x2F;&#x2F;删除记录，记录不可恢复，不写日志（快）</span><br><span class="line"></span><br><span class="line">delete from emp &#x2F;&#x2F;删除记录，但可以恢复，写日志</span><br></pre></td></tr></table></figure>
+<p>w) 注意：</p>
+<p>mysql中一条INSERT语句插入批量数据的写法：INSERT INTO <a href="%5B%E5%88%97%E5%90%8D%5D,%5B%E5%88%97%E5%90%8D%5D">表名</a> VALUES ([列值],[列值])), ([列值],[列值])), ([列值],[列值])); Oracle中不支持这种写法，不过可以采用下面 的方式：</p>
+<blockquote>
+<p>INSERT ALL INTO a表 VALUES(各个值1) INTO a表 VALUES (其它值2) INTO a表 VALUES(其它值3) SELECT * FROM b表，如果SELECT * FROM b表会查询出n条数据的话，就会先往a表插入值1对应的各个字段插入n条记录，然后插入值2各个对应的字段n条记录，然后插入值3对应的各个字段n条记录。注意后边跟的SELECT语句可以随意，不过不是把它SELECT出来的内容插入前边的表里，而是起到前边的多个数据每次插入多少行的作用，这个多少行是和后边跟的SELECT语句查出来几条而定的</p>
+</blockquote>
+<h3 id="1-3-2-数据字典"><a href="#1-3-2-数据字典" class="headerlink" title="1.3.2 数据字典"></a>1.3.2 数据字典</h3><p>  维护系统对象的一套特殊表和视图</p>
+<p> <strong>user_xxx</strong> <strong>用户拥有的 all_xx</strong> <strong>用户有权查看 dba_xxx(sys)</strong> <strong>所有的信息</strong></p>
+<p>1、 查看所有数据字典对象的名称和用途</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from dictionary;</span><br></pre></td></tr></table></figure>
+<p>2、 查看oracle数据库中所有用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select username from dba_users;</span><br></pre></td></tr></table></figure>
+<p>3、 查看scott用户下所有的表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name from user_tables;</span><br></pre></td></tr></table></figure>
+<p>4、 查看scott用户所有的视图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from user_views</span><br></pre></td></tr></table></figure>
+<p>5、查询scott用户有权查看的表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select table_name,owner from all_tables;</span><br></pre></td></tr></table></figure>
+<p>4、 创建表，讲解数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Number(m,n) char(n) varchar2(n) date</span><br></pre></td></tr></table></figure>
+<p>a&gt;创建新表</p>
+<p>b&gt;利用现有的表创建表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table test2 as select * from usersinfo;</span><br></pre></td></tr></table></figure>
+<p>5、事务控制语言（TCL）可以放SQL后面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Insert into dept values(11,null,null);</span><br><span class="line"></span><br><span class="line">Insert into dept values(12,null,null);</span><br><span class="line"></span><br><span class="line">Savepoint p1;</span><br><span class="line"></span><br><span class="line">Insert into dept values(13,null,null);</span><br><span class="line"></span><br><span class="line">Insert into dept values(14,null,null);</span><br><span class="line"></span><br><span class="line">Savepoint p2;</span><br><span class="line"></span><br><span class="line">Insert into dept values(15,null,null);</span><br><span class="line"></span><br><span class="line">Insert into dept values(16,null,null);</span><br><span class="line"></span><br><span class="line">rollback to p2;</span><br><span class="line"></span><br><span class="line">Select * from dept;</span><br><span class="line"></span><br><span class="line">Rollback to p1;</span><br><span class="line"></span><br><span class="line">Select * from dept;</span><br><span class="line"></span><br><span class="line">Rollabck;</span><br><span class="line"></span><br><span class="line">Select * from dept;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-16be74709284b194.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-50dedc709078b8ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-66161909a147b437.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-1bbd464e62de187b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Select distinct * from emp where job&#x3D;’CLERK’;</span><br><span class="line"></span><br><span class="line">Select distinct job,ename from emp where job&#x3D;’CLERK’;</span><br><span class="line"></span><br><span class="line">Select distinct job from emp;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-5f6ddfa2e5d4922a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-c041d8ed17a43138.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-009a3a4dae78c9b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Select (empno||’,’||ename||’,’||job) as OUT_PUT from emp;</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-d63eb698b8257993.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-e169edcd289aee96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-be76791d12388121.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-fe87bb067343365c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-6ea9377d2089737f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-6d9630d4ecf13ee0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-f382e011f9eb7050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-ad6d5d65829e08a2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-bb3322e3529acd75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-35bc4f724354a2f8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-9555f5c3abcd6b13.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-4a7d9e84d3a5b5c8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-7303a01a836eab03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-2b55d75fd514615e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-51a3635c5ba26795.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/11997621-28b477fbf9a65a38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="1-4-基本SQL查询"><a href="#1-4-基本SQL查询" class="headerlink" title="1.4 基本SQL查询"></a>1.4 基本SQL查询</h2><h3 id="1-4-1-简单查询"><a href="#1-4-1-简单查询" class="headerlink" title="1.4.1 简单查询"></a>1.4.1 简单查询</h3><p><strong>1</strong> <strong>、select</strong> <strong>简单查询</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select sid,sname from t_student</span><br><span class="line"></span><br><span class="line">select * from t_course</span><br><span class="line"></span><br><span class="line">select * from t_score</span><br></pre></td></tr></table></figure>
+<p>–2班 女生</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where sclass &#x3D; 2 and SSEX&#x3D;&#39;f&#39;</span><br></pre></td></tr></table></figure>
+<p>–查询所有班级</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sclass from t_student</span><br></pre></td></tr></table></figure>
+<p><strong>2、</strong> <strong>select distinct</strong> <strong>查询</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct sclass from t_student</span><br></pre></td></tr></table></figure>
+<p><strong>3、</strong> <strong>给列或表达式取别名</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student;</span><br></pre></td></tr></table></figure>
+<p>–从学生表中检索出2班的性别为女性的学生的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SCLASS&#x3D;2 and SSEX&#x3D;&#39;f&#39;;</span><br></pre></td></tr></table></figure>
+<p>–从学生表中检索出所有班级</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select SCLASS from t_student;</span><br><span class="line"></span><br><span class="line">select DISTINCT SCLASS from t_student;</span><br></pre></td></tr></table></figure>
+<p>–学号为‘10001’的学生参加了哪些课程的考试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select CID from t_score where SID&#x3D;&#39;10001&#39;</span><br></pre></td></tr></table></figure>
+<p>–给学员编号为10002的学生的各门课成绩进行升序和降序的排列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select SCORE from t_score where SID&#x3D;&#39;10002&#39; order by SCORE asc</span><br><span class="line"></span><br><span class="line">select SCORE from t_score where SID&#x3D;&#39;10002&#39; order by SCORE desc</span><br></pre></td></tr></table></figure>
+<p>–查询所有姓张的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SNAME like &#39;张%&#39;;</span><br><span class="line"></span><br><span class="line">insert into t_student values(&#39;10009&#39;,&#39;张三&#39;,&#39;m&#39;,&#39;01-3月-1985&#39;，&#39;13563921205&#39;,&#39;2&#39;)</span><br><span class="line"></span><br><span class="line">select * from t_student where SNAME like &#39;张_&#39;</span><br></pre></td></tr></table></figure>
+<p>–利用已有的t_student表生成新表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table t_student_bak1 as select * from t_student</span><br><span class="line"></span><br><span class="line">create table t_student_bak2 as select * from t_student where sclass&#x3D;2</span><br><span class="line"></span><br><span class="line">create table t_student_bak3 as select * from t_student where 1&#x3D;2</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-2-连接查询和子查询—重点"><a href="#1-4-2-连接查询和子查询—重点" class="headerlink" title="1.4.2 连接查询和子查询—重点"></a>1.4.2 连接查询和子查询—重点</h3><p> 1、查询员工以及他所在的部门</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select a.*,b.* from emp a,dept b where a.deptno&#x3D;b.deptno----（内连接）</span><br></pre></td></tr></table></figure>
+<p> 2、查询所有部门以及员工姓名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select a.ename,b.deptno,b.dname from emp a,dept b where a.deptno(+)&#x3D;b.deptno</span><br></pre></td></tr></table></figure>
+<p>  或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select a.ename,b.deptno,b.dname from dept b left outer join emp a on b.deptno&#x3D;a.deptno---（左外连接）</span><br><span class="line"></span><br><span class="line">select a.ename,b.deptno,b.dname from emp a right outer join dept b on a.deptno&#x3D;b.deptno----（右外连接）</span><br></pre></td></tr></table></figure>
+<p> 3、显示员工以及其直接上级</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select a.ename 员工,b.ename 经理 from emp a,emp b where a.mgr&#x3D;b.empno(+) ----(自连接)</span><br></pre></td></tr></table></figure>
+<p> 4、查询工资高于平均工资的员工</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where sal&gt;(select avg(sal) from emp) ------（非关联子查询）</span><br></pre></td></tr></table></figure>
+<p>  先执行子查询，后执行主查询，叫做非关联子查询</p>
+<p> 5、查询每个部门最高工资的员工</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp a where (select count(*) from emp where deptno&#x3D;a.deptno and sal&gt;a.sal)&#x3D;0 ---(关联子查询)</span><br></pre></td></tr></table></figure>
+<p>  先执行主查询，后执行子查询，将主查询的当作已经查询出来的结果</p>
+<p>  也可非关联实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where (deptno,sal) in (select deptno,min(sal) from emp group by deptno)</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<p>–内连接（join on/inner join on）：查询学生总体学习情况：学生姓名，课程名，成绩</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select SNAME,CNAME,SCORE from t_student a</span><br><span class="line"></span><br><span class="line">join t_score b on a.sid &#x3D; b.sid</span><br><span class="line"></span><br><span class="line">join t_course c on b.cid &#x3D; c.cid</span><br><span class="line"></span><br><span class="line">select SNAME,CNAME,SCORE from t_student,t_score,t_course</span><br><span class="line"></span><br><span class="line">where t_student.sid &#x3D; t_score.sid</span><br><span class="line"></span><br><span class="line">and t_score.cid &#x3D; t_course.cid</span><br></pre></td></tr></table></figure>
+<p>–查询及格的学生的学习情况：学生姓名，课程名，成绩</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select SNAME,CNAME,SCORE from t_student a</span><br><span class="line"></span><br><span class="line">join t_score b on a.sid &#x3D; b.sid</span><br><span class="line"></span><br><span class="line">join t_course c on b.cid &#x3D; c.cid</span><br><span class="line"></span><br><span class="line">where SCORE &gt;&#x3D; 60</span><br></pre></td></tr></table></figure>
+<p>–查询有课程的教师的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from t_teacher</span><br><span class="line"></span><br><span class="line">inner join t_teachercourse</span><br><span class="line"></span><br><span class="line">on t_teacher.tid &#x3D; t_teachercourse.tid</span><br></pre></td></tr></table></figure>
+<p>–查询所有教师的工作分配情况，有课程的和没课程的老师都要出现在查询结果中（左外连接）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select * from t_teacher --主表</span><br><span class="line"></span><br><span class="line">left outer join t_teachercourse --从表   </span><br><span class="line"></span><br><span class="line">on t_teacher.tid &#x3D; t_teachercourse.tid</span><br><span class="line"></span><br><span class="line">select * from t_teachercourse --从表 </span><br><span class="line"></span><br><span class="line">right join t_teacher --主表   </span><br><span class="line"></span><br><span class="line">on t_teacher.tid &#x3D; t_teachercourse.tid</span><br></pre></td></tr></table></figure>
+<p>–全联接(full join 结果集中除了满足联接条件的记录外,还有左、右表中不满足条件的记录) 左连接和外连接的一个组合，先执行左连接，再执行右连接，删掉重复记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from t_teacher</span><br><span class="line"></span><br><span class="line">full join t_teachercourse  </span><br><span class="line"></span><br><span class="line">on t_teacher.tid &#x3D; t_teachercourse.tid</span><br></pre></td></tr></table></figure>
+<p>–学生和课程有多少可能的组合————</p>
+<p>–交叉连接（cross join ）————-</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student</span><br><span class="line"></span><br><span class="line">cross join t_course  </span><br><span class="line"></span><br><span class="line">select * from t_student，t_course </span><br></pre></td></tr></table></figure>
+<p>———-子查询———-</p>
+<p>–查询比张老师年龄大的教师信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_teacher where tage &gt; （select tage from t_teacher where TNAME&#x3D;&#39;张老师&#39;）</span><br></pre></td></tr></table></figure>
+<p>–查询参加过课程编号为1的考试的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where sid &#x3D; (select sid from t_score where cid&#x3D;1)---失败</span><br><span class="line"></span><br><span class="line">select * from t_student where sid in (select sid from t_score where cid&#x3D;1)</span><br></pre></td></tr></table></figure>
+<p>–查询没有参加过课程编号为1的考试的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where sid not in (select sid from t_score where cid&#x3D;1)</span><br></pre></td></tr></table></figure>
+<p>–查询所有已经安排教师上课的课程信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from t_course tc where cid in (select cid from t_teachercourse )</span><br><span class="line"></span><br><span class="line">select * from t_course tc where exists (select * from t_teachercourse ttc where ttc.cid &#x3D; tc.cid)</span><br></pre></td></tr></table></figure>
+<p>–查询所有没安排教师上课的课程信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_course tc where not exists (select * from t_teachercourse ttc where ttc.cid &#x3D; tc.cid)</span><br></pre></td></tr></table></figure>
+<p>–在成绩表中查询出所有学生的最高平均分(from后面的子查询)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select max(avgscore) from (select avg(SCORE) as avgscore from t_score group by sid)</span><br></pre></td></tr></table></figure>
+<p>–经典应用分页查询（rownum）</p>
+<p>–查询成绩表的前5条记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from t_score where rownum&gt;&#x3D;1 and rownum&lt;&#x3D;5</span><br><span class="line"></span><br><span class="line">select * from (select rownum as num,SID,CID,SCORE from t_score) where num&gt;&#x3D;1 and num&lt;&#x3D;5</span><br></pre></td></tr></table></figure>
+<p>–查询成绩表的6-10条记录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from t_score where rownum&gt;&#x3D;6 and rownum&lt;&#x3D;10--错误，没有数据</span><br><span class="line"></span><br><span class="line">select * from (select rownum as num,SID,CID,SCORE from t_score) where num&gt;&#x3D;6 and num&lt;&#x3D;10</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-3-层次查询"><a href="#1-4-3-层次查询" class="headerlink" title="1.4.3 层次查询"></a>1.4.3 层次查询</h3><p> 1、显示员工领导关系</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select lpad(ename,5*level,&#39;+&#39;) from emp connect by prior empno&#x3D;mgr start with ename&#x3D;&#39;KING&#39;</span><br></pre></td></tr></table></figure>
+<p>  或者start with mgr is null</p>
+<p> connect by 用于执行记录之间的父子关系，start with 用于指定从哪个节点记录开始遍历访问 Level 在整个查询记录中的层次</p>
+<p> 2、查询BLAKE所领导团队工资总额</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(sal) from emp connect by prior empno&#x3D;mgr start with ename&#x3D;&#39;BLAKE&#39;</span><br></pre></td></tr></table></figure>
+<h2 id="1-5-操作符及其SQL函数"><a href="#1-5-操作符及其SQL函数" class="headerlink" title="1.5 操作符及其SQL函数"></a>1.5 操作符及其SQL函数</h2><h3 id="1-5-1-操作符"><a href="#1-5-1-操作符" class="headerlink" title="1.5.1 操作符"></a>1.5.1 操作符</h3><p>–算术操作符（加(+)、减(-)、乘(*)、除(/)）：检索出课程号是’2’的成绩+10分后的结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid,cid,score+10 as &quot;lastScore&quot; from t_score where cid&#x3D;2</span><br></pre></td></tr></table></figure>
+<p>———-逻辑操作符：and or not</p>
+<p>———-检索班级是1班或2班的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SCLASS&#x3D;1 or SCLASS&#x3D;2</span><br></pre></td></tr></table></figure>
+<p>———-检索班级是1班的80后学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SCLASS&#x3D;1 and SBIRTHDAY between &#39;1-1月-1980&#39; and &#39;31-12月-1989&#39;</span><br></pre></td></tr></table></figure>
+<p>比较操作符（包括 =、&lt;&gt;、&lt;、&gt;、&lt;=、&gt;=、BETWEEN…AND、IN、LIKE 和 IS NULL）：</p>
+<p>———-检索班级是1班或2班的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SCLASS in(1,2)</span><br></pre></td></tr></table></figure>
+<p>–查询 1班的 80 后的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SCLASS&#x3D;1 and SBIRTHDAY between &#39;1-1月-1980&#39; and &#39;31-12月-1989&#39;</span><br></pre></td></tr></table></figure>
+<p>———-检索班级不是1班的80后学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SCLASS&lt;&gt;1 and SBIRTHDAY between &#39;1-1月-1980&#39; and &#39;31-12月-1989&#39;</span><br></pre></td></tr></table></figure>
+<p>– 检索1986 年出生的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SBIRTHDAY between &#39;1-1月-1986&#39; and &#39;31-12月-1986&#39;</span><br></pre></td></tr></table></figure>
+<p>– 检索1980 年以前出生的学生信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from t_student where SBIRTHDAY &lt; &#39;1-1月-1980&#39;</span><br></pre></td></tr></table></figure>
+<p>–连接运算符:用于将多个字符串或数据值合并成一个字符串</p>
+<p>–查询学生信息（把学号和姓名合并成一个列）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select (sid || sname) as &quot;学生信息&quot; from t_student</span><br><span class="line"></span><br><span class="line">select (&#39;学号为&#39; || sid || &#39;的学生的姓名是&#39;|| sname) as &quot;学生信息&quot; from t_student</span><br></pre></td></tr></table></figure>
+<p>——集合操作符：将两个查询的结果组合成一个结果 ppt9</p>
+<p>——-union、union all、intersect、minus</p>
+<p>——统计学习操作系统(1)或数据结构(2)的同学学号（union：返回两个查询的不重复的所有行)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select sid from t_score where CID&#x3D;&#39;1&#39;</span><br><span class="line"></span><br><span class="line">union</span><br><span class="line"></span><br><span class="line">select sid from t_score where CID&#x3D;&#39;2&#39;</span><br></pre></td></tr></table></figure>
+<p>——-统计java web(5) 和java框架(6)都为及格的同学学号</p>
+<p>——-intersect：相当于对2个查询结果集取交集，也就是只返回两个查询结果集的公共行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">select sid from t_score where cid&#x3D;&#39;5&#39; and score &gt;&#x3D; 60</span><br><span class="line"></span><br><span class="line">intersect</span><br><span class="line"></span><br><span class="line">select sid from t_score where cid&#x3D;&#39;6&#39; and score &gt;&#x3D; 60</span><br><span class="line"></span><br><span class="line">select * from t_score where cid&#x3D;&#39;5&#39;</span><br><span class="line"></span><br><span class="line">update t_score set score&#x3D;&#39;65&#39; where sid&#x3D;&#39;10002&#39; and cid&#x3D;&#39;6&#39;</span><br></pre></td></tr></table></figure>
+<p>–统计操作系统(1)70 分及以上但数据结构(2)未达到 65 的同学学号 –10004</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select sid from t_score where cid&#x3D;&#39;1&#39; and score &gt; 70</span><br><span class="line"></span><br><span class="line">minus</span><br><span class="line"></span><br><span class="line">select sid from t_score where cid&#x3D;&#39;2&#39; and score &gt;&#x3D; 65</span><br><span class="line"></span><br><span class="line">select * from t_score where sid&#x3D;&#39;10003&#39;</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-2-集合运算"><a href="#1-5-2-集合运算" class="headerlink" title="1.5.2 集合运算"></a>1.5.2 集合运算</h3><p> A集合 (1、2、3)</p>
+<p> B集合 (2、3、4)</p>
+<p>  交集：(2、3)</p>
+<p>  并集：(1、2、3、2、3、4)或(1、2、3、4)</p>
+<p>  差集：A-B(1) B-A(4)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create table a(id number);&#x2F;&#x2F;插入1，2，3</span><br><span class="line"></span><br><span class="line">create table b(id number);&#x2F;&#x2F;插入2，3,4 </span><br></pre></td></tr></table></figure>
+<p> 1、 交集</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from a intersect select * from b</span><br></pre></td></tr></table></figure>
+<p> 2、并集</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from a union all select * from b(去掉重复的记录则去掉all)</span><br></pre></td></tr></table></figure>
+<p> 3、差集</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from a minus select * from b (A-B)</span><br><span class="line"></span><br><span class="line">select * from b minus select * from a (B-A)</span><br></pre></td></tr></table></figure>
+<p> 1、查询部门10和部门20都有的工作类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select job from emp where deptno&#x3D;10 intersect select job from emp where deptno&#x3D;20;</span><br></pre></td></tr></table></figure>
+<p> 2、查询部门10的办事员和部门20的经理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where deptno&#x3D;10 and job&#x3D;&#39;CLERK&#39; union all select * from emp where deptno&#x3D;20 and job&#x3D;&#39;MANAGER&#39;</span><br></pre></td></tr></table></figure>
+<p> 3、查询部门30中有，而部门10中没有的工作类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select job from emp where deptno&#x3D;30 minus select job from emp where deptno&#x3D;10;</span><br></pre></td></tr></table></figure>
+<h3 id="1-5-3-常用函数"><a href="#1-5-3-常用函数" class="headerlink" title="1.5.3 常用函数"></a>1.5.3 常用函数</h3><p><strong>1</strong> <strong>、聚合函数</strong></p>
+<p>count() sum() avg() max() min()</p>
+<p>实例：</p>
+<p>————————————–分组聚合查询——————————————–</p>
+<p>–Min ：最小值</p>
+<p>–Max ：最大值</p>
+<p>–Sum ：求和</p>
+<p>–Avg ：求平均值</p>
+<p>–Count：计数</p>
+<p>–查询课程表中最多和最少的课时数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select MAX(CHOURS) as 最多的课时数,MIN(CHOURS)as 最少的课时数 from t_course</span><br><span class="line"></span><br><span class="line">select * from t_course</span><br></pre></td></tr></table></figure>
+<p>–查询当前的学生数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) from t_student</span><br></pre></td></tr></table></figure>
+<p>–查询成绩表中每位同学的最高分，最低分，总分，平均分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid,max(SCORE),min(SCORE),sum(SCORE),avg(SCORE) from t_score group by sid</span><br></pre></td></tr></table></figure>
+<p>–统计平均成绩超过75分的学生的最高分，最低分，总分，平均分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid,max(SCORE),min(SCORE),sum(SCORE),avg(SCORE) from t_score group by sid having avg(SCORE) &gt;75</span><br></pre></td></tr></table></figure>
+<p>–group by :select后面的这些字段，要么是在聚合函数里面，要么是在group by字句中，否则回报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sid,max(SCORE),min(SCORE),sum(SCORE),avg(SCORE) from t_score group by sid having avg(SCORE) &gt;75</span><br></pre></td></tr></table></figure>
+<p><strong>2</strong> <strong>、字符函数</strong> （参考PPT演示）</p>
+<p> ltrim() 左侧截取</p>
+<p> rtrim() 右侧截取</p>
+<p> translate(‘jack’,’a’ ,’b’) 结果back</p>
+<p> lpad(char1,n[,char2]) 使用char2字符补充在char1字符的左边，最终补足n个字符，如果没有char2字符，则用空格补足n个字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> length () select length(‘abcdefg’) from dual</span><br><span class="line"></span><br><span class="line">DECODE(input_value,value,result[,value,result…][,default_result]);</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<p> ———-字符函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select lower(&#39;FUN&#39;) from dual;--转换为小写</span><br><span class="line"></span><br><span class="line">select upper(&#39;fun&#39;) from dual; --转换为大写</span><br><span class="line"></span><br><span class="line">select ltrim(&#39; abcd &#39;) from dual;--abcd  </span><br><span class="line"></span><br><span class="line">select rtrim(&#39; abcd &#39;) from dual;-- abcd</span><br><span class="line"></span><br><span class="line">select trim(&#39; abcd &#39;) from dual;--abcd</span><br><span class="line"></span><br><span class="line">select replace (&#39;jack and jue&#39;,&#39;j&#39;,&#39;bl&#39;) from dual;</span><br></pre></td></tr></table></figure>
+<p><strong>3</strong> <strong>、数学函数</strong></p>
+<p> round[number,[decimal_places]] 四舍五入函数，将number按照指定小数位数进行四舍五入运算的结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> select round(3.567) from dual;四舍五入取整</span><br><span class="line"></span><br><span class="line"> select round(123.456, 0) from dual; 回传 123</span><br><span class="line"></span><br><span class="line">select round(123.456, 1) from dual; 回传 123.5</span><br><span class="line"></span><br><span class="line">select round(123.456, 2) from dual; 回传 123.46</span><br><span class="line"></span><br><span class="line">select round(123.456, 3) from dual; 回传 123.456</span><br><span class="line"></span><br><span class="line">select round(-123.456, 2) from dual; 回传 -123.46</span><br></pre></td></tr></table></figure>
+<p><strong>4</strong> <strong>、转换函数</strong></p>
+<p> to_char(d[,fmt]) 也可number转换  将date数据类型的d转换成字符串类型数据</p>
+<p> to_date(字符串，格式)</p>
+<p> 其他函数</p>
+<p> nvl(a,b) 如果a不为null 则返回a,如果a为null则返回b，注意两者的类型要一致</p>
+<p> nvl2(a,b,c) ,如果a不为null 则返回b,如果a为null则返回c; b和c类型不同的话，c会转换为b的类型</p>
+<p> NULLIF (expr1, expr2) -&gt;相等返回NULL，不等返回expr1</p>
+<p>COALESCE (expr1, expr2, …, exprn) -&gt;返回第一个不为NULL的表达式，各个表达式类型一致</p>
+<h3 id="1-5-4-日期函数"><a href="#1-5-4-日期函数" class="headerlink" title="1.5.4 日期函数  "></a>1.5.4 日期函数  </h3><p>  系统时间sysdate</p>
+<p> add_months(d,no_of_month) 为日期d加上no_of_month月份</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select add_months(sysdate,2) from dual;</span><br></pre></td></tr></table></figure>
+<p>months_between(d1,d2)返回日期d1和d2之间的月份数</p>
+<p>  例子：当前时间跟当前时间加上两个月的差额</p>
+<p>last_day(d)d所在月份最后一天</p>
+<p>  例子：查询当前时间所在月份最后一天日期</p>
+<p>to_date(‘字符串’,’日期格式化’)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例子：select to_date(‘20100302’,’yyyymmdd’) from dual;</span><br></pre></td></tr></table></figure>
+<p> next_day(d,day) 返回d后工作日日期 day取值范围 1—7（周日、周一、周二……周六）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select next_day(sysdate,3) from dual; 返回下周二</span><br></pre></td></tr></table></figure>
+<p> 例子：</p>
+<p>1、查询系统时间(sysdate)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sysdate from dual</span><br></pre></td></tr></table></figure>
+<p> 2、查询在12年前参加工作的员工(months_between(d1,d2)返回日期d1和d2之间的月份数)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select empno,ename,hiredate from emp where months_between(sysdate,hiredate)&gt;144</span><br></pre></td></tr></table></figure>
+<p> 3、查询在当月倒数第三天参加工作的员工（last_day(d)d所在月份最后一天）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select empno,ename,hiredate from emp where last_day(hiredate)-2&#x3D;hiredate</span><br></pre></td></tr></table></figure>
+<p> 4、查询每个员工的工作天数（trunc(n[,m])返回截尾取整到小数点后m位的数）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select empno,ename,hiredate,trunc(sysdate-hiredate) from emp</span><br></pre></td></tr></table></figure>
+<p> 5、显示系统时间为xxxx年xx月xx日，是一年中第几天（DDD），是星期几(DAY)(to_char(d，str)将d显示为str指定的格式)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select to_char(sysdate,&#39;yyyy&quot;年&quot;月&quot;dd&quot;日&quot;DDD DAY&#39;) from dual</span><br></pre></td></tr></table></figure>
+<p> 6、计算每个员工已经工作了多少个月，忽略小数部分(months_between)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select ename,trunc(months_between(sysdate,hiredate) from emp;</span><br></pre></td></tr></table></figure>
+<p> 7、查询在1987年2月到1987年5月参加工作的员工(to_date(str,formatstr)将str格式字符串日期转换成formatetr指定的格式日期)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select ename,hiredate from emp where hiredate&gt;&#x3D;to_date(&#39;19870201&#39;,&#39;yyyymmdd&#39;) and</span><br><span class="line"></span><br><span class="line">hiredate&lt;to_date(&#39;19870601&#39;,&#39;yyyymmdd&#39;)</span><br></pre></td></tr></table></figure>
+<p>实例：</p>
+<p>———-日期函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select sysdate from dual</span><br><span class="line"></span><br><span class="line">select sysdate+1 from dual --不建议</span><br><span class="line"></span><br><span class="line">select add_months(sysdate,1) from dual -- 加一月</span><br><span class="line"></span><br><span class="line">select add_months(sysdate,12) from dual -- 加一年</span><br></pre></td></tr></table></figure>
+<p>–to_char</p>
+<h3 id="1-5-5-统计函数"><a href="#1-5-5-统计函数" class="headerlink" title="1.5.5 统计函数"></a>1.5.5 统计函数</h3><p> 1、统计部门最低工资大于900的部门和最低工资</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select deptno,min(sal) from emp group by deptno having min(sal)&gt;900</span><br></pre></td></tr></table></figure>
+<p> 2、统计每个部门工资在1400元以上的所有员工的工资总额</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select deptno,sum(sal) from emp where sal&gt;1400 group by deptno</span><br></pre></td></tr></table></figure>
+<p> 3、统计不同工作的个数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(distinct job) from emp</span><br></pre></td></tr></table></figure>
+<h2 id="1-6-数据库对象"><a href="#1-6-数据库对象" class="headerlink" title="1.6 数据库对象"></a>1.6 数据库对象</h2><h3 id="1-6-1-序列"><a href="#1-6-1-序列" class="headerlink" title="1.6.1 序列"></a>1.6.1 序列</h3><p>1、  创建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create sequence seqa start with 1000 increment by 2;</span><br></pre></td></tr></table></figure>
+<p>2、  得到序列自增的数字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select seqa.CURRVAL from dual;(得到当前序列数值)</span><br><span class="line"></span><br><span class="line">select seqa.NEXTVAL from dual;（得到序列下一个数值）</span><br></pre></td></tr></table></figure>
+<p>3、  插入某表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into test values(seqa.NEXTVAL,’aa’);</span><br></pre></td></tr></table></figure>
+<p>要插入开始是字母的可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into test values(‘c’||trim(to_char(seqa.nextval,’0000’)),’aa’);</span><br></pre></td></tr></table></figure>
+<p>4、  删除序列</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop sequence seqa;</span><br></pre></td></tr></table></figure>
+<h3 id="1-6-2-伪列"><a href="#1-6-2-伪列" class="headerlink" title="1.6.2 伪列"></a>1.6.2 伪列</h3><p>rowId,rownum伪列</p>
+<p>  完成分页</p>
+<h2 id="1-7-PL-SQL"><a href="#1-7-PL-SQL" class="headerlink" title="1.7 PL/SQL"></a>1.7 PL/SQL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">declare</span><br><span class="line"></span><br><span class="line"> cursor cemp is select empno,sal from emp order by sal;</span><br><span class="line"></span><br><span class="line"> pempno emp.empno%type;</span><br><span class="line"></span><br><span class="line"> psal emp.sal%type;</span><br><span class="line"></span><br><span class="line"> --涨工资的人数:</span><br><span class="line"></span><br><span class="line"> countEmp number :&#x3D; 0;</span><br><span class="line"></span><br><span class="line"> --涨后的工资总额:</span><br><span class="line"></span><br><span class="line"> salTotal number;</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line"> --得到初始的工资总额</span><br><span class="line"></span><br><span class="line"> select sum(sal) into salTotal from emp;</span><br><span class="line"></span><br><span class="line"> open cemp;</span><br><span class="line"></span><br><span class="line"> loop</span><br><span class="line"></span><br><span class="line"> --1\. 总额 &gt; 5w</span><br><span class="line"></span><br><span class="line"> exit when salTotal &gt; 50000;</span><br><span class="line"></span><br><span class="line"> --取一个员工</span><br><span class="line"></span><br><span class="line"> fetch cemp into pempno,psal;</span><br><span class="line"></span><br><span class="line"> --2\. notfound</span><br><span class="line"></span><br><span class="line"> exit when cemp%notfound;</span><br><span class="line"></span><br><span class="line"> --涨工资</span><br><span class="line"></span><br><span class="line"> update emp set sal&#x3D;sal*1.1 where empno&#x3D;pempno;</span><br><span class="line"></span><br><span class="line"> --人数+1</span><br><span class="line"></span><br><span class="line"> countEmp :&#x3D; countEmp + 1;</span><br><span class="line"></span><br><span class="line"> --2\. 涨后&#x3D;涨前 + sal * 0.1</span><br><span class="line"></span><br><span class="line"> salTotal :&#x3D; salTotal + psal * 0.1;</span><br><span class="line"></span><br><span class="line"> end loop;</span><br><span class="line"></span><br><span class="line"> close cemp;</span><br><span class="line"></span><br><span class="line"> commit;</span><br><span class="line"></span><br><span class="line"> dbms_output.put_line(&#39;人数:&#39;||countEmp||&#39; 总额:&#39;||salTotal);</span><br><span class="line"></span><br><span class="line">end;</span><br><span class="line"></span><br><span class="line">select empno,sal from scott.emp order by sal;</span><br></pre></td></tr></table></figure>
+<h2 id="1-8-游标的使用"><a href="#1-8-游标的使用" class="headerlink" title="1.8 游标的使用"></a>1.8 游标的使用</h2><p><strong>1</strong> <strong>、游标：</strong></p>
+<p>%notfound 没有找到数据为真，找到为假</p>
+<p>%found 相反</p>
+<p>%rowcount 统计影响的行数</p>
+<p><strong>2</strong> <strong>、显示游标</strong> sql；</p>
+<p>更新指定员工工资加500</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">declare</span><br><span class="line"></span><br><span class="line">eno emp.empno%type;</span><br><span class="line"></span><br><span class="line">jr emp%rowtype;</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">eno:&#x3D;&amp;员工编号;</span><br><span class="line"></span><br><span class="line">update emp set sal&#x3D;sal+500</span><br><span class="line"></span><br><span class="line">where empno&#x3D;eno;</span><br><span class="line"></span><br><span class="line">if sql%notfound</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">dbms_output.putline(&#39;没有发现你要找的数据&#39;);</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">dbms_output.putline(‘更新完毕’);</span><br><span class="line"></span><br><span class="line">end if;</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+<p><strong>3</strong> <strong>、隐式游标</strong></p>
+<p>游标声明、打开、检索、关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">声明</span><br><span class="line"></span><br><span class="line">cursor 游标名&#123;(形参声明)&#125;</span><br><span class="line"></span><br><span class="line">is&#x2F;as</span><br><span class="line"></span><br><span class="line">select 语句;</span><br><span class="line"></span><br><span class="line">打开</span><br><span class="line"></span><br><span class="line">open 游标名&#123;(实参)&#125;;</span><br><span class="line"></span><br><span class="line">检索</span><br><span class="line"></span><br><span class="line">fatch 游标名 into 变量;</span><br><span class="line"></span><br><span class="line">关闭</span><br><span class="line"></span><br><span class="line">close 游标名;</span><br></pre></td></tr></table></figure>
+<p>例如</p>
+<p>每个部门平均工资</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">declare</span><br><span class="line"></span><br><span class="line">dno number;</span><br><span class="line"></span><br><span class="line">avgsal number;</span><br><span class="line"></span><br><span class="line">cursor cur_1</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">select deptno,avg(sal) avgsal from emp</span><br><span class="line"></span><br><span class="line">group by deptno;</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">open cur_1;</span><br><span class="line"></span><br><span class="line">loop</span><br><span class="line"></span><br><span class="line">fatch cur_1 into dno,avgsal;</span><br><span class="line"></span><br><span class="line">exit when cur_1%notfound;</span><br><span class="line"></span><br><span class="line">dbms_output.putline(&#39;编号:&#39;||dno||&#39;平均工资：&#39;||avgsal);</span><br><span class="line"></span><br><span class="line">end loop;</span><br><span class="line"></span><br><span class="line">close cur_1;--关闭</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+<p>显示指定工作的员工姓名和工资</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">declare</span><br><span class="line"></span><br><span class="line">empjob emp.job%type;</span><br><span class="line"></span><br><span class="line">empname varchar2(20);</span><br><span class="line"></span><br><span class="line">salary number;</span><br><span class="line"></span><br><span class="line">cursor cur2(work varchar2)</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">select ename,sal from emp</span><br><span class="line"></span><br><span class="line">where job&#x3D;work;</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">empjob:&#x3D;&#39;&amp;输入一个工作种类&#39;;</span><br><span class="line"></span><br><span class="line">open cur2(empjob);</span><br><span class="line"></span><br><span class="line">loop</span><br><span class="line"></span><br><span class="line">fatch cur2 into empname,salary;</span><br><span class="line"></span><br><span class="line">exit when cur2%notfound;</span><br><span class="line"></span><br><span class="line">dbms_output.putline(&#39;姓名:&#39;||empname||&#39;工资：&#39;||salary);</span><br><span class="line"></span><br><span class="line">end loop;</span><br><span class="line"></span><br><span class="line">close cur2;</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+<h2 id="1-9-触发器"><a href="#1-9-触发器" class="headerlink" title="1.9 触发器"></a>1.9 触发器</h2><p>触发器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">tnew insert udate</span><br><span class="line"></span><br><span class="line">told update dalete</span><br><span class="line"></span><br><span class="line">create (or replace) trigger 触发器名</span><br><span class="line"></span><br><span class="line">before&#x2F;after insert&#x2F;upodate(of 列名）&#x2F;delete</span><br><span class="line"></span><br><span class="line">on 表名&#x2F;视图名</span><br><span class="line"></span><br><span class="line">[for each row]--行级触发器</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">sql 语句</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+<p>级联删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">create or replace trigger tri_1</span><br><span class="line"></span><br><span class="line">after delete from emp</span><br><span class="line"></span><br><span class="line">where deptno&#x3D;:old.deptno;</span><br><span class="line"></span><br><span class="line">end;</span><br><span class="line"></span><br><span class="line">delete from dept</span><br><span class="line"></span><br><span class="line">where deptno&#x3D;10;</span><br></pre></td></tr></table></figure>
+<p>级联更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">create or replace trigger tri_update</span><br><span class="line"></span><br><span class="line">after update of deptno on dept</span><br><span class="line"></span><br><span class="line">for each row</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">update emp set deptno&#x3D;:new deptno</span><br><span class="line"></span><br><span class="line">where deptno&#x3D;:old deptno;</span><br><span class="line"></span><br><span class="line">end;</span><br><span class="line"></span><br><span class="line">update dept set deptno&#x3D;70</span><br><span class="line"></span><br><span class="line">where deptno&#x3D;30;</span><br></pre></td></tr></table></figure>
+<p>函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">create &#123;or replace&#125; function 函数名&#123;（形参）&#125;</span><br><span class="line"></span><br><span class="line">return 返回值类型</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">声明部分</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">语句1</span><br><span class="line"></span><br><span class="line">end；</span><br></pre></td></tr></table></figure>
+<p>例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">create or replace function fun</span><br><span class="line"></span><br><span class="line">return vachar2</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">return ‘hello world!’;</span><br><span class="line"></span><br><span class="line">end;</span><br><span class="line"></span><br><span class="line">select fun from duil;</span><br></pre></td></tr></table></figure>
+<p>求工资税函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">create or replace function tax(money number)</span><br><span class="line"></span><br><span class="line">return number</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">sal_rate number;</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">if money&lt;&#x3D;3500 then</span><br><span class="line"></span><br><span class="line">sal_rate:&#x3D;0;</span><br><span class="line"></span><br><span class="line">else if money&lt;&#x3D;5000 then</span><br><span class="line"></span><br><span class="line">sal_rate:&#x3D;(money-3500)*0.03;</span><br><span class="line"></span><br><span class="line">else if money&lt;&#x3D;8000 then</span><br><span class="line"></span><br><span class="line">sal_rate:&#x3D;(5000-3500)*0.03+(money-5000)*0.1;</span><br><span class="line"></span><br><span class="line">else .....</span><br><span class="line"></span><br><span class="line">end if;</span><br><span class="line"></span><br><span class="line">end if;</span><br><span class="line"></span><br><span class="line">end if;</span><br><span class="line"></span><br><span class="line">return sal_rate;</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+<h2 id="1-10-存储过程"><a href="#1-10-存储过程" class="headerlink" title="1.10 存储过程"></a>1.10 存储过程</h2><p>存储过程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">create （or replace) procedure 存储过程名（形参）</span><br><span class="line"></span><br><span class="line">is&#x2F;as</span><br><span class="line"></span><br><span class="line">（声明部分）</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">语句</span><br><span class="line"></span><br><span class="line">（异常处理部分）</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+<p>用存储过程实现某个工作地点的员工姓名及工资</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">create or replace procedure p_emp_dept(loca varchar2)</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">empname varchar2(20);</span><br><span class="line"></span><br><span class="line">salary number;</span><br><span class="line"></span><br><span class="line">cursor c_sal(location varchar2)</span><br><span class="line"></span><br><span class="line">is</span><br><span class="line"></span><br><span class="line">select ename,sal from emp</span><br><span class="line"></span><br><span class="line">where deptno in(select deptno from dept where loc&#x3D;location);</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">open c_sal(loca);</span><br><span class="line"></span><br><span class="line">dbms_output.putline(&#39;姓名:&#39;||&#39;工资：&#39;);</span><br><span class="line"></span><br><span class="line">loop</span><br><span class="line"></span><br><span class="line">fatch c_sal into empname,salary;</span><br><span class="line"></span><br><span class="line">exit when c_sal%notfound;</span><br><span class="line"></span><br><span class="line">dbms_output.putline(empname||salary);</span><br><span class="line"></span><br><span class="line">end loop;</span><br><span class="line"></span><br><span class="line">close c_sal;</span><br><span class="line"></span><br><span class="line">end;</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">p_emp_dept(‘纽约’);</span><br><span class="line"></span><br><span class="line">end;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/17/Oracle%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-HTML网页开发手册" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/21/HTML%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/">HTML网页开发手册</a>
     </h1>
   
 
@@ -315,37 +788,6 @@
       
 
       
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>Beer, drugs, chickens all have to be spent<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/wxpay.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
     </div>
     <div class="article-info article-info-index">
       
@@ -353,84 +795,16 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/21/HTML%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/21/HTML%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/11/17/Oracle%E7%9F%A5%E8%AF%86%E7%82%B9%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Oracle知识点笔记
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/07/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -450,14 +824,87 @@
 
 
 
-  
-  
-  
 
   
-
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/21/hello-world/">Hello World</a>
+    </h1>
   
 
+        
+        <a href="/2019/07/21/hello-world/" class="archive-article-date">
+  	<time datetime="2019-07-21T07:26:22.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/21/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
 
 
@@ -480,8 +927,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

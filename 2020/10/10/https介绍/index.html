@@ -6,19 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>代理介绍 | 海若Hero</title>
+  <title>https介绍 | 海若Hero</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="代理概念设计模式的一种 设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。">
+  <meta name="description" content="Https概述与流程HTTP   HTTP  超文本传输协议协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。使用TCP端口为80。  HTTPS为了解决HTTP协议的这一缺陷，网景公式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="代理介绍">
-<meta property="og:url" content="http://yoursite.com/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:title" content="https介绍">
+<meta property="og:url" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="海若Hero">
-<meta property="og:description" content="代理概念设计模式的一种 设计模式的分类 总体来说设计模式分为三大类： 创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。 结构型模式，共七种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式。 行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。">
+<meta property="og:description" content="Https概述与流程HTTP   HTTP  超文本传输协议协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。使用TCP端口为80。  HTTPS为了解决HTTP协议的这一缺陷，网景公式">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-07-08T08:28:15.440Z">
-<meta property="article:modified_time" content="2020-07-08T08:41:13.514Z">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/957ca1d3915209f9d2e26ef9268fe63e.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/de4baa5362a2a811e632800338eb742e.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/5fc7751de7d23cec495a357dba04a896.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/41955d23e1ee7aa8aa24312f44cae9a4.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/ede88eda4d7048854084791c8c9ddf8e.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/45498705b4fcdc7eb9543150e90cf2f3.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/b1dcabff036c87b577a5831316c73687.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/712868fa7f19a7dfdfee791f812379f0.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/5c3ecf8d41195c86f63805beb40a98d6.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/8662f2c303f980be9145f0da3f637134.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/73648d164f60e08a3e3cdbe84cd0437f.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/a4e2ea8cee6347e8a5f5b99023779500.png">
+<meta property="og:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/4fbd1465be5514df74ed705945699994.png">
+<meta property="article:published_time" content="2020-10-10T06:16:04.440Z">
+<meta property="article:modified_time" content="2020-10-10T06:17:24.885Z">
 <meta property="article:author" content="海若">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/media/957ca1d3915209f9d2e26ef9268fe63e.png">
   
     <link rel="alternative" href="/atom.xml" title="海若Hero" type="application/atom+xml">
   
@@ -150,97 +164,415 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-代理介绍" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-https介绍" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      代理介绍
+      https介绍
     </h1>
   
 
         
-        <a href="/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-07-08T08:28:15.440Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-08</time>
+        <a href="/2020/10/10/https%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
+  	<time datetime="2020-10-10T06:16:04.440Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><h4 id="设计模式的一种"><a href="#设计模式的一种" class="headerlink" title="设计模式的一种"></a>设计模式的一种</h4><ul>
-<li><p>设计模式的分类</p>
-<p>总体来说设计模式分为三大类：</p>
-<p>创建型模式，共五种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式。</p>
-<p><strong>结构型模式</strong>，共七种：适配器模式、装饰器模式、<strong>代理模式</strong>、外观模式、桥接模式、组合模式、享元模式。</p>
-<p>行为型模式，共十一种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+        <h2 id="Https概述与流程"><a href="#Https概述与流程" class="headerlink" title="Https概述与流程"></a>Https概述与流程</h2><h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><blockquote>
+<p>  HTTP<br>  超文本传输协议协议被用于在Web浏览器和网站服务器之间传递信息，HTTP协议以明文方式发送内容，不提供任何方式的数据加密，如果攻击者截取了Web浏览器和网站服务器之间的传输报文，就可以直接读懂其中的信息，因此，HTTP协议不适合传输一些敏感信息，比如：信用卡号、密码等支付信息。使用TCP端口为80。</p>
+</blockquote>
+<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>为了解决HTTP协议的这一缺陷，网景公式设计了SSL(Secure Sockets<br>Layer-安全套接层)协议用于对Http协议传输的数据进行加密，保证会话过程中的安全性。使用TCP端口为<br>443。SSL依靠证书来验证服务器的身份，并为浏览器和服务器之间的通信加密。</p>
+<p>HTTPS也称作HTTP over TLS。TLS(Transport Layer<br>Security-传输层安全)协议的前身是SSL，TLS 1.0通常被标示为SSL 3.1，TLS 1.1为SSL<br>3.2，TLS 1.2为SSL 3.3，TLS 1.3为SSL 3.4。</p>
+<table>
+<thead>
+<tr>
+<th><strong>SSL1.0</strong></th>
+<th><strong>SSL2.0</strong></th>
+<th><strong>SSL3.0</strong></th>
+<th><strong>TLS1.0(SSL3.1)</strong></th>
+<th><strong>TLS1.1(SSL3.2)</strong></th>
+<th><strong>TLS1.2(SSL3.3)</strong></th>
+<th><strong>TLS1.3(SSL3.4)</strong></th>
+</tr>
+</thead>
+</table>
+<p>红色的表示不安全的，绿色的是安全的。</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>层名</th>
+<th>常用协议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>应用层</td>
+<td>HTTP/HTTPS、FTP、Socket、Telnet、SSH、SMTP、POP3、DHCP、DNS、NFS、SNMP</td>
+</tr>
+<tr>
+<td>6</td>
+<td>表示层</td>
+<td>XDR、LPP</td>
+</tr>
+<tr>
+<td>5</td>
+<td>会话层</td>
+<td>SSL/TLS、LDAP/DAP、RPC</td>
+</tr>
+<tr>
+<td>4</td>
+<td>传输层</td>
+<td>TCP、UDP</td>
+</tr>
+<tr>
+<td>3</td>
+<td>网络层</td>
+<td>IP、OSPF、ICMP、</td>
+</tr>
+<tr>
+<td>2</td>
+<td>数据链路层</td>
+<td>以太网、令牌环、PPP、PPTP、L2TP、ARP、ATMP</td>
+</tr>
+<tr>
+<td>1</td>
+<td>物理层</td>
+<td>物理线路、光纤、无线电</td>
+</tr>
+</tbody></table>
+<p>客户端执行https请求时，需要由TCP协议建立和释放连接。这就涉及TCP协议的三次握手和四次挥手。</p>
+<p>注意：我们可能会经常看到“HTTP的三次握手”这个说法，其实这种说法不准确，HTTP是没有什么三次握手的，这个其实指的就是TCP的三次握手。</p>
+<h3 id="HTTPS认证流程"><a href="#HTTPS认证流程" class="headerlink" title="HTTPS认证流程"></a>HTTPS认证流程</h3><p>TCP连接建立好后，对于HTTP而言，服务器就可以发数据给客户端。但是对于HTTPS，它还要运行SSL/TLS协议，SSL/TLS协议分两层，第一层是记录协议，主要用于传输数据的加密压缩；第二层是握手协议，它建立在第一层协议之上，主要用于数据传输前的双方身份认证、协商加密算法、交换密钥。</p>
+<p>HTTPS验证过程就是SSL握手协议的交互过程。“HTTPS验证”这个说法其实不准确的，应该是“SSL验证”，这两种说法网上都能看到。</p>
+<p>https单相认证</p>
+<p><img src="media/957ca1d3915209f9d2e26ef9268fe63e.png" alt="https://note.youdao.com/yws/public/resource/00a479b6b6d605908238c53b86e6df4b/xmlnote/WEB1ee02e17904898d5baaeaaec535487ad/7593F5312D3447248DFAEFECCE5A5ACB/6640"></p>
+<p>https双向认证之客户端认证</p>
+<p><img src="media/de4baa5362a2a811e632800338eb742e.png" alt="https://note.youdao.com/yws/public/resource/00a479b6b6d605908238c53b86e6df4b/xmlnote/WEB1ee02e17904898d5baaeaaec535487ad/CC09F989F8C243AAA0148D7C481D600C/6644"></p>
+<p><strong>单向认证</strong></p>
+<ol>
+<li>客户端向指定域名的服务器发起https请求</li>
+</ol>
+<p>请求内容包括:</p>
+<blockquote>
+<p>  1）客户端支持的SSL/TLS协议版本列表</p>
+</blockquote>
+<blockquote>
+<p>  2）支持的对称加密算法列表</p>
+</blockquote>
+<blockquote>
+<p>  3）客户端生成的随机数A</p>
+</blockquote>
+<ol>
+<li><p>服务器收到请求后，回应客户端，回应的内容主要有：</p>
+<p>1）SSL/TLS版本。服务器会在客户端支持的协议和服务器自己支持的协议中，选择双方都支持的SSL/TLS的最高版本，作为双方使用的SSL/TLS版本。如果客户端的SSL/TLS版本服务器都不支持，则不允许访问</p>
 </li>
-<li><p>代理模式定义：代理模式给某一个对象提供一个代理对象，并由代理对象控制对原对象的引用。通俗的来讲代理模式就是我们生活中常见的中介。或者最常见的就是朋友圈中卖面膜的同学了。</p>
+</ol>
+<p>2）与1类似，选择双方都支持的最安全的加密算法。</p>
+<p>3）从服务器密钥库中取出的证书</p>
+<p>4）服务器端生成的随机数B</p>
+<ol>
+<li>客户端回应</li>
+</ol>
+<p>客户端收到后，检查证书是否合法，主要检查下面4点：</p>
+<p><strong>1、检查证书是否过期</strong></p>
+<p><strong>2、检查证书是否已经被吊销</strong>。</p>
+<blockquote>
+<p>  有CRL和OCSP两种检查方法。CRL即证书吊销列表，证书的属性里面会有一个CRL分发点属性，如下图所示（Microsoft<br>  IT的证书），这个属性会包含了一个url地址，证书的签发机构会将被吊销的证书列表展现在这个url地址中；OCSP是在线证书状态检查协议，客户端直接向证书签发机构发起查询请求以确认该证书是否有效。</p>
+</blockquote>
+<p><img src="media/5fc7751de7d23cec495a357dba04a896.png"></p>
+<p><strong>3、证书是否可信。</strong></p>
+<blockquote>
+<p>  客户端会有一个信任库，里面保存了该客户端信任的CA（证书签发机构）的证书，如果收到的证书签发机构不在信任库中，则客户端会提示用户证书不可信。</p>
+</blockquote>
+<blockquote>
+<p>  若客户端是浏览器，各个浏览器都会内置一些可信任的证书签发机构列表，在浏览器的设置中可以看到。</p>
+</blockquote>
+<p><img src="media/41955d23e1ee7aa8aa24312f44cae9a4.png"></p>
+<blockquote>
+<p>  如果不在信任表中，则浏览器会出现类似下面的警告页面，提示你不安全。（当然，你可以选择继续访问）</p>
+</blockquote>
+<p><img src="media/ede88eda4d7048854084791c8c9ddf8e.png"></p>
+<blockquote>
+<p>  若客户端是程序，例如Java中，需要程序配置信任库文件，以判断证书是否可信，如果没设置，则默认使用jdk自带的证书库（jre\lib\security\cacerts,默认密码changeit）。如果证书或签发机构的证书不在信任库中，则认为不安全，程序会报错。（你可以在程序中设置信任所有证书，不过这样并不安全）。</p>
+</blockquote>
+<p><strong>4、检查收到的证书中的域名与请求的域名是否一致。</strong></p>
+<blockquote>
+<p>  <strong>若客户端是程序，这一项可配置不检查。若为浏览器，则会出现警告，用户也可以跳过。</strong></p>
+</blockquote>
+<blockquote>
+<p>  证书验证通过后，客户端使用特定的方法又生成一个随机数c，这个随机数有专门的名称“pre-master<br>  key”。接着，客户端会用证书的公钥对“pre-master key”加密，然后发给服务器。</p>
+</blockquote>
+<ol>
+<li><p>服务器的最后回应</p>
+<p>服务器使用密钥库中的私钥解密后，得到这个随机数c。此时，服务端和客户端都拿到了随机数a、b、c，双方通过这3个随机数使用相同的<strong>DH密钥交换算法</strong>计算得到了相同的<strong>对称加密的密钥</strong>。这个密钥就作为后续数据传输时对称加密使用的密钥。</p>
+<p>服务器回应客户端，握手结束，可以采用对称加密传输数据了。</p>
 </li>
-<li><p>代理模式的有点</p>
-<ul>
-<li>职责清晰<br> 具体角色是实现具体的业务逻辑，不用关心其他非本职责的事务，通过后期的代理完成一件事务，代码清晰。在某些情况下，一个客户类不想或者不能直接引用一个委托对象，而代理类对象可以在客户类和委托对象之间起到中介的作用，其<strong>特征是代理类和委托类实现相同的接口</strong>。</li>
-<li>高扩展性<br> 具体主题角色随时会发生变化，但是只要实现了接口，接口不变，代理类就可以不做任何修改继续使用，符合“<strong>开闭原则</strong>”。<br> 另外，代理类除了是客户类和委托类的中介之外，我们还可以通过给代理类增加额外的功能来扩展委托类的功能，这样做我们只需要修改代理类而不需要再修改委托类，<strong>同样符合开闭原则</strong>。</li>
-</ul>
+</ol>
+<p>这里注意几点：</p>
+<p>1、整个验证过程，其实是为了安全地得到一个双方约定的对称加密密钥，当然，过程中也涉及一些身份认证过程。既然刚开始时，客户端已经拿到了证书，里面包含了非对称加密的公钥，为什么不直接使用非对称加密方案呢，这是因为非对称加密计算量大、比较耗时，而对称加密耗时少。</p>
+<p>2、对称加密的密钥只在这次连接中断前有效，从而保证数据传输安全。</p>
+<p>3、为什么要用到3个随机数，1个不行吗？这是因为客户端和服务端都不能保证自己的随机数是真正随机生成的，这样会导致数据传输使用的密钥就不是随机的，时间长了，就很容易被破解。如果使用客户端随机数、服务端随机数、pre-master<br>key随机数这3个组合，就能十分接近随机。</p>
+<p>4、什么是信任库和密钥库。信任库前面已经说了，它是用来存放客户端信任的CA的证书。在程序交互中，需要确保你访问的服务器的证书在你的信任库里面。密钥库是用来存放服务器的私钥和证书。</p>
+<p>5、中间人攻击问题。前面过程说明中，有一点，客户端是验证有问题的时候，是可以选择继续的。对浏览器而言，用户可以选择继续访问；对程序而言，有些系统为了处理简单，会选择信任所有证书，这样就给中间人攻击提供了漏洞。</p>
+<p>中间人攻击时，它想办法拦截到客户端与服务器之间的通信。在客户端向服务器发信息时，中间人首先伪装成客户端，向真正的服务器发消息，获得真正的证书，接着伪装成服务器将自己的伪证书发给客户端。服务器向客户端发消息时，中间人伪装成客户端，接收消息，然后再伪装成服务器向客户端发消息。最后验证过程完成后，客户端的真实对称密钥被中间人拿到，而真正的服务器拿到的是中间人提供的伪密钥。后续数据传输过程中的数据就会被中间人窃取。</p>
+<p><strong>双向认证</strong></p>
+<p>单向验证过程中，客户端会验证自己访问的服务器，服务器对来访的客户端身份不做任何限制。如果服务器需要限制客户端的身份，则可以选择开启服务端验证，这就是双向验证。从这个过程中我们发现，<strong>使用单向验证还是双向验证，是服务器决定的。</strong></p>
+<p>一般而言，我们的服务器都是对所有客户端开放的，所以<strong>服务器默认都是使用单向验证</strong>。如果你使用的是Tomcat服务器，在配置文件server.xml中，配置Connector节点的clientAuth属性即可。若为true，则使用双向验证，若为false，则使用单向验证。如果你的服务，只允许特定的客户端访问，那就需要使用双向验证了。</p>
+<p>双向验证基本过程与单向验证相同，不同在于：</p>
+<p>1）第二步服务器第一次回应客户端的消息中，会要求客户端提供“客户端的证书”</p>
+<p>2）第三步客户端验证完服务器证书后的回应内容中，会增加两个信息：</p>
+<blockquote>
+<p>  1、客户端的证书</p>
+</blockquote>
+<blockquote>
+<p>  2、客户端证书验证消息（<strong>CertificateVerify<br>  message</strong>）：客户端将之前所有收到的和发送的消息组合起来，并用hash算法得到一个hash值，然后用客户端<strong>密钥库</strong>的<strong>私钥</strong>对这个hash进行签名，这个签名就是<strong>CertificateVerify<br>  message</strong></p>
+</blockquote>
+<p>3）服务器收到客户端证书后：</p>
+<blockquote>
+<p>  a）确认这个证书是否在自己的<strong>信任库</strong>中（当然也会校验是否过期等信息），如果验证不通过则会拒绝连接；</p>
+</blockquote>
+<blockquote>
+<p>  b）用<strong>客户端证书中的公钥</strong>去验证收到的证书验证消息中的签名。这一步的作用是为了确认证书确实是客户端的。</p>
+</blockquote>
+<p>所以，<strong>在双向验证中，客户端需要用到密钥库，保存自己的私钥和证书，并且证书需要提前发给服务器，由服务器放到它的信任库中。</strong></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>1、单向验证中，如果是你客户端，你需要拿到服务器的证书，并放到你的信任库中；如果是服务端，你要生成私钥和证书，并将这两个放到你的密钥库中，并且将证书发给所有客户端。</p>
+<p>2、双向验证中，如果你是客户端，你要生成客户端的私钥和证书，将它们放到密钥库中，并将证书发给服务端，同时，在信任库中导入服务端的证书。如果你是服务端，除了在密钥库中保存服务器的私钥和证书，还要在信任库中导入客户端的证书。</p>
+<p>3、再次强调，使用单向验证还是双向验证，是服务器决定的。</p>
+<p>4、https的验证过程，不管是单向还是双向，只有<strong>四步</strong>，图上画的步骤只是为了便于理解。很多关于https验证过程的文章中，写了来来回回七八上十步。要真是这样，访问一个https地址，时间全花在了交互上了。</p>
+<h2 id="https双向认证与openssl"><a href="#https双向认证与openssl" class="headerlink" title="https双向认证与openssl"></a>https双向认证与openssl</h2><h3 id="证书相关概念"><a href="#证书相关概念" class="headerlink" title="证书相关概念"></a>证书相关概念</h3><p>**CA(Certificate<br>Authority)**：被称为证书授权中心是数字证书发放和管理的机构。签发主流机构：Symantec、Thawte、GeoTrust、GlobalSign等。</p>
+<p><strong>根证书</strong>：CA证书授权中心给自己颁发的证书,<br>是信任链的起始点。安装根证书意味着对这个CA认证中心的信任。权威CA机构的根证书内置于浏览器中。</p>
+<p><strong>签发证书的过程：</strong></p>
+<ol>
+<li><p>撰写证书元数据：包括 <strong>签发人(Issuer)**、</strong>地址<strong>、</strong>签发时间<strong>、</strong>有效期**<br>等，还包括证书持有者(Owner)基本信息，比如 <strong>DN(DNS<br>Name，即证书生效的域名)**、 **Owner 公钥</strong> 等信息</p>
 </li>
-</ul>
-<h4 id="代理分类"><a href="#代理分类" class="headerlink" title="代理分类"></a>代理分类</h4><ul>
-<li><p>静态代理：</p>
-<ul>
-<li><p>代理类和被代理类应该共同实现一个接口，或者是共同继承某个类。为什么叫做静态呢？因为它的类型是事先预定好的</p>
+<li><p>使用通用的 Hash 算法（如SHA-256）对证书元数据计算生成 <strong>数字摘要</strong></p>
 </li>
-<li><p>优点<br> 业务类只需要关注业务逻辑本身，保证了业务类的重用性。这是代理的共有优点。代理使客户端不需要知道实现类是什么，怎么做的，而客户端只需知道代理即可（解耦合）。对于如上的客户端代码，<code>Subject subject = new ConcreteSubject(); Proxy proxy = new Proxy(subject);</code>可以应用工厂方法将它隐藏。</p>
+<li><p>使用 Issuer<br>的私钥对该数字摘要进行加密，生成一个加密的数字摘要，也就是Issuer的<br><strong>数字签名</strong></p>
 </li>
-<li><p>缺点</p>
-<ul>
-<li>代理类和委托类实现了相同的接口，代理类通过委托类实现了相同的方法。这样就出现了大量的代码重复。如果接口增加一个方法，除了所有实现类需要实现这个方法外，所有代理类也需要实现此方法。增加了代码维护的复杂度。</li>
-<li>代理对象只服务于一种类型的对象，如果要服务多类型的对象。势必要为每一种对象都进行代理，静态代理在程序规模稍大时就无法胜任了。如上的代码是只为Subject类的访问提供了代理，但是如果还要为其他类如AnotherSubject类提供代理的话，就需要我们再次添加代理AnotherSubject的代理类。<br> 由于静态代理的这个缺点，就需要使用动态代理。</li>
-</ul>
+<li><p>将数字签名附加到数字证书上，变成一个 <strong>签过名的数字证书</strong></p>
 </li>
-</ul>
+<li><p>将签过名的数字证书与 <strong>Issuer<br>的公钥</strong>，一同发给证书使用者（注意，将公钥主动发给使用者是一个形象的说法，只是为了表达使用者最终获取到了<br>Issuer 的公钥）</p>
 </li>
-<li><p>jdk代理</p>
-<ul>
-<li>jdk动态代理的逻辑其实就是通过InvocationHandler接口来实现的<ul>
-<li>优点<br> 动态代理与静态代理相比较，最大的好处是接口中声明的所有方法都被转移到调用处理器一个集中的方法中处理（<code>InvocationHandler.invoke</code>）。这样，在接口方法数量比较多的时候，我们可以进行灵活处理，而不需要像静态代理那样每一个方法进行中转。而且动态代理的应用使我们的类职责更加单一，复用性更强。</li>
-<li>缺点<br> Proxy已经设计得非常优美，但是还是有一点点小小的遗憾之处——<strong>它始终无法摆脱仅支持 interface代理的桎梏</strong>，因为它的设计注定了这个遗憾。动态生成的代理类的继承关系图，已经注定有一个共同的父类叫 Proxy。Java 的继承机制注定了这些动态代理类们无法实现对 class 的动态代理，原因是多继承在 Java 中本质上就行不通。</li>
-</ul>
+</ol>
+<p><strong>验证证书的过程：</strong></p>
+<ol>
+<li><p>证书使用者获通过某种途径（如浏览器访问）获取到该数字证书，解压后分别获得<br><strong>证书元数据</strong> 和 <strong>数字签名</strong></p>
 </li>
-</ul>
+<li><p>使用同样的Hash算法计算证书元数据的 <strong>数字摘要</strong></p>
 </li>
-<li><p>CGLIB代理</p>
-<ul>
-<li><p>CGLIB 原理：动态生成一个要代理类的子类，子类重写要代理的类的所有不是final的方法。在子类中采用方法拦截的技术拦截所有父类方法的调用，顺势织入横切逻辑。效率方面</p>
-<ul>
-<li>在jdk6之前比使用Java反射效率要高。唯一需要注意的是，CGLib不能对声明为final的方法进行代理，</li>
-</ul>
-<p>​       因为CGLib原理是动态生成被代理类的子类。</p>
-<ul>
-<li>在jdk6、jdk7、jdk8逐步对JDK动态代理优化之后，在调用次数较少的情况下，JDK代理效率高于CGLIB代理效率，</li>
-</ul>
-<p>​       只有当进行大量调用的时候，jdk6和jdk7比CGLIB代理效率低一点，但是到jdk8的时候，jdk代理效率高于CGLIB代理，</p>
-<p>​       总之，每一次jdk版本升级，jdk代理效率都得到提升，而CGLIB代理消息确有点跟不上步伐。。</p>
+<li><p>使用 <strong>Issuer 的公钥</strong> 对数字签名进行解密，得到 <strong>解密后的数字摘要</strong></p>
 </li>
-</ul>
+<li><p>对比 2 和 3 两个步骤得到的数字摘要值，如果相同，则说明这个数字证书确实是被<br>Issuer 验证过合法证书，证书中的信息（最主要的是 Owner 的公钥）是可信的</p>
 </li>
-</ul>
-<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><ul>
-<li><p>AOP/@Transational</p>
-<ul>
-<li><p>源码参考</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1）SpringTransactionAnnotationParser:parseTransactionAnnotation()</span><br><span class="line">（2）AbstractFallbackTransactionAttributeSource:112</span><br><span class="line">     TransactionAttribute txAttr &#x3D; computeTransactionAttribute(method, targetClass);</span><br><span class="line"> （3）AbstractAutoProxyCreator:348</span><br><span class="line">     if (specificInterceptors !&#x3D; DO_NOT_PROXY)</span><br></pre></td></tr></table></figure>
-
-
-
+</ol>
+<p>证书链：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fcd0572c4765">https://www.jianshu.com/p/fcd0572c4765</a></p>
+<p><img src="media/45498705b4fcdc7eb9543150e90cf2f3.png" alt="客户端验证服务器证书"></p>
+<p>客户端验证服务器证书</p>
+<p>Openssl ：目前最流行的 SSL<br>密码库工具，其提供了一个通用、健壮、功能完备的工具套件，用以支持SSL/TLS<br>协议的实现。</p>
+<p>X.509：是被广泛使用的数字证书标准，是用于标志通讯各方身份信息的一系列数据。</p>
+<p>X.509证书包含三个文件：key(私钥)，csr(生成数字证书请求文件)，cer/crt(是用于存放证书的签名文件，以二进制形式存放，不含私钥)。</p>
+<h3 id="生成数字证书"><a href="#生成数字证书" class="headerlink" title="生成数字证书"></a>生成数字证书</h3><p>我们需要 自签根证书、服务端证书、服务端私钥、客户端证书。</p>
+<p>注意：Openssl使用1.0.2版本，否则生成请求文件会报错。</p>
+<ol>
+<li>创建根证私钥</li>
+</ol>
+<p>OpenSSL&gt;genrsa -out D:\F\two-way-verification\root-key.key 1024</p>
+<p>说明：生成rsa私钥，1024位长度，输出到root-key.key。</p>
+<ol start="2">
+<li>创建根证书请求文件</li>
+</ol>
+<p>OpenSSL&gt; req -new -out D:\F\two-way-verification\root-req.csr -key<br>D:\F\two-way-verification\root-key.key</p>
+<p>说明：会让填写信息,其中国家,省市,公司等需要和后面的证书保持一致.后面challenge<br>password的地方直接回车就好。</p>
+<ol start="3">
+<li>生成自签根证书</li>
+</ol>
+<p>OpenSSL&gt; x509 -req -in D:\F\two-way-verification\root-req.csr -out<br>D:\F\two-way-verification\root-cert.cer -signkey<br>D:\F\two-way-verification\root-key.key -CAcreateserial -days 3650</p>
+<ol start="4">
+<li>生成服务端私钥</li>
+</ol>
+<p>OpenSSL&gt; genrsa -out D:\F\two-way-verification\server-key.key 1024</p>
+<ol start="5">
+<li>生成服务端请求文件</li>
+</ol>
+<p>OpenSSL&gt;req -new -out D:\F\two-way-verification\server-req.csr -key<br>D:\F\two-way-verification\server-key.key</p>
+<p>说明：国家省市公司和2)保持一致, Common Name 要特别注意,<br>要用你服务器的域名,我们测试用wangting.com</p>
+<ol start="6">
+<li>生成服务端证书（root-cert.cer，root-key.key，server-key.key，server-req.csr<br>这4个文件来生成服务端证书）</li>
+</ol>
+<p>OpenSSL&gt; x509 -req -in D:\F\two-way-verification\server-req.csr -out<br>D:\F\two-way-verification\server-cert.cer -signkey<br>D:\F\two-way-verification\server-key.key -CA<br>D:\F\two-way-verification\root-cert.cer -CAkey<br>D:\F\two-way-verification\root-key.key -CAcreateserial -days 3650</p>
+<ol start="7">
+<li>生成客户端key</li>
+</ol>
+<p>OpenSSL&gt; genrsa -out D:\F\two-way-verification\client-key.key 1024</p>
+<ol start="8">
+<li>生成客户端请求文件</li>
+</ol>
+<p>OpenSSL&gt; req -new -out D:\F\two-way-verification\client-req.csr -key<br>D:\F\two-way-verification\client-key.key</p>
+<p>9.<br>生成客户端证书（root证书，rootkey，client-key.key，client-req.csr这4个生成文件生成客户端证书）</p>
+<p>OpenSSL&gt; x509 -req -in D:\F\two-way-verification\client-req.csr -out<br>D:\F\two-way-verification\client-cert.cer -signkey<br>D:\F\two-way-verification\client-key.key -CA<br>D:\F\two-way-verification\root-cert.cer -CAkey<br>D:\F\two-way-verification\root-key.key -CAcreateserial -days 3650</p>
+<ol start="10">
+<li>生成客户端p12格式根证书(密码设置123456)</li>
+</ol>
+<p>OpenSSL&gt; pkcs12 -export -clcerts -in<br>D:\F\two-way-verification\client-cert.cer -inkey<br>D:\F\two-way-verification\client-key.key -out<br>D:\F\two-way-verification\client.p12</p>
+<p>为什么必须转p12，因为步骤9生成的证书导入不了浏览器客户端。</p>
+<p><strong>备注：参数名称和意义</strong></p>
+<p>genrsa 产生RSA密钥命令</p>
+<p>req 产生证书签发申请命令</p>
+<p>x509 签发X.509格式证书命令</p>
+<p>pkcs12 PKCS#12编码格式证书命令。</p>
+<p>-in 表示输入文件</p>
+<p>-out 表示输出文件</p>
+<p>-req 表示证书输入请求。</p>
+<p>-export 表示导出证书</p>
+<p>-inkey 表示输入私钥文件</p>
+<p>-days 表示有效天数</p>
+<p>-CAcreateserial 表示创建CA证书序列号</p>
+<p>-CAkey 表示CA证书私钥</p>
+<p>-CA 表示CA证书</p>
+<p>-signkey 表示自签名私钥</p>
+<p>-new 表示新请求</p>
+<p>-clcerts 表示仅导出客户证书。</p>
+<h3 id="配置nginx服务"><a href="#配置nginx服务" class="headerlink" title="配置nginx服务"></a>配置nginx服务</h3><p>注意事项：1. nginx安装包路径中不能有中文，否则启动不了</p>
+<ol start="2">
+<li>配置https的证书路径时注意要使用/，不能使用\。</li>
+</ol>
+<p>重定向http请求</p>
+<p>server {</p>
+<p>listen 80;</p>
+<p>server_name 127.0.0.1;</p>
+<p>rewrite ^(.*)$ https://$host$1; # 强制转https</p>
+<p>}</p>
+<p>创建监听443端口服务</p>
+<p>server {</p>
+<p>listen 443 ssl;</p>
+<p>server_name wangting.com;</p>
+<p>ssl_certificate D:/two-way-verification/server-cert.cer; #server公钥证书</p>
+<p>ssl_certificate_key D:/two-way-verification/server-key.key; #server私钥</p>
+<p>ssl_client_certificate D:/two-way-verification/root-cert.cer;<br>#客户端证书的CA证书了(即根证书)，代表此CA签发的证书都是可信的。 使用 CA<br>证书来验证请求带的客户端证书是否是该 CA 签发的</p>
+<p>ssl_verify_client off; #启用客户端证书审核</p>
+<p>ssl_session_cache shared:SSL:1m; #设置储存SSL会话的缓存类型和大小</p>
+<p>ssl_session_timeout 5m; #设置客户端能够反复使用储存在缓存中的会话参数时间</p>
+<p>ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #指定要使用的SSL协议</p>
+<p>location / {</p>
+<p>root D:/two-way-verification;</p>
+<p>index index.html;</p>
+<p>}</p>
+<p>}</p>
+<h3 id="配置Host域名解析"><a href="#配置Host域名解析" class="headerlink" title="配置Host域名解析"></a>配置Host域名解析</h3><p>C:\Windows\System32\drivers\etc\hosts</p>
+<h3 id="安装客户端证书"><a href="#安装客户端证书" class="headerlink" title="安装客户端证书"></a>安装客户端证书</h3><p>将client.p12进行安装</p>
+<p>备注：不同的客户端证书通过Common Name 和 Email Address区分</p>
+<p><img src="media/b1dcabff036c87b577a5831316c73687.png"></p>
+<p>注意: 为什么不安装client-cert.cer证书</p>
+<p>因为client-cert.cer证书中只有公钥信息，双向认证浏览器安装的客户端证书中需要使用到私钥信息。</p>
+<h2 id="https单向认证与keytool"><a href="#https单向认证与keytool" class="headerlink" title="https单向认证与keytool"></a>https单向认证与keytool</h2><h3 id="单向认证"><a href="#单向认证" class="headerlink" title="单向认证"></a>单向认证</h3><p>注释掉</p>
+<p>ssl_verify_client on; #启用客户端证书审核</p>
+<h3 id="Keytool简介"><a href="#Keytool简介" class="headerlink" title="Keytool简介"></a>Keytool简介</h3><p>keytool 是个Java提供的密钥和证书管理工具。</p>
+<p>keytool 将密钥和证书储存在一个称为keystore的密钥<strong>仓库中</strong></p>
+<h3 id="Keytool生成私钥和证书"><a href="#Keytool生成私钥和证书" class="headerlink" title="Keytool生成私钥和证书"></a>Keytool生成私钥和证书</h3><ol>
+<li>创建keystore秘钥库</li>
+</ol>
+<p>keytool -genkey -v -alias wangting -keyalg RSA -validity 3650 -keystore<br>D:/one-way-verification/wangting.keystore</p>
+<ol start="2">
+<li>创建证书</li>
+</ol>
+<p>keytool -export -alias wangting -keystore<br>D:/one-way-verification/wangting.keystore -storepass 123456 -rfc -file<br>D:/one-way-verification/wangting.cer</p>
+<p>备注：参数名称和意义</p>
+<p>-keyalg 使用加密的算法，这里是RSA</p>
+<p>-keypass 私有密钥的密码，这里设置为 123456</p>
+<p>-keystore 密钥库</p>
+<p>-validity 该密钥的有效期为 365天 (默认为90天)</p>
+<p>-keysize 指定密钥长度</p>
+<p>-alias 证书别名</p>
+<p>-storepass 指定密钥库的密码</p>
+<p>-export 将别名指定的证书导出到文件</p>
+<p>-rfc 表示以base64输出文件，否则以二进制输出</p>
+<ol start="3">
+<li>获取秘钥</li>
+</ol>
+<p>keytool不提供命令导出私钥，所以需要使用程序导出key</p>
+<p><img src="media/712868fa7f19a7dfdfee791f812379f0.png"></p>
+<h3 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h3><p>更换nginx.conf中的私钥和证书，域名如有变化需要更改</p>
+<h3 id="配置Host"><a href="#配置Host" class="headerlink" title="配置Host"></a>配置Host</h3><p>C:\Windows\System32\drivers\etc\hosts</p>
+<h2 id="tomcat配置https"><a href="#tomcat配置https" class="headerlink" title="tomcat配置https"></a>tomcat配置https</h2><h3 id="使用openssl生成的私钥和证书"><a href="#使用openssl生成的私钥和证书" class="headerlink" title="使用openssl生成的私钥和证书"></a>使用openssl生成的私钥和证书</h3><ol>
+<li><p>根据双向认证时生成的服务端证书和私钥生成PKCS#12的证书文件：</p>
+<p>pkcs12 -export -clcerts -in D:\two-way-verification\server-cert.cer -inkey<br>D:\two-way-verification\server-key.key -out<br>D:\two-way-verification\server.p12</p>
 </li>
-</ul>
+<li><p>将server.p12文件转为keystore：</p>
+<p>keytool -importkeystore -v -srckeystore D:/two-way-verification/server.p12<br>-srcstoretype pkcs12 -srcstorepass 123456(p12刚输入的密码) -destkeystore<br>D:/two-way-verification/server.keystore -deststoretype jks -deststorepass<br>123456(keystore密钥库的密码)</p>
+<p>注意：(标黄的两个密码需要一致，不一致tomcat启动时会报错。)</p>
 </li>
-</ul>
-<ul>
-<li>自定义标签优化项目结构-xw-server</li>
-</ul>
+<li><p>配置tomcat的server.xml</p>
+<p><img src="media/5c3ecf8d41195c86f63805beb40a98d6.png"></p>
+</li>
+<li><p>启动tomcat， 访问<a target="_blank" rel="noopener" href="https://wangting.com:8443/">https://wangting.com:8443/</a></p>
+</li>
+<li><p>在浏览器中配置证书</p>
+</li>
+</ol>
+<h3 id="使用keytool生成keystore"><a href="#使用keytool生成keystore" class="headerlink" title="使用keytool生成keystore"></a>使用keytool生成keystore</h3><ol>
+<li><p>使用单向认证时生成的密钥库wangting.keystore，以及证书wangting.cer</p>
+</li>
+<li><p>配置tomcat的server.xml</p>
+<p><img src="media/8662f2c303f980be9145f0da3f637134.png"></p>
+</li>
+<li><p>启动tomcat， 访问<a target="_blank" rel="noopener" href="https://yada:8443/">https://yada:8443/</a></p>
+</li>
+<li><p>在浏览器中配置证书</p>
+</li>
+</ol>
+<h2 id="生成带SAN的证书"><a href="#生成带SAN的证书" class="headerlink" title="生成带SAN的证书"></a>生成带SAN的证书</h2><p>问题：在之前的案例中我们发现及时浏览器安装了证书，在谷歌浏览器中依然会警告</p>
+<p><img src="media/73648d164f60e08a3e3cdbe84cd0437f.png"></p>
+<p>原因：Chrome 58 及以上版本只会使用 subjectAlternativeName 扩展程序（而不是<br>commonName）来匹配域名和网站证书。因此会报错：NET::ERR_CERT_COMMON_NAME_INVALID<br>。</p>
+<h3 id="修改openssl配置文件"><a href="#修改openssl配置文件" class="headerlink" title="修改openssl配置文件"></a>修改openssl配置文件</h3><p>首先需要修改openssl.cnf（该文件在bin文件中），有的bin文件中没有openssl.cnf,<br>但是有openssl.cnf，将后缀名改一下就可以了。</p>
+<p>确保req下存在以下2行（默认第一行是有的，第2行被注释了）</p>
+<p>[ req ]<br>distinguished_name = req_distinguished_name<br>req_extensions = v3_req</p>
+<p>确保req_distinguished_name下没有 0.xxx 的标签，有的话把0.xxx的0. 去掉</p>
+<p>新增最后一行内容 subjectAltName = @alt_names（前2行默认存在）</p>
+<p>[ v3_req ]<br># Extensions to add to a certificate request<br>basicConstraints = CA:FALSE<br>keyUsage = nonRepudiation, digitalSignature, keyEncipherment<br>subjectAltName = @alt_names</p>
+<p>新增 alt_names,注意括号前后的空格，DNS.x 的数量可以自己加</p>
+<p>[ alt_names ]</p>
+<p>DNS.1 = wangting.com</p>
+<p>DNS.2 = yuxinditie.com</p>
+<h3 id="根据配置文件生成证书"><a href="#根据配置文件生成证书" class="headerlink" title="根据配置文件生成证书"></a>根据配置文件生成证书</h3><p>1)生成私钥</p>
+<blockquote>
+<p>  genrsa -out server.key 2048</p>
+</blockquote>
+<ol start="2">
+<li>生成csr文件</li>
+</ol>
+<blockquote>
+<p>  req -new -key server.key -out server.csr -config openssl.cnf</p>
+</blockquote>
+<ol start="3">
+<li>生成ca.key并自签署</li>
+</ol>
+<blockquote>
+<p>  req -new -x509 -days 3650 -keyout ca.key -out ca.crt -config openssl.cnf</p>
+</blockquote>
+<p>4)用生成的CA的证书为刚才生成的server.csr文件签名</p>
+<blockquote>
+<p>  ca -in server.csr -out server.crt -cert ca.crt -keyfile ca.key -extensions<br>  v3_req -config openssl.cnf</p>
+</blockquote>
+<h3 id="配置nginx服务-1"><a href="#配置nginx服务-1" class="headerlink" title="配置nginx服务"></a>配置nginx服务</h3><p>同上</p>
+<h3 id="配置Host域名解析-1"><a href="#配置Host域名解析-1" class="headerlink" title="配置Host域名解析"></a>配置Host域名解析</h3><p>同上</p>
+<h2 id="使用程序访问https网站"><a href="#使用程序访问https网站" class="headerlink" title="使用程序访问https网站"></a>使用程序访问https网站</h2><p><img src="media/a4e2ea8cee6347e8a5f5b99023779500.png"></p>
+<p>可以看到执行完这段代码，程序会报如下错误：</p>
+<p><img src="media/4fbd1465be5514df74ed705945699994.png"></p>
+<p>原因：验证服务器证书时出错，程序启动后，java虚拟机会查看jvm信任的证书列表，发现没有信任服务器的证书。</p>
+<p>解决方案: 将服务器证书导入到jdk。</p>
+<p>keytool -import -v -trustcacerts -alias wang-ca -file D:/certWithSAN/ca.crt<br>-storepass changeit -keystore<br>D:/D/Installed/Java/jdk1.8.0_131/jre/lib/security/cacerts</p>
+<p>重新运行程序，成功。</p>
+<p>--查看jvm信任的证书列表</p>
+<p>keytool -list -keystore<br>“D:/D/Installed/Java/jdk1.8.0_131/jre/lib/security/cacerts” -storepass changeit</p>
+<p>--删除证书</p>
+<p>keytool -delete -alias wang2 -keystore<br>“D:/D/Installed/Java/jdk1.8.0_131/jre/lib/security/cacerts” -storepass changeit</p>
 
       
 
@@ -330,7 +662,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/08/%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/10/https%E4%BB%8B%E7%BB%8D/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +676,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/09/springboot%E6%B3%A8%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/10/10/%E5%A6%82%E4%BD%95%E5%86%99%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          springboot注解
+          如何写单元测试
         
       </div>
     </a>
   
   
-    <a href="/2020/07/08/spring%20session%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">spring session入门</div>
+    <a href="/2020/10/10/kafka%E4%BB%8B%E7%BB%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">kafka介绍</div>
       <i class="icon-circle-right"></i>
     </a>
   
